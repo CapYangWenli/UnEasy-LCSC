@@ -312,7 +312,7 @@
     try {
         const script = document.createElement("script");
         // chrome.runtime.getURL works in Chromium; Firefox also supports it
-        script.src = chrome.runtime.getURL("injected.js");
+        script.src = chrome.runtime.getURL("src/injected.js");
         script.onload = () => {
         console.log("[Extractor] injected.js loaded into page.");
         script.remove();
