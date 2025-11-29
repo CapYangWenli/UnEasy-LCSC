@@ -1,13 +1,13 @@
 # UnEasy-LCSC
 
-**UnEasy-LCSC** is a browser extension that unlocks LCSC + EasyEDA part data:
+**UnEasy-LCSC** is a browser extension that lets you download footprints, symbols, and 3d models right from LCSC's website:
 
-- Extracts **symbol** and **footprint** in native **EasyEDA `.json` format**
+- Extracts **symbol** and **footprint** in native **EasyEDA `.json` format that you can import in KiCAD**
 - Optionally downloads **SVG previews** (symbol + footprint)
-- Opens the correct **EasyEDA 3D viewer**
+- Opens an internal **EasyEDA 3D viewer**
 - Captures the WebGL model and exports it as a **`.obj`** mesh
 
-Everything runs **locally in your browser** — no servers or accounts.
+Everything runs **locally in your browser** — no EasyEDA account necessary.
 
 ---
 
@@ -21,7 +21,7 @@ Everything runs **locally in your browser** — no servers or accounts.
   - Optional: `Download SVG previews`
   - `Open 3D Viewer` → jumps directly to the EasyEDA 3D model
 
-- On the **EasyEDA 3D viewer**:
+- On the **3D viewer**:
   - `Export 3D OBJ` button captures WebGL geometry and exports a mesh as:
     `easyeda_model.obj`
 
