@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "LCSC EasyEDA Extractor",
+  "description": "Extract EasyEDA symbol/footprint JSON from LCSC and export 3D OBJ from EasyEDA viewer.",
+  "version": "0.4.0",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.lcsc.com/*",
+        "*://lcsc.com/*",
+        "*://easyeda.com/editor/*",
+        "*://*.easyeda.com/editor/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+
+  "host_permissions": [
+    "https://easyeda.com/*",
+    "https://*.easyeda.com/*",
+    "https://lcsc.com/*",
+    "https://*.lcsc.com/*"
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": [
+        "*://easyeda.com/*",
+        "*://*.easyeda.com/*"
+      ]
+    }
+  ]
+}
