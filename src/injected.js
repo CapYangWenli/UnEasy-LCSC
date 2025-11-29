@@ -2,6 +2,23 @@
 
 (() => {
   console.log("%c[Extractor] injected.js loaded in page context", "color: orange");
+  window.__uneasy = window.__uneasy || {};
+  window.__uneasy.meta = window.__uneasy.meta || {};
+
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const lcscId = params.get("ue_lcsc");
+    const name   = params.get("ue_name");
+    const uuid   = params.get("ue_uuid");
+
+    if (lcscId) window.__uneasy.meta.lcsc = lcscId;
+    if (name)   window.__uneasy.meta.name = name;
+    if (uuid)   window.__uneasy.meta.model_uuid = uuid;
+
+    console.log("[Extractor] Meta from URL:", window.__uneasy.meta);
+  } catch (e) {
+    console.warn("[Extractor] Failed to parse metadata from URL:", e);
+  }
 
   if (window.__easyedaHookInstalled) {
     console.log("[Extractor] WebGL hook already installed.");
@@ -117,11 +134,19 @@
       offset += verts.length;
     });
 
+    // 🔹 Safely read metadata (either from message or from window.__uneasy.meta)
+    const meta = (data.meta || window.__uneasy?.meta || {});
+    const modelName = meta.name || "model";
+    const modelUUID = meta.model_uuid || "unknown";
+    const lcscId = meta.lcsc || "UnknownLCSC";
+
+    const safeName = String(modelName).replace(/[^a-z0-9_\-()+\[\] ]+/gi, "_");
+
     const blob = new Blob([obj], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "easyeda_model.obj";
+    a.download = `${lcscId} - ${safeName}.obj`;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -129,4 +154,5 @@
 
     console.log("[Extractor] OBJ export completed.");
   });
+
 })();

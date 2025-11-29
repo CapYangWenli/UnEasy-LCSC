@@ -271,13 +271,24 @@
         }
 
         const { uuid3d, modelName3d } = info3d;
-        const encodedName = encodeURIComponent(modelName3d);
 
+        // Use the LCSC code we already detected at the top
+        const lcscId = lcscCode;                  // e.g. "C48606318"
+        const modelUUID = uuid3d;                 // EasyEDA 3D UUID
+        const modelName = modelName3d || "model"; // e.g. "CONN-TH_3P-P5.00_WJ500V-5.08-3P"
+
+        const baseUrl = "https://easyeda.com/editor/6.5.51/htm/editorpage15.html";
+        const modelPath = `/analyzer/api/3dmodel/${modelUUID}/${encodeURIComponent(modelName)}.obj`;
+
+        // Pass our metadata into the viewer as ue_* params
         const viewerUrl =
-          `https://easyeda.com/editor/6.5.51/htm/editorpage15.html` +
-          `?version=6.5.51` +
-          `&url=/analyzer/api/3dmodel/${uuid3d}/${encodedName}.obj`;
+          `${baseUrl}?version=6.5.51` +
+          `&url=${encodeURIComponent(modelPath)}` +
+          `&ue_lcsc=${encodeURIComponent(lcscId)}` +
+          `&ue_name=${encodeURIComponent(modelName)}` +
+          `&ue_uuid=${encodeURIComponent(modelUUID)}`;
 
+        console.log("[LCSC 3D Viewer] Opening:", viewerUrl);
         window.open(viewerUrl, "_blank");
         btn3d.textContent = "Opened 3D Viewer";
       } catch (err) {
@@ -293,12 +304,9 @@
     return;
   }
 
-    // ======================
-    // BRANCH 2: EASYEDA VIEWER
-    // ======================
-// ===========================
-// BRANCH 2: EASYEDA 3D VIEWER
-// ===========================
+  // ===========================
+  // BRANCH 2: EASYEDA 3D VIEWER
+  // ===========================
     if (host.includes("easyeda.com") && location.href.includes("/editor/")) {
     if (window.__easyedaObjExporterInjected) {
         console.log("[Extractor] EasyEDA viewer branch already injected.");
