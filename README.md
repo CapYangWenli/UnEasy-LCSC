@@ -11,28 +11,10 @@ Everything runs **locally in your browser** — no EasyEDA account necessary.
 
 ---
 
-## Features
-
-- On **LCSC product pages**:
-  - `Download EasyEDA JSON`  
-    → Saves:  
-    `CXXXXX_<name>_symbol.json` (EasyEDA symbol format)  
-    `CXXXXX_<name>_footprint.json` (EasyEDA footprint format)
-  - Optional: `Download SVG previews`
-  - `Open 3D Viewer` → jumps directly to the EasyEDA 3D model
-
-- On the **3D viewer**:
-  - `Export 3D OBJ` button captures WebGL geometry and exports a mesh as:
-    `easyeda_model.obj`
-
-Useful for KiCad, FreeCAD, Blender, or converting to STEP.
-
----
-
 ## Install (Chromium browsers)
 
 1. Clone or download this repo.
-2. Open `chrome://extensions/` (or `edge://extensions/`, `brave://extensions/`).
+2. Open `chrome://extensions/`.
 3. Enable **Developer mode**.
 4. Click **Load unpacked** → select the `UnEasy-LCSC` folder.
 
