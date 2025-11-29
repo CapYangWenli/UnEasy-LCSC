@@ -1,78 +1,73 @@
 # UnEasy-LCSC
 
-**UnEasy-LCSC** is a browser extension that unlocks LCSC + EasyEDA data:
+**UnEasy-LCSC** is a browser extension that unlocks LCSC + EasyEDA part data:
 
-- Extracts **symbol JSON** and **footprint JSON** directly from LCSC part pages
-- Optionally downloads **SVG previews**
-- Opens the **EasyEDA 3D viewer** for the part
-- Hooks the EasyEDA 3D viewer’s WebGL pipeline and exports the mesh as a **`.obj`** file
+- Extracts **symbol** and **footprint** in native **EasyEDA `.json` format**
+- Optionally downloads **SVG previews** (symbol + footprint)
+- Opens the correct **EasyEDA 3D viewer**
+- Captures the WebGL model and exports it as a **`.obj`** mesh
 
-Everything runs **locally in your browser**. No external servers, no accounts.
+Everything runs **locally in your browser** — no servers or accounts.
 
 ---
 
 ## Features
 
-- On **LCSC part pages**:
+- On **LCSC product pages**:
   - `Download EasyEDA JSON`  
-    → `CXXXXX_<name>_symbol.json`  
-    → `CXXXXX_<name>_footprint.json`
-  - Optional: `Download SVG previews` (symbol + footprint)
-  - `Open 3D Viewer`  
-    → opens the correct EasyEDA 3D viewer URL for that part
+    → Saves:  
+    `CXXXXX_<name>_symbol.json` (EasyEDA symbol format)  
+    `CXXXXX_<name>_footprint.json` (EasyEDA footprint format)
+  - Optional: `Download SVG previews`
+  - `Open 3D Viewer` → jumps directly to the EasyEDA 3D model
 
-- On the **EasyEDA 3D viewer page**:
-  - Adds an `Export 3D OBJ` button
-  - Hooks WebGL / WebGL2 and captures triangle meshes as they’re drawn
-  - Exports `easyeda_model.obj` (triangle soup, no materials)
+- On the **EasyEDA 3D viewer**:
+  - `Export 3D OBJ` button captures WebGL geometry and exports a mesh as:
+    `easyeda_model.obj`
 
-Works nicely with KiCad, FreeCAD, Blender, and other tools that can import `.obj`.
+Useful for KiCad, FreeCAD, Blender, or converting to STEP.
 
 ---
 
-## Install (Chromium-based browsers)
+## Install (Chromium browsers)
 
-1. Clone or download this repository.
-2. Open `chrome://extensions/` (or `edge://extensions/` / `brave://extensions/`).
+1. Clone or download this repo.
+2. Open `chrome://extensions/` (or `edge://extensions/`, `brave://extensions/`).
 3. Enable **Developer mode**.
-4. Click **“Load unpacked”** and select the `UnEasy-LCSC` folder.
+4. Click **Load unpacked** → select the `UnEasy-LCSC` folder.
 
-The extension will add buttons automatically on matching LCSC and EasyEDA pages.
+The extension activates automatically on supported pages.
 
 ---
 
 ## Usage
 
-### LCSC
+### On LCSC
 
-1. Open any LCSC product page (e.g. `C48606318`).
-2. Use the floating panel in the bottom-right:
-   - `Download EasyEDA JSON` → saves symbol + footprint JSON (and SVGs if enabled)
-   - `Open 3D Viewer` → opens the EasyEDA 3D viewer for that part
+1. Open a component page (`CXXXXX`).
+2. Use the floating panel bottom-right:
+   - `Download EasyEDA JSON`
+   - (Optional) `Download SVG`
+   - `Open 3D Viewer`
 
-### EasyEDA 3D Viewer
+### In the 3D Viewer
 
-1. Wait for the 3D model to load.
-2. Rotate / zoom the model a bit.
-3. Click `Export 3D OBJ` (bottom-right).
-4. A file named `easyeda_model.obj` will be downloaded.
+1. Wait until the model renders.
+2. Rotate or zoom it once (required to trigger WebGL buffers).
+3. Click `Export 3D OBJ`.
 
-If you get a message like:
-
-> No mesh captured yet — rotate/zoom the 3D model and click Export again.
-
-…just move the model and try again.
+If no mesh appears, move the model a bit and retry.
 
 ---
 
 ## Notes
 
-- Uses only public EasyEDA / LCSC endpoints and WebGL calls your browser already sees.
-- Code is small and intended to be auditable.
+- Extracted `.json` files match EasyEDA’s internal symbol/footprint schema.
+- `.obj` export is geometry-only (no texture/material metadata).
 - Not affiliated with LCSC, EasyEDA, or JLCPCB.
 
 ---
 
 ## License
 
-MIT. See `LICENSE` for details.
+MIT.
