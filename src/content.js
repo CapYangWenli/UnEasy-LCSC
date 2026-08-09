@@ -448,26 +448,68 @@
       container.appendChild(menu);
       document.body.appendChild(container);
 
+      let menuIdleTimer = null;
+      const MENU_IDLE_MS = 8000;
+
+      function clearMenuIdleTimer() {
+        if (menuIdleTimer != null) {
+          clearTimeout(menuIdleTimer);
+          menuIdleTimer = null;
+        }
+      }
+
+      function armMenuIdleTimer() {
+        clearMenuIdleTimer();
+        if (menu.hidden) return;
+        menuIdleTimer = setTimeout(() => setMenuOpen(false), MENU_IDLE_MS);
+      }
+
       function setMenuOpen(open) {
         menu.hidden = !open;
         btnMore.setAttribute("aria-expanded", open ? "true" : "false");
         btnMore.textContent = open ? "More ▴" : "More ▾";
+        if (open) armMenuIdleTimer();
+        else clearMenuIdleTimer();
       }
 
       btnMore.addEventListener("click", (e) => {
+        e.preventDefault();
         e.stopPropagation();
         setMenuOpen(menu.hidden);
       });
 
-      const onDocClick = (e) => {
-        if (!container.contains(e.target)) setMenuOpen(false);
+      // LCSC/JLCPCB pages often swallow bubble-phase clicks; use capture +
+      // pointerdown/keydown/scroll so the menu cannot stay stuck open.
+      const onOutsidePointer = (e) => {
+        if (!menu.hidden && !container.contains(e.target)) setMenuOpen(false);
       };
-      document.addEventListener("click", onDocClick, true);
+      const onKeyDown = (e) => {
+        if (e.key === "Escape") setMenuOpen(false);
+      };
+      const onScrollClose = () => {
+        if (!menu.hidden) setMenuOpen(false);
+      };
+      const onMenuInteract = () => {
+        if (!menu.hidden) armMenuIdleTimer();
+      };
+
+      document.addEventListener("pointerdown", onOutsidePointer, true);
+      document.addEventListener("keydown", onKeyDown, true);
+      window.addEventListener("scroll", onScrollClose, true);
+      menu.addEventListener("pointerdown", onMenuInteract, true);
+      menu.addEventListener("mousemove", onMenuInteract, true);
+
       container._uneasyCleanup = () => {
-        document.removeEventListener("click", onDocClick, true);
+        clearMenuIdleTimer();
+        document.removeEventListener("pointerdown", onOutsidePointer, true);
+        document.removeEventListener("keydown", onKeyDown, true);
+        window.removeEventListener("scroll", onScrollClose, true);
+        menu.removeEventListener("pointerdown", onMenuInteract, true);
+        menu.removeEventListener("mousemove", onMenuInteract, true);
       };
 
       btnKicad.addEventListener("click", async () => {
+        setMenuOpen(false);
         if (typeof UnEasyKicad === "undefined") {
           alert("KiCad converter failed to load. Reload the extension.");
           return;
