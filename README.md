@@ -1,6 +1,6 @@
 # UnEasy-LCSC
 
-**UnEasy-LCSC** is a browser extension that lets you download footprints, symbols, and 3d models right from LCSC's website:
+**UnEasy-LCSC** is a browser extension that lets you download footprints, symbols, and 3d models right from LCSC and JLCPCB part pages:
 
 - Extracts **symbol** and **footprint** in native **EasyEDA `.json` format that you can import in KiCAD**
 - Optionally downloads **SVG previews** (symbol + footprint)
@@ -15,7 +15,7 @@ Everything runs **locally in your browser** — no EasyEDA account necessary.
 
 Use the signed add-on in [`releases/`](releases/) — this is the recommended install path.
 
-1. Download [`releases/uneasy-lcsc-0.4.1.xpi`](releases/uneasy-lcsc-0.4.1.xpi).
+1. Download [`releases/uneasy-lcsc-0.4.2.xpi`](releases/uneasy-lcsc-0.4.2.xpi).
 2. Open Firefox → `about:addons`.
 3. Click the gear icon → **Install Add-on From File…**
 4. Select the downloaded `.xpi`.
@@ -37,9 +37,9 @@ The extension activates automatically on supported pages.
 
 ## Usage
 
-### On LCSC
+### On LCSC / JLCPCB
 
-1. Open a component page (`CXXXXX`).
+1. Open a component page (`CXXXXX`), e.g. on lcsc.com or `jlcpcb.com/partdetail/.../C#####`.
 2. Use the floating panel bottom-right:
    - `Download EasyEDA JSON`
    - (Optional) `Download SVG`

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "UnEasy-LCSC",
-  "description": "Extract EasyEDA symbol/footprint JSON from LCSC and export 3D OBJ from the EasyEDA viewer.",
-  "version": "0.4.1",
+  "description": "Extract EasyEDA symbol/footprint JSON from LCSC/JLCPCB and export 3D OBJ from the EasyEDA viewer.",
+  "version": "0.4.2",
 
   "browser_specific_settings": {
     "gecko": {
@@ -19,6 +19,8 @@
       "matches": [
         "*://*.lcsc.com/*",
         "*://lcsc.com/*",
+        "*://*.jlcpcb.com/*",
+        "*://jlcpcb.com/*",
         "*://easyeda.com/editor/*",
         "*://*.easyeda.com/editor/*"
       ],
@@ -32,7 +34,9 @@
     "https://easyeda.com/*",
     "https://*.easyeda.com/*",
     "https://lcsc.com/*",
-    "https://*.lcsc.com/*"
+    "https://*.lcsc.com/*",
+    "https://jlcpcb.com/*",
+    "https://*.jlcpcb.com/*"
   ],
 
   "web_accessible_resources": [
