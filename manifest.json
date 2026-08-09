@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "UnEasy-LCSC",
-  "description": "Extract EasyEDA symbol/footprint JSON from LCSC/JLCPCB and export 3D OBJ from the EasyEDA viewer.",
-  "version": "0.4.2",
+  "description": "Download EasyEDA/LCSC/JLCPCB parts as KiCad symbols, footprints, and STEP models.",
+  "version": "0.6.2",
 
   "browser_specific_settings": {
     "gecko": {
@@ -12,6 +12,12 @@
         "required": ["none"]
       }
     }
+  },
+
+  "permissions": ["downloads"],
+
+  "background": {
+    "scripts": ["src/background.js"]
   },
 
   "content_scripts": [
@@ -24,7 +30,7 @@
         "*://easyeda.com/editor/*",
         "*://*.easyeda.com/editor/*"
       ],
-      "js": ["src/content.js"],
+      "js": ["src/kicad/convert.js", "src/content.js"],
       "run_at": "document_idle",
       "all_frames": true
     }
@@ -33,6 +39,10 @@
   "host_permissions": [
     "https://easyeda.com/*",
     "https://*.easyeda.com/*",
+    "https://modules.easyeda.com/*",
+    "https://lceda.cn/*",
+    "https://*.lceda.cn/*",
+    "https://modules.lceda.cn/*",
     "https://lcsc.com/*",
     "https://*.lcsc.com/*",
     "https://jlcpcb.com/*",

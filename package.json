@@ -1,8 +1,8 @@
 {
   "name": "uneasy-lcsc",
-  "version": "0.4.2",
+  "version": "0.6.2",
   "private": true,
-  "description": "Browser extension: EasyEDA symbol/footprint JSON and 3D OBJ export from LCSC/JLCPCB",
+  "description": "Browser extension: LCSC/JLCPCB parts to KiCad symbols, footprints, and STEP models",
   "scripts": {
     "firefox:run": "web-ext run --source-dir . --firefox-profile uneasy-lcsc-dev --keep-profile-changes",
     "firefox:build": "web-ext build --source-dir . --overwrite-dest",

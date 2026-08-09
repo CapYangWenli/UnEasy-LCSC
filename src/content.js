@@ -69,25 +69,146 @@
       return mp || name || val || null;
     }
 
-    async function downloadFile(filename, text, mime = "application/octet-stream") {
-      const blob = new Blob([text], { type: mime });
+    function getRuntime() {
+      return (typeof browser !== "undefined" && browser.runtime) || chrome.runtime;
+    }
+
+    function libraryPath(kind, filename) {
+      if (typeof UnEasyKicad !== "undefined" && UnEasyKicad.libraryPath) {
+        return UnEasyKicad.libraryPath(kind, filename);
+      }
+      const base = String(filename || "file").split(/[/\\]/).pop();
+      if (kind === "symbol") return `UnEasy-LCSC/UnEasy-LCSC.kicad_symdir/${base}`;
+      if (kind === "footprint") return `UnEasy-LCSC/UnEasy-LCSC.pretty/${base}`;
+      if (kind === "step") return `UnEasy-LCSC/UnEasy-LCSC.3dshapes/${base}`;
+      if (kind === "easyeda") return `UnEasy-LCSC/easyeda/${base}`;
+      return `UnEasy-LCSC/${base}`;
+    }
+
+    async function downloadViaBackground(filename, payload) {
+      const runtime = getRuntime();
+      const response = await runtime.sendMessage({
+        type: "uneasy-download",
+        filename,
+        mime: payload.mime || "application/octet-stream",
+        text: payload.text,
+        buffer: payload.buffer
+      });
+      if (!response || !response.ok) {
+        throw new Error((response && response.error) || "Download failed.");
+      }
+    }
+
+    async function fetchViaBackground(url) {
+      const runtime = getRuntime();
+      const response = await runtime.sendMessage({
+        type: "uneasy-fetch",
+        url
+      });
+      if (!response || !response.ok) {
+        throw new Error((response && response.error) || "Background fetch failed.");
+      }
+      return response;
+    }
+
+    async function saveStepViaBackground(filename, uuid3d) {
+      const runtime = getRuntime();
+      const response = await runtime.sendMessage({
+        type: "uneasy-save-step",
+        filename,
+        uuid: uuid3d
+      });
+      if (!response || !response.ok) {
+        throw new Error((response && response.error) || "STEP download failed.");
+      }
+      return response;
+    }
+
+    function downloadBlobFallback(filename, blob) {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = filename;
+      a.download = String(filename).split(/[/\\]/).pop();
       document.body.appendChild(a);
       a.click();
       a.remove();
-      URL.revokeObjectURL(url);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    async function downloadBlob(filename, blob, mime) {
+      try {
+        const buffer = await blob.arrayBuffer();
+        await downloadViaBackground(filename, {
+          buffer,
+          mime: mime || blob.type || "application/octet-stream"
+        });
+      } catch (err) {
+        // Fallback: <a download> usually cannot create subfolders.
+        console.warn("[UnEasy-LCSC] background download failed, falling back:", err);
+        downloadBlobFallback(filename, blob);
+      }
+    }
+
+    async function downloadFile(filename, text, mime = "application/octet-stream") {
+      try {
+        await downloadViaBackground(filename, { text, mime });
+      } catch (err) {
+        console.warn("[UnEasy-LCSC] background download failed, falling back:", err);
+        downloadBlobFallback(filename, new Blob([text], { type: mime }));
+      }
+    }
+
+    async function resolveFootprint3D(lcscCode) {
+      const { footprintEntry } = await fetchSvgsMeta(lcscCode);
+      if (!footprintEntry?.component_uuid) {
+        throw new Error("No footprint component UUID found for this part.");
+      }
+
+      const fpDataStr = await fetchDataStr(footprintEntry.component_uuid);
+      if (!fpDataStr) {
+        throw new Error("Footprint dataStr missing.");
+      }
+
+      const info3d = extract3DInfoFromDataStr(fpDataStr);
+      if (!info3d) {
+        throw new Error("No outline3D SVGNODE / 3D info found in footprint.");
+      }
+
+      return info3d;
+    }
+
+    async function fetchJson(url, label) {
+      let text;
+      let status;
+      try {
+        const resp = await fetchViaBackground(url);
+        status = resp.status;
+        text = new TextDecoder("utf-8").decode(resp.buffer);
+      } catch (_) {
+        const resp = await fetch(url);
+        status = resp.status;
+        text = await resp.text();
+      }
+      if (status < 200 || status >= 300) {
+        throw new Error(`${label} HTTP ${status}`);
+      }
+      try {
+        return JSON.parse(text);
+      } catch {
+        throw new Error(`${label} returned non-JSON (HTTP ${status}).`);
+      }
     }
 
     async function fetchSvgsMeta(lcscCode) {
       const svgsUrl = `https://easyeda.com/api/products/${lcscCode}/svgs`;
-      const svgsResp = await fetch(svgsUrl);
-      if (!svgsResp.ok) throw new Error(`SVGS HTTP ${svgsResp.status}`);
-      const svgsData = await svgsResp.json();
+      const svgsData = await fetchJson(svgsUrl, "SVGS");
 
-      if (!svgsData.success) throw new Error("SVGS API invalid");
+      if (!svgsData.success) {
+        const detail = svgsData.message || svgsData.code || "unknown";
+        throw new Error(
+          `No EasyEDA CAD data for ${lcscCode} (${detail}). Check the LCSC code.`
+        );
+      }
 
       const results = svgsData.result || [];
       const symbolEntry = results.find(r => r.docType === 2);
@@ -95,17 +216,21 @@
       return { symbolEntry, footprintEntry };
     }
 
-    async function fetchDataStr(uuid) {
+    async function fetchComponent(uuid) {
       const compUrl = `https://easyeda.com/api/components/${uuid}`;
-      const compResp = await fetch(compUrl);
-      if (!compResp.ok) throw new Error(`Component HTTP ${compResp.status}`);
-      const compData = await compResp.json();
-      return compData?.result?.dataStr;
+      const compData = await fetchJson(compUrl, "Component");
+      return compData?.result || null;
+    }
+
+    async function fetchDataStr(uuid) {
+      const result = await fetchComponent(uuid);
+      return result?.dataStr || null;
     }
 
     function extract3DInfoFromDataStr(dataStr) {
       if (!dataStr || !Array.isArray(dataStr.shape)) return null;
 
+      let fallback = null;
       for (const entry of dataStr.shape) {
         if (typeof entry !== "string") continue;
         if (!entry.startsWith("SVGNODE~")) continue;
@@ -114,33 +239,40 @@
         try {
           const node = JSON.parse(jsonPart);
           const attrs = node && node.attrs;
-          if (!attrs) continue;
+          if (!attrs || !attrs.uuid) continue;
 
-          if (attrs.c_etype === "outline3D" && attrs.uuid) {
-            const uuid3d = attrs.uuid;
-            const title =
-              attrs.title ||
-              (dataStr.head &&
-                dataStr.head.c_para &&
-                (dataStr.head.c_para["3DModel"] || dataStr.head.c_para["package"])) ||
-              "model";
-            return { uuid3d, modelName3d: title };
-          }
+          const title =
+            attrs.title ||
+            (dataStr.head &&
+              dataStr.head.c_para &&
+              (dataStr.head.c_para["3DModel"] || dataStr.head.c_para["package"])) ||
+            "model";
+          const info = { uuid3d: attrs.uuid, modelName3d: title };
+
+          if (attrs.c_etype === "outline3D") return info;
+          if (!fallback) fallback = info;
         } catch (e) {
           continue;
         }
       }
-      return null;
+      return fallback;
     }
 
     function mountPanel(lcscCode) {
       const existing = document.getElementById(PANEL_ID);
       if (existing) {
         if (existing.dataset.lcscCode === lcscCode) return;
+        if (typeof existing._uneasyCleanup === "function") existing._uneasyCleanup();
         existing.remove();
       }
 
       if (!document.body) return;
+
+      let extVersion = "?";
+      try {
+        const runtime = (typeof browser !== "undefined" && browser.runtime) || chrome.runtime;
+        extVersion = runtime.getManifest().version;
+      } catch (_) {}
 
       const container = document.createElement("div");
       container.id = PANEL_ID;
@@ -150,80 +282,280 @@
         right: "20px",
         bottom: "20px",
         zIndex: "999999",
-        display: "flex",
-        flexDirection: "column",
-        gap: "6px",
-        alignItems: "flex-end",
-        fontFamily: "sans-serif",
+        fontFamily: "system-ui, Segoe UI, sans-serif",
         fontSize: "12px"
       });
 
-      const btn = document.createElement("button");
-      btn.id = "lcsc-footprint-btn";
-      btn.textContent = "Download EasyEDA JSON";
-      Object.assign(btn.style, {
-        padding: "8px 12px",
-        background: "#1976d2",
+      const bar = document.createElement("div");
+      Object.assign(bar.style, {
+        display: "flex",
+        alignItems: "stretch",
+        gap: "0",
+        boxShadow: "0 2px 8px rgba(0,0,0,0.28)",
+        borderRadius: "6px",
+        overflow: "hidden"
+      });
+
+      const btnKicad = document.createElement("button");
+      btnKicad.id = "lcsc-download-kicad";
+      btnKicad.type = "button";
+      btnKicad.textContent = "Download KiCad";
+      Object.assign(btnKicad.style, {
+        padding: "9px 14px",
+        background: "#e65100",
         color: "#fff",
         border: "none",
+        cursor: "pointer",
+        fontSize: "12px",
+        fontWeight: "600",
+        lineHeight: "1.2"
+      });
+
+      const btnMore = document.createElement("button");
+      btnMore.id = "lcsc-more-btn";
+      btnMore.type = "button";
+      btnMore.setAttribute("aria-haspopup", "true");
+      btnMore.setAttribute("aria-expanded", "false");
+      btnMore.title = "More options";
+      btnMore.textContent = "More ▾";
+      Object.assign(btnMore.style, {
+        padding: "9px 10px",
+        background: "#bf360c",
+        color: "#fff",
+        border: "none",
+        borderLeft: "1px solid rgba(255,255,255,0.25)",
+        cursor: "pointer",
+        fontSize: "12px",
+        lineHeight: "1.2",
+        whiteSpace: "nowrap"
+      });
+
+      const menu = document.createElement("div");
+      menu.id = "lcsc-more-menu";
+      menu.hidden = true;
+      Object.assign(menu.style, {
+        position: "absolute",
+        right: "0",
+        bottom: "calc(100% + 6px)",
+        minWidth: "220px",
+        background: "#fff",
+        color: "#222",
+        border: "1px solid #ddd",
+        borderRadius: "6px",
+        boxShadow: "0 4px 16px rgba(0,0,0,0.18)",
+        padding: "4px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "2px"
+      });
+
+      function styleMenuItem(el) {
+        Object.assign(el.style, {
+          display: "block",
+          width: "100%",
+          textAlign: "left",
+          padding: "8px 10px",
+          background: "transparent",
+          color: "#222",
+          border: "none",
+          borderRadius: "4px",
+          cursor: "pointer",
+          fontSize: "12px",
+          lineHeight: "1.3",
+          boxSizing: "border-box"
+        });
+        el.addEventListener("mouseenter", () => {
+          if (!el.disabled) el.style.background = "#f3f3f3";
+        });
+        el.addEventListener("mouseleave", () => {
+          el.style.background = "transparent";
+        });
+      }
+
+      const btnStep = document.createElement("button");
+      btnStep.id = "lcsc-download-step";
+      btnStep.type = "button";
+      btnStep.textContent = "Download STEP";
+      styleMenuItem(btnStep);
+
+      const btn3d = document.createElement("button");
+      btn3d.id = "lcsc-open-3d";
+      btn3d.type = "button";
+      btn3d.textContent = "Open 3D Viewer";
+      styleMenuItem(btn3d);
+
+      const btn = document.createElement("button");
+      btn.id = "lcsc-footprint-btn";
+      btn.type = "button";
+      btn.textContent = "Download EasyEDA JSON";
+      styleMenuItem(btn);
+
+      const svgLabel = document.createElement("label");
+      svgLabel.htmlFor = "lcsc-download-svg";
+      Object.assign(svgLabel.style, {
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+        padding: "8px 10px",
         borderRadius: "4px",
         cursor: "pointer",
         fontSize: "12px",
-        boxShadow: "0 2px 4px rgba(0,0,0,0.3)"
+        color: "#222",
+        userSelect: "none"
       });
-
-      const svgLabel = document.createElement("label");
-      svgLabel.style.display = "flex";
-      svgLabel.style.alignItems = "center";
-      svgLabel.style.gap = "4px";
-      svgLabel.style.cursor = "pointer";
+      svgLabel.addEventListener("mouseenter", () => {
+        svgLabel.style.background = "#f3f3f3";
+      });
+      svgLabel.addEventListener("mouseleave", () => {
+        svgLabel.style.background = "transparent";
+      });
 
       const svgCheckbox = document.createElement("input");
       svgCheckbox.type = "checkbox";
       svgCheckbox.id = "lcsc-download-svg";
 
       const svgText = document.createElement("span");
-      svgText.textContent = "Download SVG previews too";
+      svgText.textContent = "Include SVG previews";
 
       svgLabel.appendChild(svgCheckbox);
       svgLabel.appendChild(svgText);
 
-      const btn3d = document.createElement("button");
-      btn3d.id = "lcsc-open-3d";
-      btn3d.textContent = "Open 3D Viewer";
-      Object.assign(btn3d.style, {
-        padding: "6px 10px",
-        background: "#388e3c",
-        color: "#fff",
-        border: "none",
-        borderRadius: "4px",
-        cursor: "pointer",
-        fontSize: "11px",
-        boxShadow: "0 2px 4px rgba(0,0,0,0.3)"
+      const menuDivider = document.createElement("div");
+      Object.assign(menuDivider.style, {
+        height: "1px",
+        background: "#eee",
+        margin: "4px 6px"
       });
 
       const versionLabel = document.createElement("div");
-      let extVersion = "?";
-      try {
-        const runtime = (typeof browser !== "undefined" && browser.runtime) || chrome.runtime;
-        extVersion = runtime.getManifest().version;
-      } catch (_) {}
       versionLabel.textContent = `UnEasy-LCSC v${extVersion}`;
       Object.assign(versionLabel.style, {
-        color: "#666",
+        color: "#888",
         fontSize: "10px",
-        background: "rgba(255,255,255,0.9)",
-        padding: "2px 6px",
-        borderRadius: "3px"
+        padding: "4px 10px 6px"
       });
 
-      container.appendChild(btn);
-      container.appendChild(svgLabel);
-      container.appendChild(btn3d);
-      container.appendChild(versionLabel);
+      menu.appendChild(btnStep);
+      menu.appendChild(btn3d);
+      menu.appendChild(btn);
+      menu.appendChild(svgLabel);
+      menu.appendChild(menuDivider);
+      menu.appendChild(versionLabel);
+
+      bar.appendChild(btnKicad);
+      bar.appendChild(btnMore);
+      container.appendChild(bar);
+      container.appendChild(menu);
       document.body.appendChild(container);
 
+      function setMenuOpen(open) {
+        menu.hidden = !open;
+        btnMore.setAttribute("aria-expanded", open ? "true" : "false");
+        btnMore.textContent = open ? "More ▴" : "More ▾";
+      }
+
+      btnMore.addEventListener("click", (e) => {
+        e.stopPropagation();
+        setMenuOpen(menu.hidden);
+      });
+
+      const onDocClick = (e) => {
+        if (!container.contains(e.target)) setMenuOpen(false);
+      };
+      document.addEventListener("click", onDocClick, true);
+      container._uneasyCleanup = () => {
+        document.removeEventListener("click", onDocClick, true);
+      };
+
+      btnKicad.addEventListener("click", async () => {
+        if (typeof UnEasyKicad === "undefined") {
+          alert("KiCad converter failed to load. Reload the extension.");
+          return;
+        }
+
+        btnKicad.disabled = true;
+        const oldText = btnKicad.textContent;
+        btnKicad.textContent = "Converting...";
+
+        try {
+          const { symbolEntry, footprintEntry } = await fetchSvgsMeta(lcscCode);
+
+          let modelName = lcscCode;
+          if (symbolEntry?.svg) {
+            const extracted = extractModelNameFromSvg(symbolEntry.svg);
+            if (extracted) modelName = extracted;
+          }
+          modelName = sanitizeFilenamePart(modelName);
+
+          const symbolComponent = symbolEntry?.component_uuid
+            ? await fetchComponent(symbolEntry.component_uuid)
+            : null;
+          const footprintDataStr = footprintEntry?.component_uuid
+            ? await fetchDataStr(footprintEntry.component_uuid)
+            : null;
+
+          if (!symbolComponent && !footprintDataStr) {
+            throw new Error("No symbol/footprint data found for this part.");
+          }
+
+          const converted = UnEasyKicad.convertEasyedaToKicad({
+            symbolComponent,
+            footprintDataStr,
+            lcsc: lcscCode,
+            name: modelName
+          });
+
+          if (converted.symbol && converted.symbol.pinCount === 0) {
+            throw new Error(
+              "Converted symbol has no pins (unsupported or empty EasyEDA symbol data)."
+            );
+          }
+
+          if (converted.symbol) {
+            await downloadFile(
+              libraryPath("symbol", converted.symbol.filename),
+              converted.symbol.content,
+              "application/x-kicad-symbol"
+            );
+          }
+          if (converted.footprint) {
+            await downloadFile(
+              libraryPath("footprint", converted.footprint.filename),
+              converted.footprint.content,
+              "application/x-kicad-footprint"
+            );
+          }
+
+          // Prefer official STEP into UnEasy-LCSC.3dshapes when available.
+          try {
+            const info3d = footprintDataStr
+              ? extract3DInfoFromDataStr(footprintDataStr)
+              : null;
+            if (info3d?.uuid3d) {
+              const stepName =
+                converted.footprint?.stepFilename ||
+                `${lcscCode}_${sanitizeFilenamePart(info3d.modelName3d || "model")}.step`;
+              await saveStepViaBackground(
+                libraryPath("step", stepName),
+                info3d.uuid3d
+              );
+            }
+          } catch (stepErr) {
+            console.warn("[UnEasy-LCSC] STEP optional download failed:", stepErr);
+          }
+
+          btnKicad.textContent = "KiCad done!";
+        } catch (err) {
+          console.error("[UnEasy-LCSC KiCad]", err);
+          alert("Failed to convert to KiCad: " + err.message);
+          btnKicad.textContent = oldText;
+        } finally {
+          btnKicad.disabled = false;
+        }
+      });
+
       btn.addEventListener("click", async () => {
+        setMenuOpen(false);
         btn.disabled = true;
         btn.textContent = "Fetching...";
 
@@ -241,7 +573,7 @@
             const sym = await fetchDataStr(symbolEntry.component_uuid);
             if (sym) {
               await downloadFile(
-                `${lcscCode}_${modelName}_symbol.json`,
+                libraryPath("easyeda", `${lcscCode}_${modelName}_symbol.json`),
                 JSON.stringify(sym, null, 2),
                 "application/json"
               );
@@ -252,7 +584,7 @@
             const fp = await fetchDataStr(footprintEntry.component_uuid);
             if (fp) {
               await downloadFile(
-                `${lcscCode}_${modelName}_footprint.json`,
+                libraryPath("easyeda", `${lcscCode}_${modelName}_footprint.json`),
                 JSON.stringify(fp, null, 2),
                 "application/json"
               );
@@ -262,14 +594,14 @@
           if (svgCheckbox.checked) {
             if (symbolEntry?.svg) {
               await downloadFile(
-                `${lcscCode}_${modelName}_symbol.svg`,
+                libraryPath("easyeda", `${lcscCode}_${modelName}_symbol.svg`),
                 symbolEntry.svg,
                 "image/svg+xml"
               );
             }
             if (footprintEntry?.svg) {
               await downloadFile(
-                `${lcscCode}_${modelName}_footprint.svg`,
+                libraryPath("easyeda", `${lcscCode}_${modelName}_footprint.svg`),
                 footprintEntry.svg,
                 "image/svg+xml"
               );
@@ -286,28 +618,37 @@
         }
       });
 
+      btnStep.addEventListener("click", async () => {
+        setMenuOpen(false);
+        btnStep.disabled = true;
+        const oldText = btnStep.textContent;
+        btnStep.textContent = "Fetching STEP...";
+
+        try {
+          const { uuid3d, modelName3d } = await resolveFootprint3D(lcscCode);
+          const modelName = sanitizeFilenamePart(modelName3d || "model");
+          await saveStepViaBackground(
+            libraryPath("step", `${lcscCode}_${modelName}.step`),
+            uuid3d
+          );
+          btnStep.textContent = "STEP downloaded!";
+        } catch (err) {
+          console.error("[UnEasy-LCSC STEP]", err);
+          alert("Failed to download STEP: " + err.message);
+          btnStep.textContent = oldText;
+        } finally {
+          btnStep.disabled = false;
+        }
+      });
+
       btn3d.addEventListener("click", async () => {
+        setMenuOpen(false);
         btn3d.disabled = true;
         const oldText = btn3d.textContent;
         btn3d.textContent = "Opening...";
 
         try {
-          const { footprintEntry } = await fetchSvgsMeta(lcscCode);
-          if (!footprintEntry?.component_uuid) {
-            throw new Error("No footprint component UUID found for this part.");
-          }
-
-          const fpDataStr = await fetchDataStr(footprintEntry.component_uuid);
-          if (!fpDataStr) {
-            throw new Error("Footprint dataStr missing.");
-          }
-
-          const info3d = extract3DInfoFromDataStr(fpDataStr);
-          if (!info3d) {
-            throw new Error("No outline3D SVGNODE / 3D info found in footprint.");
-          }
-
-          const { uuid3d, modelName3d } = info3d;
+          const { uuid3d, modelName3d } = await resolveFootprint3D(lcscCode);
           const modelUUID = uuid3d;
           const modelName = modelName3d || "model";
 
@@ -336,7 +677,11 @@
     function syncPanelToUrl() {
       const code = getPartCode();
       if (!code) {
-        document.getElementById(PANEL_ID)?.remove();
+        const panel = document.getElementById(PANEL_ID);
+        if (panel) {
+          if (typeof panel._uneasyCleanup === "function") panel._uneasyCleanup();
+          panel.remove();
+        }
         return;
       }
       mountPanel(code);
