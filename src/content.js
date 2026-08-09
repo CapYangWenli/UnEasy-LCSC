@@ -319,8 +319,9 @@
     // Inject external script (injected.js) into the page
     try {
         const script = document.createElement("script");
-        // chrome.runtime.getURL works in Chromium; Firefox also supports it
-        script.src = chrome.runtime.getURL("src/injected.js");
+        // chrome.* and browser.* both work in Firefox; Chromium uses chrome.*
+        const runtime = (typeof browser !== "undefined" && browser.runtime) || chrome.runtime;
+        script.src = runtime.getURL("src/injected.js");
         script.onload = () => {
         console.log("[Extractor] injected.js loaded into page.");
         script.remove();

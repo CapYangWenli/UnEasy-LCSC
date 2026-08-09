@@ -1,0 +1,14 @@
+{
+  "name": "uneasy-lcsc",
+  "version": "0.4.0",
+  "private": true,
+  "description": "Browser extension: EasyEDA symbol/footprint JSON and 3D OBJ export from LCSC",
+  "scripts": {
+    "firefox:run": "web-ext run --source-dir . --firefox-profile uneasy-lcsc-dev --keep-profile-changes",
+    "firefox:build": "web-ext build --source-dir . --overwrite-dest",
+    "firefox:sign": "web-ext sign --source-dir . --channel unlisted --artifacts-dir web-ext-artifacts"
+  },
+  "devDependencies": {
+    "web-ext": "^8.9.0"
+  }
+}
