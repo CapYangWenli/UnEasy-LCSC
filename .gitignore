@@ -1,4 +1,4 @@
 node_modules/
 web-ext-artifacts/
-*.xpi
 .web-ext-cache/
+*.zip
