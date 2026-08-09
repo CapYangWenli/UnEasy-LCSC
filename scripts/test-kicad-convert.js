@@ -29,6 +29,15 @@ async function testPart(codeId, expectPinsMin) {
   const pinCount = (out.symbol.content.match(/\(pin /g) || []).length;
   const unitCount = (out.symbol.content.match(/_(\d+)_1"/g) || []).length;
   const padCount = (out.footprint.content.match(/\(pad /g) || []).length;
+  const rect = out.symbol.content.match(
+    /\(rectangle\s*\(start ([-\d.]+) ([-\d.]+)\)\s*\(end ([-\d.]+) ([-\d.]+)\)/
+  );
+  let rectW = 0;
+  let rectH = 0;
+  if (rect) {
+    rectW = Math.abs(+rect[3] - +rect[1]);
+    rectH = Math.abs(+rect[4] - +rect[2]);
+  }
   console.log(
     codeId,
     "pins",
@@ -37,17 +46,36 @@ async function testPart(codeId, expectPinsMin) {
     unitCount,
     "pads",
     padCount,
+    "rect",
+    `${rectW.toFixed(2)}x${rectH.toFixed(2)}`,
     "file",
     out.symbol.filename
   );
   if (pinCount < expectPinsMin || padCount < 1) {
     throw new Error(`Unexpected conversion for ${codeId}`);
   }
+  return { out, rectW, rectH, pinCount };
 }
 
 (async () => {
   await testPart("C14284", 2);
   await testPart("C17702531", 100);
+  const c9864 = await testPart("C9864", 8);
+  if (!(c9864.rectW > 1 && c9864.rectH > 1)) {
+    throw new Error(
+      `C9864 body rectangle degenerate: ${c9864.rectW}x${c9864.rectH}`
+    );
+  }
+
+  // Footprint descr should include MPN from the symbol (not the package).
+  const c98715 = await testPart("C98715", 8);
+  const descr = (c98715.out.footprint.content.match(/\(descr "([^"]*)"\)/) || [])[1] || "";
+  if (!/UC3845BD1R2G/.test(descr)) {
+    throw new Error(`C98715 footprint descr missing MPN: ${descr}`);
+  }
+  if (!/\(property "MPN" "UC3845BD1R2G"\)/.test(c98715.out.footprint.content)) {
+    throw new Error("C98715 footprint missing MPN property");
+  }
   console.log("OK");
 })().catch((e) => {
   console.error(e);

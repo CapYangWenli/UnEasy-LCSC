@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>UnEasy-LCSC — KiCad library</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f4f1;
+        --ink: #1f1a17;
+        --muted: #6b625a;
+        --accent: #e65100;
+        --card: #fff;
+        --line: #e5ddd4;
+        --ok: #1b5e20;
+      }
+      body {
+        margin: 0;
+        font: 14px/1.45 system-ui, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        padding: 24px;
+      }
+      main {
+        max-width: 520px;
+        margin: 0 auto;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 20px 22px;
+      }
+      h1 {
+        font-size: 18px;
+        margin: 0 0 8px;
+      }
+      p {
+        margin: 0 0 12px;
+        color: var(--muted);
+      }
+      code {
+        font-size: 12px;
+        background: #f0ebe4;
+        padding: 1px 5px;
+        border-radius: 4px;
+        color: var(--ink);
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 16px 0 8px;
+      }
+      button {
+        border: none;
+        border-radius: 6px;
+        padding: 9px 12px;
+        cursor: pointer;
+        font: inherit;
+      }
+      button.primary {
+        background: var(--accent);
+        color: #fff;
+        font-weight: 600;
+      }
+      button.secondary {
+        background: #eee;
+        color: var(--ink);
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+      #status {
+        margin-top: 12px;
+        padding: 10px 12px;
+        border-radius: 6px;
+        background: #f7f1ea;
+        color: var(--ink);
+        white-space: pre-wrap;
+      }
+      #status.ready {
+        background: #e8f5e9;
+        color: var(--ok);
+      }
+      .note {
+        font-size: 12px;
+        margin-top: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>KiCad library folder</h1>
+      <p>
+        Chromium only. Choose the folder KiCad uses as
+        <code>UNEASY_LCSC</code>. Downloads write into:
+      </p>
+      <p>
+        <code>UnEasy-LCSC.kicad_symdir/</code><br />
+        <code>UnEasy-LCSC.pretty/</code><br />
+        <code>UnEasy-LCSC.3dshapes/</code>
+      </p>
+      <div class="row">
+        <button id="pick" class="primary" type="button">Choose folder…</button>
+        <button id="allow" class="secondary" type="button">Allow access</button>
+        <button id="clear" class="secondary" type="button">Clear</button>
+      </div>
+      <div id="status">Checking…</div>
+      <p class="note">
+        After Choose folder… (or Allow access), status must say <strong>Ready</strong>.
+        Keep this tab open while downloading — Chrome only allows writes from this
+        page. Reloading the extension requires Choose/Allow again. Firefox ignores
+        this and uses <code>Downloads/UnEasy-LCSC/</code>.
+      </p>
+    </main>
+    <script src="library-fs.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

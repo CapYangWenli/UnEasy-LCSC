@@ -137,13 +137,26 @@
   }
 
   function parseRect(line) {
-    // R~x~y~rx~ry~w~h~...  OR R~x~y~~w~h~...
+    // EasyEDA rectangle forms (symbol/footprint):
+    //   R~x~y~rx~ry~w~h~...     (rx/ry may be "" for sharp corners → "~~~")
+    //   R~x~y~~w~h~...          (single empty slot, older docs)
+    //   R~x~y~w~h~color~...     (no radius slots)
     const p = line.split("~");
-    const hasRadii = p[3] !== "" || p[4] !== "";
-    if (hasRadii) {
+    const isNumField = (s) => s !== "" && s != null && Number.isFinite(Number(s));
+
+    // Prefer w/h in the rx/ry layout when those slots parse as numbers.
+    if (isNumField(p[5]) && isNumField(p[6])) {
       return { x: num(p[1]), y: num(p[2]), w: num(p[5]), h: num(p[6]) };
     }
-    return { x: num(p[1]), y: num(p[2]), w: num(p[4]), h: num(p[5]) };
+    // R~x~y~~w~h~color...
+    if (p[3] === "" && isNumField(p[4]) && isNumField(p[5])) {
+      return { x: num(p[1]), y: num(p[2]), w: num(p[4]), h: num(p[5]) };
+    }
+    // R~x~y~w~h~color...
+    if (isNumField(p[3]) && isNumField(p[4])) {
+      return { x: num(p[1]), y: num(p[2]), w: num(p[3]), h: num(p[4]) };
+    }
+    return { x: num(p[1]), y: num(p[2]), w: num(p[5]), h: num(p[6]) };
   }
 
   function parsePolylinePoints(pointsStr, ox, oy, flipY) {
@@ -402,8 +415,14 @@ ${unitBlocks}
     const bboxX = eeToMm(num(head.x));
     const bboxY = eeToMm(num(head.y));
     const name = sanitizeName(para.package || meta.package || meta.name || meta.lcsc || "FOOTPRINT");
-    const manufacturer = para.Manufacturer || para.BOM_Manufacturer || "";
-    const mpn = para["Manufacturer Part"] || para["BOM_Manufacturer Part"] || "";
+    // Footprint packages rarely carry MPN; prefer values passed from the symbol.
+    const manufacturer =
+      meta.manufacturer || para.Manufacturer || para.BOM_Manufacturer || "";
+    const mpn =
+      meta.mpn ||
+      para["Manufacturer Part"] ||
+      para["BOM_Manufacturer Part"] ||
+      "";
     const isSmd =
       meta.isSmd != null
         ? !!meta.isSmd
@@ -592,6 +611,16 @@ ${unitBlocks}
     };
   }
 
+  function manufacturerMpnFromSymbol(symbolSource) {
+    if (!symbolSource) return { manufacturer: "", mpn: "" };
+    const ds = normalizeDataStr(symbolSource.dataStr) || {};
+    const para = cPara(ds.head || {});
+    return {
+      manufacturer: para.Manufacturer || para.BOM_Manufacturer || "",
+      mpn: para["Manufacturer Part"] || para["BOM_Manufacturer Part"] || ""
+    };
+  }
+
   function convertEasyedaToKicad({
     symbolDataStr,
     symbolComponent,
@@ -602,18 +631,21 @@ ${unitBlocks}
     const result = { symbol: null, footprint: null };
     let packageName = null;
 
+    const symbolSource =
+      symbolComponent ||
+      (symbolDataStr ? { dataStr: symbolDataStr, subparts: [] } : null);
+    const fromSym = manufacturerMpnFromSymbol(symbolSource);
+
     if (footprintDataStr) {
       result.footprint = exportFootprint(footprintDataStr, {
         lcsc,
         name,
-        package: name
+        package: name,
+        manufacturer: fromSym.manufacturer,
+        mpn: fromSym.mpn
       });
       packageName = result.footprint.packageName;
     }
-
-    const symbolSource =
-      symbolComponent ||
-      (symbolDataStr ? { dataStr: symbolDataStr, subparts: [] } : null);
 
     if (symbolSource) {
       result.symbol = exportSymbolFromComponent(symbolSource, {
@@ -628,6 +660,8 @@ ${unitBlocks}
             lcsc,
             name: pkg,
             package: pkg,
+            manufacturer: fromSym.manufacturer,
+            mpn: fromSym.mpn,
             stepFilename: result.footprint.stepFilename || undefined
           });
         }

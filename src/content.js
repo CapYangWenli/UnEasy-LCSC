@@ -73,6 +73,39 @@
       return (typeof browser !== "undefined" && browser.runtime) || chrome.runtime;
     }
 
+    function extensionAlive() {
+      try {
+        return !!(getRuntime() && getRuntime().id);
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function friendlyRuntimeError(err) {
+      const msg = err && err.message ? err.message : String(err || "");
+      if (/extension context invalidated/i.test(msg) || !extensionAlive()) {
+        return "Extension was reloaded. Refresh this page, then try again.";
+      }
+      return msg || "Unknown error.";
+    }
+
+    async function runtimeSend(message) {
+      if (!extensionAlive()) {
+        throw new Error("Extension was reloaded. Refresh this page, then try again.");
+      }
+      try {
+        const response = await getRuntime().sendMessage(message);
+        return response;
+      } catch (err) {
+        throw new Error(friendlyRuntimeError(err));
+      }
+    }
+
+    // Chromium-only library folder writing (File System Access API). Firefox stays on Downloads/.
+    function isChromiumBrowser() {
+      return !/firefox/i.test(navigator.userAgent || "");
+    }
+
     function libraryPath(kind, filename) {
       if (typeof UnEasyKicad !== "undefined" && UnEasyKicad.libraryPath) {
         return UnEasyKicad.libraryPath(kind, filename);
@@ -86,8 +119,7 @@
     }
 
     async function downloadViaBackground(filename, payload) {
-      const runtime = getRuntime();
-      const response = await runtime.sendMessage({
+      const response = await runtimeSend({
         type: "uneasy-download",
         filename,
         mime: payload.mime || "application/octet-stream",
@@ -97,11 +129,35 @@
       if (!response || !response.ok) {
         throw new Error((response && response.error) || "Download failed.");
       }
+      return response;
+    }
+
+    function noteLibraryFallback(responses) {
+      if (!isChromiumBrowser()) return;
+      const failed = (responses || []).find(
+        (r) =>
+          r &&
+          (r.mode === "downloads" || r.mode === "direct" || r.mode === "blob-download") &&
+          (r.libraryError ||
+            (r.libraryReason &&
+              r.libraryReason !== "no-handle" &&
+              r.libraryReason !== "no-fs-helper"))
+      );
+      if (!failed) return;
+      const detail =
+        failed.libraryError ||
+        "Folder permission missing — click Allow access in the library tab.";
+      console.warn("[UnEasy-LCSC] library folder write failed:", detail);
+      runtimeSend({ type: "uneasy-open-options" }).catch(() => {});
+      alert(
+        "KiCad library folder write failed — files went to Downloads instead.\n\n" +
+          detail +
+          "\n\nIn the library tab, status must say Ready (Allow access / Choose folder…). Keep that tab open, then re-download."
+      );
     }
 
     async function fetchViaBackground(url) {
-      const runtime = getRuntime();
-      const response = await runtime.sendMessage({
+      const response = await runtimeSend({
         type: "uneasy-fetch",
         url
       });
@@ -112,8 +168,7 @@
     }
 
     async function saveStepViaBackground(filename, uuid3d) {
-      const runtime = getRuntime();
-      const response = await runtime.sendMessage({
+      const response = await runtimeSend({
         type: "uneasy-save-step",
         filename,
         uuid: uuid3d
@@ -472,6 +527,33 @@
         else clearMenuIdleTimer();
       }
 
+      if (isChromiumBrowser()) {
+        const btnLib = document.createElement("button");
+        btnLib.id = "lcsc-set-library-folder";
+        btnLib.type = "button";
+        btnLib.textContent = "KiCad library folder…";
+        styleMenuItem(btnLib);
+        btnLib.addEventListener("click", () => {
+          setMenuOpen(false);
+          // Content scripts cannot open chrome-extension:// pages directly.
+          runtimeSend({ type: "uneasy-open-options" }).catch((err) => {
+            console.warn("[UnEasy-LCSC] open options failed:", err);
+            alert(friendlyRuntimeError(err));
+          });
+        });
+        menu.insertBefore(btnLib, menuDivider);
+
+        runtimeSend({ type: "uneasy-library-status" })
+          .then((status) => {
+            if (status && status.configured && status.name) {
+              const perm =
+                status.permission === "granted" ? "ready" : "needs Allow";
+              versionLabel.textContent = `UnEasy-LCSC v${extVersion} · ${status.name} (${perm})`;
+            }
+          })
+          .catch(() => {});
+      }
+
       btnMore.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -553,18 +635,27 @@
             );
           }
 
+          const saveResults = [];
           if (converted.symbol) {
-            await downloadFile(
-              libraryPath("symbol", converted.symbol.filename),
-              converted.symbol.content,
-              "application/x-kicad-symbol"
+            saveResults.push(
+              await downloadViaBackground(
+                libraryPath("symbol", converted.symbol.filename),
+                {
+                  text: converted.symbol.content,
+                  mime: "application/x-kicad-symbol"
+                }
+              )
             );
           }
           if (converted.footprint) {
-            await downloadFile(
-              libraryPath("footprint", converted.footprint.filename),
-              converted.footprint.content,
-              "application/x-kicad-footprint"
+            saveResults.push(
+              await downloadViaBackground(
+                libraryPath("footprint", converted.footprint.filename),
+                {
+                  text: converted.footprint.content,
+                  mime: "application/x-kicad-footprint"
+                }
+              )
             );
           }
 
@@ -577,19 +668,22 @@
               const stepName =
                 converted.footprint?.stepFilename ||
                 `${lcscCode}_${sanitizeFilenamePart(info3d.modelName3d || "model")}.step`;
-              await saveStepViaBackground(
-                libraryPath("step", stepName),
-                info3d.uuid3d
+              saveResults.push(
+                await saveStepViaBackground(
+                  libraryPath("step", stepName),
+                  info3d.uuid3d
+                )
               );
             }
           } catch (stepErr) {
             console.warn("[UnEasy-LCSC] STEP optional download failed:", stepErr);
           }
 
+          noteLibraryFallback(saveResults);
           btnKicad.textContent = "KiCad done!";
         } catch (err) {
           console.error("[UnEasy-LCSC KiCad]", err);
-          alert("Failed to convert to KiCad: " + err.message);
+          alert("Failed to convert to KiCad: " + friendlyRuntimeError(err));
           btnKicad.textContent = oldText;
         } finally {
           btnKicad.disabled = false;
@@ -653,7 +747,7 @@
           btn.textContent = "Done!";
         } catch (err) {
           console.error("[UnEasy-LCSC]", err);
-          alert("Failed: " + err.message);
+          alert("Failed: " + friendlyRuntimeError(err));
           btn.textContent = "Download EasyEDA JSON";
         } finally {
           btn.disabled = false;
@@ -676,7 +770,7 @@
           btnStep.textContent = "STEP downloaded!";
         } catch (err) {
           console.error("[UnEasy-LCSC STEP]", err);
-          alert("Failed to download STEP: " + err.message);
+          alert("Failed to download STEP: " + friendlyRuntimeError(err));
           btnStep.textContent = oldText;
         } finally {
           btnStep.disabled = false;
@@ -708,7 +802,7 @@
           btn3d.textContent = "Opened 3D Viewer";
         } catch (err) {
           console.error("[UnEasy-LCSC 3D]", err);
-          alert("Failed to open 3D viewer: " + err.message);
+          alert("Failed to open 3D viewer: " + friendlyRuntimeError(err));
           btn3d.textContent = oldText;
         } finally {
           btn3d.disabled = false;

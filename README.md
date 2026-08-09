@@ -34,6 +34,13 @@ It stays installed across restarts.
 
 The extension activates automatically on supported pages.
 
+**Optional — write straight into your KiCad library (Chromium only):**
+
+1. Create/open your `UnEasy-LCSC` library root (the folder you will set as `UNEASY_LCSC`).
+2. **More** → **KiCad library folder…** → **Choose folder…** (or **Allow access** if already chosen).
+3. Keep that library tab open while downloading — Chrome only writes while this page holds permission.
+4. Firefox ignores this and keeps using `Downloads/UnEasy-LCSC/`.
+
 ---
 
 ## Usage
