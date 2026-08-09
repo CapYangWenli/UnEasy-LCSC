@@ -2,3 +2,6 @@ node_modules/
 web-ext-artifacts/
 .web-ext-cache/
 *.zip
+.env
+.env.local
+.amo-upload-uuid

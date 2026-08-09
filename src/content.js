@@ -349,17 +349,29 @@
         boxShadow: "0 2px 4px rgba(0,0,0,0.3)"
     });
 
+    function setExportBusy(busy) {
+      btn.disabled = busy;
+      btn.textContent = busy ? "Exporting…" : "Export 3D OBJ";
+      btn.style.opacity = busy ? "0.7" : "1";
+      btn.style.cursor = busy ? "wait" : "pointer";
+    }
+
+    window.addEventListener("message", (event) => {
+      if (event.source !== window || !event.data) return;
+      if (event.data.type === "EASYEDA_EXPORT_OBJ_BUSY") setExportBusy(true);
+      if (event.data.type === "EASYEDA_EXPORT_OBJ_DONE") setExportBusy(false);
+    });
+
     // Prevent EasyEDA's jsapi from grabbing our mouse events
     btn.addEventListener("mousedown", e => e.stopPropagation());
     btn.addEventListener("mouseup", e => e.stopPropagation());
     btn.addEventListener("click", e => {
         e.stopPropagation();
-        console.log("[Extractor] Export button clicked → sending EASYEDA_EXPORT_OBJ");
+        if (btn.disabled) return;
         window.postMessage({ type: "EASYEDA_EXPORT_OBJ" }, "*");
     });
 
     document.body.appendChild(btn);
-    console.log("%c[Extractor] Export button added.", "color:lime");
     }
         // Other hosts: do nothing
 })();

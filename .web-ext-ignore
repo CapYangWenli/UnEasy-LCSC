@@ -2,8 +2,12 @@
 .github/**
 node_modules/**
 web-ext-artifacts/**
+releases/**
+scripts/**
 *.md
 package.json
 package-lock.json
 .web-ext-ignore
 .gitignore
+.env
+.env.*

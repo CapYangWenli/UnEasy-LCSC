@@ -15,7 +15,7 @@ Everything runs **locally in your browser** — no EasyEDA account necessary.
 
 Use the signed add-on in [`releases/`](releases/) — this is the recommended install path.
 
-1. Download [`releases/uneasy-lcsc-0.4.0.xpi`](releases/uneasy-lcsc-0.4.0.xpi).
+1. Download [`releases/uneasy-lcsc-0.4.1.xpi`](releases/uneasy-lcsc-0.4.1.xpi).
 2. Open Firefox → `about:addons`.
 3. Click the gear icon → **Install Add-on From File…**
 4. Select the downloaded `.xpi`.
@@ -70,15 +70,32 @@ Only needed when shipping a new Firefox build.
 
 1. Create / use a [Firefox Add-on Developer account](https://addons.mozilla.org/developers/).
 2. Generate API credentials: [AMO API keys](https://addons.mozilla.org/developers/addon/api/key/).
-3. Build a root-level zip (forward-slash paths) or use `web-ext`, then sign as **unlisted**.
-4. Put the signed file at `releases/uneasy-lcsc-<version>.xpi` and update the Install (Firefox) link above.
+3. Copy `.env.example` → `.env` and paste your keys:
+
+```env
+WEB_EXT_API_KEY=your-jwt-issuer
+WEB_EXT_API_SECRET=your-jwt-secret
+```
+
+4. Sign as **unlisted**, then put the signed file at `releases/uneasy-lcsc-<version>.xpi` and update the Install (Firefox) link above.
 
 ```powershell
 npm install
-$env:WEB_EXT_API_KEY = "your-jwt-issuer"
-$env:WEB_EXT_API_SECRET = "your-jwt-secret"
 npm run firefox:sign
 ```
+
+If `npm install` fails with `'node' is not recognized` (common with nvm-windows inside Cursor), either fully restart Cursor, or in that terminal run:
+
+```powershell
+$env:NVM_HOME = "$env:LOCALAPPDATA\nvm"
+$env:NVM_SYMLINK = "C:\nvm4w\nodejs"
+$env:Path = "$env:NVM_SYMLINK;$env:NVM_HOME;$env:Path"
+npm install
+```
+
+Or use the wrapper: `npm run firefox:sign:win`
+
+`.env` is gitignored — do not commit your keys.
 
 ---
 
