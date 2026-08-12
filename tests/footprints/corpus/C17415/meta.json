@@ -1,0 +1,21 @@
+{
+  "lcsc": "C17415",
+  "mpn": "0805W8F100JT5E",
+  "package": "R0805_NEW",
+  "title": "R0805_NEW",
+  "risk": "low",
+  "tier": "A",
+  "tags": [
+    "0805",
+    "resistor",
+    "smd"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:18:59.770Z",
+  "padCommandCount": 2,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 5
+  },
+  "solidRegionCopperAtFreeze": 2
+}

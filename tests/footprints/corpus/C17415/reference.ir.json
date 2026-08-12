@@ -1,0 +1,57 @@
+{
+  "name": "R0805_NEW",
+  "pads": [
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.966216,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.132535,
+        "h": 1.37701
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.966216,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.132535,
+        "h": 1.37701
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -1.5324835,
+    "miny": -0.688505,
+    "maxx": 1.5324835,
+    "maxy": 0.688505
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "R0805_L2.0-W1.3-H0.6"
+}

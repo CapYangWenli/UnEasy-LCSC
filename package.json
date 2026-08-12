@@ -7,7 +7,9 @@
     "firefox:run": "web-ext run --source-dir . --firefox-profile uneasy-lcsc-dev --keep-profile-changes",
     "firefox:build": "web-ext build --source-dir . --overwrite-dest",
     "firefox:sign": "node scripts/sign-firefox.js",
-    "firefox:sign:win": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/firefox-sign.ps1"
+    "firefox:sign:win": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/firefox-sign.ps1",
+    "test:footprint-e2e": "node scripts/test-footprint-e2e.js",
+    "freeze:footprint": "node scripts/freeze-footprint-fixture.js"
   },
   "devDependencies": {
     "web-ext": "^8.9.0"

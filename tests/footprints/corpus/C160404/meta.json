@@ -1,0 +1,20 @@
+{
+  "lcsc": "C160404",
+  "mpn": "SM04B-SRSS-TB(LF)(SN)",
+  "package": "CONN-SMD_4P-P1.00_SM04B-SRSS-TB-LF-SN",
+  "title": "CONN-SMD_4P-P1.00_SM04B-SRSS-TB-LF-SN",
+  "risk": "medium",
+  "tier": "E",
+  "tags": [
+    "JST",
+    "connector"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:11.059Z",
+  "padCommandCount": 6,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 7
+  },
+  "solidRegionCopperAtFreeze": 0
+}

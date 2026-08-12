@@ -1,0 +1,20 @@
+{
+  "lcsc": "C2765186",
+  "mpn": "TYPE-C 16PIN 2MD(073)",
+  "package": "USB-C-SMD_TYPE-C-16PIN-2MD-073",
+  "title": "USB-C-SMD_TYPE-C-16PIN-2MD-073",
+  "risk": "high",
+  "tier": "C",
+  "tags": [
+    "EP",
+    "ESOP"
+  ],
+  "hasEp": true,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:06.794Z",
+  "padCommandCount": 16,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 17
+  },
+  "solidRegionCopperAtFreeze": 0
+}

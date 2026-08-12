@@ -1,0 +1,20 @@
+{
+  "lcsc": "C124393",
+  "mpn": "B-2201S12P-A120",
+  "package": "HDR-TH_12P-P1.27-V-F",
+  "title": "HDR-TH_12P-P1.27-V-F",
+  "risk": "medium",
+  "tier": "F",
+  "tags": [
+    "header",
+    "THT"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:12.744Z",
+  "padCommandCount": 12,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 13
+  },
+  "solidRegionCopperAtFreeze": 0
+}

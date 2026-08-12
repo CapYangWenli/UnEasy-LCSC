@@ -1,0 +1,10 @@
+{
+  "name": "synth-oval-tht-v",
+  "expect": "pass",
+  "risk": "low",
+  "tags": ["synthetic", "oval", "tht"],
+  "expectOvalOrientation": {
+    "oval_w": 7.62,
+    "oval_h": 10.16
+  }
+}

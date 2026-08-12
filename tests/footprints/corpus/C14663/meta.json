@@ -1,0 +1,22 @@
+{
+  "lcsc": "C14663",
+  "mpn": "CC0603KRX7R9BB104",
+  "package": "C0603",
+  "title": "C0603",
+  "risk": "low",
+  "tier": "A",
+  "tags": [
+    "0603",
+    "capacitor",
+    "smd"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:18:58.894Z",
+  "padCommandCount": 2,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 3,
+    "ARC": 4
+  },
+  "solidRegionCopperAtFreeze": 0
+}

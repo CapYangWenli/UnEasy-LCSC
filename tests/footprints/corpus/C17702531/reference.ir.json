@@ -1,0 +1,4134 @@
+{
+  "name": "COMM-SMD_L55.0-W40.0_CM4101000",
+  "pads": [
+    {
+      "number": "200",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -9.799955,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "199",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -9.799955,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "198",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -9.399905,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "197",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -9.399905,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "196",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.999855,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "195",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.999855,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "194",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.600059,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "193",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.600059,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "192",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.200009,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "191",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.200009,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "190",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -7.799959,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "189",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -7.799959,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "188",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -7.399909,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "187",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -7.399909,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "186",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.999859,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "185",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.999859,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "184",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.600063,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "183",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.600063,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "182",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.200013,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "181",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.200013,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "180",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -5.799963,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "179",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -5.799963,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "178",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -5.399913,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "177",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -5.399913,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "176",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.999863,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "175",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.999863,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "174",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.600067,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "173",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.600067,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "172",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.200017,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "171",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.200017,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "170",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.799967,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "169",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.799967,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "168",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.399917,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "167",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.399917,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "166",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.999867,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "165",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.999867,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "164",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.600071,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "163",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.600071,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "162",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.200021,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "161",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.200021,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "160",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.799971,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "159",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.799971,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "158",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.399921,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "157",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.399921,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "156",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.000125,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "155",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.000125,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "154",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.600075,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "153",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.600075,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "152",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.200025,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "151",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.200025,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "150",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.200025,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "149",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.200025,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "148",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.600075,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "147",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.600075,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "146",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.000125,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "145",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.000125,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "144",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.399921,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "143",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.399921,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "142",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.799971,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "141",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.799971,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "140",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.200021,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "139",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.200021,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "138",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.600071,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "137",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.600071,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "136",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.000121,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "135",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.000121,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "134",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.399917,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "133",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.399917,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "132",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.799967,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "131",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.799967,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "130",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 4.200017,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "129",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 4.200017,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "128",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 4.600067,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "127",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 4.600067,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "126",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.000117,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "125",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.000117,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "124",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.399913,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "123",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.399913,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "122",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.799963,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "121",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.799963,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "120",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 6.200013,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "119",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 6.200013,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "118",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 6.600063,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "117",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 6.600063,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "116",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.000113,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "115",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.000113,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "114",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.399909,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "113",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.399909,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "112",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.799959,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "111",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.799959,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "110",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.200009,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "109",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.200009,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "108",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.600059,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "107",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.600059,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "106",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.000109,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "105",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.000109,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "104",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.399905,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "103",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.399905,
+        "y": 15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "100",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -9.799955,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "99",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -9.799955,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "98",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -9.399905,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "97",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -9.399905,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "96",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.999855,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "95",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.999855,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "94",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.600059,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "93",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.600059,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "92",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.200009,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "91",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.200009,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "90",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -7.799959,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "89",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -7.799959,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "88",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -7.399909,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "87",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -7.399909,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "86",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.999859,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "85",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.999859,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "84",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.600063,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "83",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.600063,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "82",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.200013,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "81",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.200013,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "80",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -5.799963,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "79",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -5.799963,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "78",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -5.399913,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "77",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -5.399913,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "76",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.999863,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "75",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.999863,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "74",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.600067,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "73",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.600067,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "72",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.200017,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "71",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -4.200017,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "70",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.799967,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "69",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.799967,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "68",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.399917,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "67",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.399917,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "66",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.999867,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "65",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.999867,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "64",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.600071,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "63",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.600071,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "62",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.200021,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "61",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.200021,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "60",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.799971,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "59",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.799971,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "58",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.399921,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "57",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.399921,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "56",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.000125,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "55",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.000125,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "54",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.600075,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "53",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.600075,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "52",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.200025,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "51",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.200025,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "50",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.200025,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "49",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.200025,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "48",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.600075,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "47",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.600075,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "46",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.000125,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "45",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.000125,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "44",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.399921,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "43",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.399921,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "42",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.799971,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "41",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.799971,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "40",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.200021,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "39",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.200021,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "38",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.600071,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "37",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.600071,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "36",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.000121,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "35",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.000121,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "34",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.399917,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "33",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.399917,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "32",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.799967,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "31",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.799967,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "30",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 4.200017,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "29",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 4.200017,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "28",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 4.600067,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "27",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 4.600067,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "26",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.000117,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "25",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.000117,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "24",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.399913,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "23",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.399913,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "22",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.799963,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "21",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 5.799963,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "20",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 6.200013,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 6.200013,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "18",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 6.600063,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "17",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 6.600063,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "16",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.000113,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "15",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.000113,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "14",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.399909,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "13",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.399909,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "12",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.799959,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "11",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 7.799959,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "10",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.200009,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "9",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.200009,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "8",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.600059,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "7",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.600059,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "6",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.000109,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "5",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.000109,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "4",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.399905,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "3",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.399905,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.799955,
+        "y": -15.460091
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.799955,
+        "y": -18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "102",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.799955,
+        "y": 18.540095
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "101",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 9.799955,
+        "y": 15.459837
+      },
+      "size_mm": {
+        "w": 0.2,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -21.499957,
+        "y": 16.499967
+      },
+      "size_mm": {
+        "w": 2.999994,
+        "h": 2.999994
+      },
+      "rotation_deg": 0,
+      "drill_mm": {
+        "dia": 2.999994
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -21.499957,
+        "y": -16.499967
+      },
+      "size_mm": {
+        "w": 2.999994,
+        "h": 2.999994
+      },
+      "rotation_deg": 0,
+      "drill_mm": {
+        "dia": 2.999994
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 26.499947,
+        "y": -16.499967
+      },
+      "size_mm": {
+        "w": 2.999994,
+        "h": 2.999994
+      },
+      "rotation_deg": 0,
+      "drill_mm": {
+        "dia": 2.999994
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 26.499947,
+        "y": 16.499967
+      },
+      "size_mm": {
+        "w": 2.999994,
+        "h": 2.999994
+      },
+      "rotation_deg": 0,
+      "drill_mm": {
+        "dia": 2.999994
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [
+    {
+      "center_mm": {
+        "x": -21.499957,
+        "y": 16.499967
+      },
+      "dia_mm": 2.999994
+    },
+    {
+      "center_mm": {
+        "x": -21.499957,
+        "y": -16.499967
+      },
+      "dia_mm": 2.999994
+    },
+    {
+      "center_mm": {
+        "x": 26.499947,
+        "y": -16.499967
+      },
+      "dia_mm": 2.999994
+    },
+    {
+      "center_mm": {
+        "x": 26.499947,
+        "y": 16.499967
+      },
+      "dia_mm": 2.999994
+    }
+  ],
+  "bbox_mm": {
+    "minx": -22.999954,
+    "miny": -18.8900945,
+    "maxx": 27.999944,
+    "maxy": 18.8900945
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "COMM-SMD_L55.0-W40.0_CM4101000"
+}

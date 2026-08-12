@@ -1,0 +1,6 @@
+{
+  "name": "synth-text-silk",
+  "expect": "pass",
+  "risk": "low",
+  "tags": ["synthetic", "text", "silk"]
+}

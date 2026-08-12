@@ -1,0 +1,30 @@
+{
+  "parts": [
+    { "lcsc": "C25804", "tier": "A", "risk": "low", "tags": ["0603", "resistor", "smd"], "notes": "Simple 0603 resistor." },
+    { "lcsc": "C14663", "tier": "A", "risk": "low", "tags": ["0603", "capacitor", "smd"], "notes": "Simple 0603 capacitor." },
+    { "lcsc": "C17415", "tier": "A", "risk": "low", "tags": ["0805", "resistor", "smd"], "notes": "Simple 0805 resistor." },
+    { "lcsc": "C5446", "tier": "A", "risk": "low", "tags": ["SOT-23", "smd"], "notes": "SOT-23 discrete." },
+
+    { "lcsc": "C98715", "tier": "B", "risk": "medium", "tags": ["SOIC-8", "IC"], "notes": "SOIC-8 UC3845 — TRD anchor." },
+    { "lcsc": "C9864", "tier": "B", "risk": "medium", "tags": ["SOP", "IC"], "notes": "SOP IC — TRD anchor / empty-field class." },
+    { "lcsc": "C124356", "tier": "B", "risk": "medium", "tags": ["TQFP", "IC"], "notes": "Dense TQFP/SSOP-class IC — TRD anchor." },
+    { "lcsc": "C8736", "tier": "B", "risk": "medium", "tags": ["LQFP", "IC"], "notes": "32-pad LQFP/QFP-class IC." },
+
+    { "lcsc": "C2838512", "tier": "C", "risk": "high", "tags": ["EP", "power"], "hasEp": true, "notes": "Power package with exposed pad — TRD anchor." },
+    { "lcsc": "C2934560", "tier": "C", "risk": "high", "tags": ["EP", "QFN"], "hasEp": true, "notes": "QFN with EP — TRD anchor." },
+    { "lcsc": "C2765186", "tier": "C", "risk": "high", "tags": ["EP", "ESOP"], "hasEp": true, "notes": "ESOP-EP class — TRD anchor." },
+
+    { "lcsc": "C2040", "tier": "D", "risk": "high", "tags": ["fine-pitch", "QFN", "0.4mm", "EP"], "hasEp": true, "notes": "LQFN-56 0.4mm pitch EP — TRD anchor." },
+    { "lcsc": "C8734", "tier": "D", "risk": "high", "tags": ["fine-pitch", "QFN"], "hasEp": true, "notes": "Fine-pitch QFN/LQFN." },
+
+    { "lcsc": "C132555", "tier": "E", "risk": "medium", "tags": ["USB-C", "connector", "hybrid"], "notes": "USB-C connector hybrid SMD+THT." },
+    { "lcsc": "C167308", "tier": "E", "risk": "medium", "tags": ["Micro-USB", "connector"], "notes": "Micro-USB connector." },
+    { "lcsc": "C160404", "tier": "E", "risk": "medium", "tags": ["JST", "connector"], "notes": "JST-style connector." },
+
+    { "lcsc": "C124378", "tier": "F", "risk": "medium", "tags": ["header", "THT", "oval"], "notes": "THT header with oval drills." },
+    { "lcsc": "C124393", "tier": "F", "risk": "medium", "tags": ["header", "THT"], "notes": "Dense THT pin header." },
+
+    { "lcsc": "C17702531", "tier": "G", "risk": "high", "tags": ["CM4", "module", "array"], "notes": "CM4-like large pad array — TRD anchor." },
+    { "lcsc": "C701124", "tier": "G", "risk": "medium", "tags": ["ESP32", "module"], "notes": "ESP-class module footprint." }
+  ]
+}

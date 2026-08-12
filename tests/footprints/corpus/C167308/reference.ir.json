@@ -1,0 +1,77 @@
+{
+  "name": "IND-SMD_L12.5-W12.5_CEP125NP",
+  "pads": [
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.499993,
+        "y": -5.450078
+      },
+      "size_mm": {
+        "w": 2.999994,
+        "h": 2.799994
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.499993,
+        "y": -5.450078
+      },
+      "size_mm": {
+        "w": 2.999994,
+        "h": 2.799994
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "3",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.000127,
+        "y": 5.450078
+      },
+      "size_mm": {
+        "w": 2.999994,
+        "h": 2.599995
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -4.99999,
+    "miny": -6.850075,
+    "maxx": 4.99999,
+    "maxy": 6.7500755
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "IND-SMD_L12.5-W12.5-H5.6_CEP125NP"
+}

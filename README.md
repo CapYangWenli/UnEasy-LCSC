@@ -163,6 +163,31 @@ If no mesh appears, move the model a bit and retry.
 
 ---
 
+## Footprint testing
+
+Footprints from **Download KiCad** are **assisted conversions** — verify land patterns against the vendor datasheet before production PCBs.
+
+Automated geometry checks (pad/drill IR compares on a frozen LCSC corpus) live under `tests/footprints/` and are documented in:
+
+- [docs/footprint-e2e-trd.md](docs/footprint-e2e-trd.md) — requirements and assertion IDs
+- [docs/footprint-known-gaps.md](docs/footprint-known-gaps.md) — intentional skips (paste/decorative fills, etc.)
+
+```bash
+npm run test:footprint-e2e
+```
+
+CI runs this suite when `src/kicad/convert.js` or footprint fixtures change. Reports are written to `artifacts/footprint-report.json` (gitignored).
+
+To refresh a frozen corpus part (dev only, not used in CI):
+
+```bash
+npm run freeze:footprint -- C9864 --tier B --risk medium
+# or batch:
+npm run freeze:footprint -- --manifest tests/footprints/corpus-manifest.json
+```
+
+---
+
 ## Notes
 
 - KiCad conversion covers the common EasyEDA primitives (pins, pads, tracks, silk, holes, etc.) and multi-unit symbols (e.g. Compute Module). Complex arcs/paths may be simplified vs `easyeda2kicad.py`.
@@ -170,6 +195,7 @@ If no mesh appears, move the model a bit and retry.
 - `.obj` export is geometry-only (no texture/material metadata).
 - Not affiliated with LCSC, EasyEDA, or JLCPCB.
 - Firefox ID: `uneasy-lcsc@local` (required for MV3 signing). Chromium ignores this.
+
 
 ---
 

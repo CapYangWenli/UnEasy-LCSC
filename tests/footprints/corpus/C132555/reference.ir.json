@@ -1,0 +1,197 @@
+{
+  "name": "TDFN-8_L3.0-W3.0-P0.65-BL-EP",
+  "pads": [
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -0.975106,
+        "y": 1.495044
+      },
+      "size_mm": {
+        "w": 0.350012,
+        "h": 0.840003
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -0.324866,
+        "y": 1.495044
+      },
+      "size_mm": {
+        "w": 0.350012,
+        "h": 0.840003
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "3",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0.32512,
+        "y": 1.495044
+      },
+      "size_mm": {
+        "w": 0.350012,
+        "h": 0.840003
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "4",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0.975106,
+        "y": 1.495044
+      },
+      "size_mm": {
+        "w": 0.350012,
+        "h": 0.840003
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "5",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0.975106,
+        "y": -1.495044
+      },
+      "size_mm": {
+        "w": 0.350012,
+        "h": 0.840003
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "6",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0.32512,
+        "y": -1.495044
+      },
+      "size_mm": {
+        "w": 0.350012,
+        "h": 0.840003
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "7",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -0.324866,
+        "y": -1.495044
+      },
+      "size_mm": {
+        "w": 0.350012,
+        "h": 0.840003
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "8",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -0.975106,
+        "y": -1.495044
+      },
+      "size_mm": {
+        "w": 0.350012,
+        "h": 0.840003
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "9",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 2.399995,
+        "h": 1.599997
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -1.1999975,
+    "miny": -1.9150455000000002,
+    "maxx": 1.1999975,
+    "maxy": 1.9150455000000002
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "TDFN-8_L3.0-W3.0-H0.8-P0.65"
+}

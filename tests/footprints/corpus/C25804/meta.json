@@ -1,0 +1,21 @@
+{
+  "lcsc": "C25804",
+  "mpn": "0603WAF1002T5E",
+  "package": "R0603",
+  "title": "R0603",
+  "risk": "low",
+  "tier": "A",
+  "tags": [
+    "0402",
+    "resistor",
+    "smd"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:18:58.031Z",
+  "padCommandCount": 2,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 5
+  },
+  "solidRegionCopperAtFreeze": 2
+}

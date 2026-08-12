@@ -1,0 +1,7 @@
+{
+  "name": "synth-empty-radius",
+  "expect": "pass",
+  "risk": "low",
+  "tags": ["synthetic", "empty-fields", "c9864-class"],
+  "notes": "Empty hole radius / sparse PAD fields (rect SMD with empty slots)"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "synth-malformed-pad",
+  "expect": "skip",
+  "risk": "low",
+  "tags": ["synthetic", "negative", "malformed"]
+}

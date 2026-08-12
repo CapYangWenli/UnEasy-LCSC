@@ -1,0 +1,13 @@
+{
+  "head": {
+    "x": 0,
+    "y": 0,
+    "c_para": {
+      "package": "SYNTH_EMPTY_RADIUS"
+    }
+  },
+  "shape": [
+    "PAD~RECT~10~20~30~40~1~~1~~~~~~~",
+    "PAD~RECT~100~20~30~40~1~~2~0~~~~0"
+  ]
+}

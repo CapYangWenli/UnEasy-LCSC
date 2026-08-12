@@ -1,0 +1,21 @@
+{
+  "lcsc": "C8734",
+  "mpn": "STM32F103C8T6",
+  "package": "LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL",
+  "title": "LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL",
+  "risk": "high",
+  "tier": "D",
+  "tags": [
+    "fine-pitch",
+    "QFN"
+  ],
+  "hasEp": true,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:08.544Z",
+  "padCommandCount": 48,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 97,
+    "ARC": 1
+  },
+  "solidRegionCopperAtFreeze": 0
+}

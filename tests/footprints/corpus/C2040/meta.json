@@ -1,0 +1,22 @@
+{
+  "lcsc": "C2040",
+  "mpn": "RP2040",
+  "package": "LQFN-56_L7.0-W7.0-P0.4-EP",
+  "title": "LQFN-56_L7.0-W7.0-P0.4-EP",
+  "risk": "high",
+  "tier": "D",
+  "tags": [
+    "fine-pitch",
+    "QFN",
+    "0.4mm",
+    "EP"
+  ],
+  "hasEp": true,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:07.669Z",
+  "padCommandCount": 57,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 116
+  },
+  "solidRegionCopperAtFreeze": 0
+}

@@ -1,0 +1,21 @@
+{
+  "lcsc": "C132555",
+  "mpn": "MCP14628-E/MF",
+  "package": "TDFN-8_L3.0-W3.0-P0.65-BL-EP",
+  "title": "TDFN-8_L3.0-W3.0-P0.65-BL-EP",
+  "risk": "medium",
+  "tier": "E",
+  "tags": [
+    "USB-C",
+    "connector",
+    "hybrid"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:09.379Z",
+  "padCommandCount": 9,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 10
+  },
+  "solidRegionCopperAtFreeze": 0
+}

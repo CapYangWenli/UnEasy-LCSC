@@ -1,0 +1,20 @@
+{
+  "lcsc": "C8736",
+  "mpn": "STM8S105K4T6C",
+  "package": "LQFP-32_L7.0-W7.0-P0.80-LS9.0-BL",
+  "title": "LQFP-32_L7.0-W7.0-P0.80-LS9.0-BL",
+  "risk": "medium",
+  "tier": "B",
+  "tags": [
+    "LQFP",
+    "IC"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:21:03.426Z",
+  "padCommandCount": 32,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 65
+  },
+  "solidRegionCopperAtFreeze": 0
+}

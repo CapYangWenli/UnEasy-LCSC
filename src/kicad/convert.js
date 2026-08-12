@@ -445,6 +445,118 @@ ${unitBlocks}
     return r > 180 ? -(360 - r) : r;
   }
 
+  function toRadians(n) {
+    return (n / 180) * Math.PI;
+  }
+
+  function toDegrees(n) {
+    return (n / Math.PI) * 180;
+  }
+
+  // SVG elliptical-arc endpoint → center form (W3C SVG 1.1 §F.6).
+  // Returns [cx, cy, angleExtentDeg] for KiCad legacy fp_arc (start=center).
+  function computeArc(startX, startY, radiusX, radiusY, angle, largeArcFlag, sweepFlag, endX, endY) {
+    let rx = Math.abs(radiusX);
+    let ry = Math.abs(radiusY);
+    const dx2 = (startX - endX) / 2;
+    const dy2 = (startY - endY) / 2;
+    const ang = toRadians(angle % 360);
+    const cosA = Math.cos(ang);
+    const sinA = Math.sin(ang);
+    const x1 = cosA * dx2 + sinA * dy2;
+    const y1 = -sinA * dx2 + cosA * dy2;
+    let rxSq = rx * rx;
+    let rySq = ry * ry;
+    const x1Sq = x1 * x1;
+    const y1Sq = y1 * y1;
+    const radiiCheck = rxSq && rySq ? x1Sq / rxSq + y1Sq / rySq : 0;
+    if (radiiCheck > 1) {
+      const s = Math.sqrt(radiiCheck);
+      rx *= s;
+      ry *= s;
+      rxSq = rx * rx;
+      rySq = ry * ry;
+    }
+    let sign = largeArcFlag === sweepFlag ? -1 : 1;
+    let sq = 0;
+    if (rxSq * y1Sq + rySq * x1Sq > 0) {
+      sq = (rxSq * rySq - rxSq * y1Sq - rySq * x1Sq) / (rxSq * y1Sq + rySq * x1Sq);
+      sq = Math.max(sq, 0);
+    }
+    const coef = sign * Math.sqrt(sq);
+    const cx1 = coef * ((rx * y1) / ry);
+    const cy1 = rx !== 0 ? coef * -((ry * x1) / rx) : 0;
+    const sx2 = (startX + endX) / 2;
+    const sy2 = (startY + endY) / 2;
+    const cx = sx2 + (cosA * cx1 - sinA * cy1);
+    const cy = sy2 + (sinA * cx1 + cosA * cy1);
+    const ux = rx !== 0 ? (x1 - cx1) / rx : 0;
+    const uy = ry !== 0 ? (y1 - cy1) / ry : 0;
+    const vx = rx !== 0 ? (-x1 - cx1) / rx : 0;
+    const vy = ry !== 0 ? (-y1 - cy1) / ry : 0;
+    const n = Math.sqrt((ux * ux + uy * uy) * (vx * vx + vy * vy));
+    const p = ux * vx + uy * vy;
+    sign = ux * vy - uy * vx < 0 ? -1 : 1;
+    let angleExtent =
+      n !== 0 ? toDegrees(sign * Math.acos(Math.max(-1, Math.min(1, p / n)))) : 719;
+    if (!sweepFlag && angleExtent > 0) angleExtent -= 360;
+    else if (sweepFlag && angleExtent < 0) angleExtent += 360;
+    const extentSign = angleExtent < 0 ? 1 : -1;
+    angleExtent = (Math.abs(angleExtent) % 360) * extentSign;
+    return [cx, cy, angleExtent];
+  }
+
+  // Footprint SVG path → mm points relative to footprint origin (no Y flip).
+  // Supports M/L/H/V/Z; A advances to endpoint only (polygon approximation).
+  function parseFpSvgPath(pathStr, bboxX, bboxY) {
+    const parts = String(pathStr || "")
+      .trim()
+      .split(/(?=[MLHVAZmlhvaz])/);
+    const pts = [];
+    let curX = 0;
+    let curY = 0;
+    const append = () => {
+      const pt = [eeToMm(curX) - bboxX, eeToMm(curY) - bboxY];
+      if (!pts.length || pts[pts.length - 1][0] !== pt[0] || pts[pts.length - 1][1] !== pt[1]) {
+        pts.push(pt);
+      }
+    };
+    for (const part of parts) {
+      const token = part.trim();
+      if (!token) continue;
+      const cmd = token[0].toUpperCase();
+      const args = token
+        .slice(1)
+        .trim()
+        .split(/[\s,]+/)
+        .filter(Boolean)
+        .map(num);
+      if ((cmd === "M" || cmd === "L") && args.length >= 2) {
+        for (let i = 0; i + 1 < args.length; i += 2) {
+          curX = args[i];
+          curY = args[i + 1];
+          append();
+        }
+      } else if (cmd === "H" && args.length >= 1) {
+        curX = args[0];
+        append();
+      } else if (cmd === "V" && args.length >= 1) {
+        curY = args[0];
+        append();
+      } else if (cmd === "A" && args.length >= 7) {
+        curX = args[5];
+        curY = args[6];
+        append();
+      } else if (cmd === "Z" && pts.length && (pts[0][0] !== pts[pts.length - 1][0] || pts[0][1] !== pts[pts.length - 1][1])) {
+        pts.push([pts[0][0], pts[0][1]]);
+      }
+    }
+    return pts;
+  }
+
+  // Layers imported for SOLIDREGION. Paste (5/6) stays on pads; 100/101 are decorative.
+  const SOLID_REGION_LAYERS = new Set([1, 2, 3, 4, 13, 14, 99]);
+
   function drillStr(holeRadius, holeLength, padH, padW) {
     if (holeRadius > 0 && holeLength) {
       const maxHole = Math.max(holeRadius * 2, holeLength);
@@ -586,6 +698,89 @@ ${unitBlocks}
         graphicBlocks.push(
           `\t(fp_circle (center ${cx.toFixed(2)} ${cy.toFixed(2)}) (end ${(cx + r).toFixed(2)} ${cy.toFixed(2)}) (layer ${layer}) (width ${width.toFixed(2)}))`
         );
+      } else if (cmd === "ARC") {
+        // ARC~stroke~layer~net~path~helper~id~locked
+        const width = Math.max(eeToMm(p[1]), 0.01);
+        const layer = FP_LAYERS[num(p[2])] || "F.Fab";
+        const path = String(p[4] || "").replace(/,/g, " ").trim();
+        const aIdx = path.toUpperCase().indexOf("A");
+        if (aIdx > 0) {
+          const before = path.slice(0, aIdx).replace(/^[Mm]\s*/, "").trim();
+          const after = path.slice(aIdx + 1).trim().split(/[\s]+/).filter(Boolean);
+          const startParts = before.split(/[\s]+/).filter(Boolean);
+          if (startParts.length >= 2 && after.length >= 7) {
+            const startX = eeToMm(startParts[0]) - bboxX;
+            const startY = eeToMm(startParts[1]) - bboxY;
+            const rx = eeToMm(after[0]);
+            const ry = eeToMm(after[1]);
+            const xRot = num(after[2]);
+            const largeArc = after[3] === "1";
+            const sweep = after[4] === "1";
+            const endX = eeToMm(after[5]) - bboxX;
+            const endY = eeToMm(after[6]) - bboxY;
+            let cx = 0;
+            let cy = 0;
+            let extent = 0;
+            if (ry !== 0) {
+              [cx, cy, extent] = computeArc(
+                startX,
+                startY,
+                rx,
+                ry,
+                xRot,
+                largeArc,
+                sweep,
+                endX,
+                endY
+              );
+              graphicBlocks.push(
+                `\t(fp_arc (start ${cx.toFixed(2)} ${cy.toFixed(2)}) (end ${endX.toFixed(2)} ${endY.toFixed(2)}) (angle ${extent.toFixed(2)}) (layer ${layer}) (width ${width.toFixed(2)}))`
+              );
+            }
+          }
+        }
+      } else if (cmd === "SOLIDREGION") {
+        // SOLIDREGION~layer~net~path~solid|cutout|npth~id~~
+        const layerId = num(p[1], -1);
+        const regionType = String(p[4] || "solid").toLowerCase();
+        if (SOLID_REGION_LAYERS.has(layerId) && (regionType === "solid" || regionType === "npth")) {
+          const pts = parseFpSvgPath(p[3], bboxX, bboxY);
+          if (pts.length >= 3) {
+            const layer = FP_LAYERS[layerId] || "F.SilkS";
+            if (layer === "F.CrtYd") {
+              // Layer 99 is invisible body outline in EasyEDA → courtyard stroke.
+              for (let i = 0; i + 1 < pts.length; i++) {
+                graphicBlocks.push(
+                  `\t(fp_line (start ${pts[i][0].toFixed(2)} ${pts[i][1].toFixed(2)}) (end ${pts[i + 1][0].toFixed(2)} ${pts[i + 1][1].toFixed(2)}) (layer F.CrtYd) (width 0.05))`
+                );
+              }
+            } else {
+              const ptsStr = pts.map(([x, y]) => `(xy ${x.toFixed(6)} ${y.toFixed(6)})`).join(" ");
+              graphicBlocks.push(
+                `\t(fp_poly (pts ${ptsStr}) (stroke (width 0) (type solid)) (fill solid) (layer ${layer}))`
+              );
+            }
+          }
+        }
+      } else if (cmd === "TEXT") {
+        // TEXT~type~x~y~stroke~rot~mirror~layer~net~fontSize~text~path~visible~id~
+        const textType = p[1] || "";
+        const tx = eeToMm(p[2]) - bboxX;
+        const ty = eeToMm(p[3]) - bboxY;
+        const thickness = Math.max(eeToMm(p[4]), 0.01);
+        const orientation = angleToKi(p[5]);
+        let layer = FP_LAYERS[num(p[7])] || "F.Fab";
+        const fontSize = Math.max(eeToMm(p[9]), 0.25);
+        const text = String(p[10] || "").trim();
+        const isDisplayed = p[12] !== "0" && p[12] !== "false";
+        if (text) {
+          if (textType === "N") layer = layer.replace(".SilkS", ".Fab");
+          const hide = !isDisplayed || textType === "N" ? " hide" : "";
+          const mirror = layer.startsWith("B") ? " mirror" : "";
+          graphicBlocks.push(
+            `\t(fp_text user "${esc(text)}" (at ${tx.toFixed(2)} ${ty.toFixed(2)} ${orientation.toFixed(2)}) (layer ${layer})${hide}\n\t\t(effects (font (size ${fontSize.toFixed(2)} ${fontSize.toFixed(2)}) (thickness ${thickness.toFixed(2)})) (justify left${mirror}))\n\t)`
+          );
+        }
       } else if (cmd === "HOLE") {
         const cx = eeToMm(p[1]) - bboxX;
         const cy = eeToMm(p[2]) - bboxY;

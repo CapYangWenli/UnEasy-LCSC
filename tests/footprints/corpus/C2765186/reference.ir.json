@@ -1,0 +1,412 @@
+{
+  "name": "USB-C-SMD_TYPE-C-16PIN-2MD-073",
+  "pads": [
+    {
+      "number": "A1B12",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.200019,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.550012,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "A4B9",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.399919,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.550012,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "B8",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.749933,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.299999,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "A5",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.249807,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.299999,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "B7",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.749935,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.299999,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "A6",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.250063,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.299999,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "A7",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.250063,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.299999,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "B6",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.749935,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.299999,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "A8",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.250061,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.299999,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "B5",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.750187,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.299999,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "B4A9",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.400173,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.550012,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "B1A12",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 3.200019,
+        "y": -2.375027
+      },
+      "size_mm": {
+        "w": 0.550012,
+        "h": 1.099998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -2.889885,
+        "y": -1.304925
+      },
+      "size_mm": {
+        "w": 0.700024,
+        "h": 0.700024
+      },
+      "rotation_deg": 0,
+      "drill_mm": {
+        "dia": 0.700024
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 2.890139,
+        "y": -1.304925
+      },
+      "size_mm": {
+        "w": 0.700024,
+        "h": 0.700024
+      },
+      "rotation_deg": 0,
+      "drill_mm": {
+        "dia": 0.700024
+      },
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "13",
+      "type": "thru_hole",
+      "shape": "oval",
+      "center_mm": {
+        "x": -4.324985,
+        "y": -1.825117
+      },
+      "size_mm": {
+        "w": 1.099998,
+        "h": 1.999996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "oval_w": 0.599998,
+        "oval_h": 1.499997,
+        "orientation": 0
+      }
+    },
+    {
+      "number": "14",
+      "type": "thru_hole",
+      "shape": "oval",
+      "center_mm": {
+        "x": 4.324985,
+        "y": -1.825117
+      },
+      "size_mm": {
+        "w": 1.099998,
+        "h": 1.999996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "oval_w": 0.599998,
+        "oval_h": 1.500022,
+        "orientation": 0
+      }
+    },
+    {
+      "number": "13",
+      "type": "thru_hole",
+      "shape": "oval",
+      "center_mm": {
+        "x": -4.324985,
+        "y": 2.375027
+      },
+      "size_mm": {
+        "w": 1.199998,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "oval_w": 0.599998,
+        "oval_h": 1.199998,
+        "orientation": 0
+      }
+    },
+    {
+      "number": "14",
+      "type": "thru_hole",
+      "shape": "oval",
+      "center_mm": {
+        "x": 4.324985,
+        "y": 2.375027
+      },
+      "size_mm": {
+        "w": 1.199998,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "oval_w": 0.599998,
+        "oval_h": 1.199998,
+        "orientation": 0
+      }
+    }
+  ],
+  "holes": [
+    {
+      "center_mm": {
+        "x": -2.889885,
+        "y": -1.304925
+      },
+      "dia_mm": 0.700024
+    },
+    {
+      "center_mm": {
+        "x": 2.890139,
+        "y": -1.304925
+      },
+      "dia_mm": 0.700024
+    }
+  ],
+  "bbox_mm": {
+    "minx": -4.924984,
+    "miny": -2.9250260000000003,
+    "maxx": 4.924984,
+    "maxy": 3.2750250000000003
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "USB-C-SMD_TYPE-C-6PIN-2MD-073"
+}

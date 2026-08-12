@@ -1,0 +1,50 @@
+{
+  "name": "SYNTH_POLYGON",
+  "pads": [
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "polygon",
+      "center_mm": {
+        "x": 12.7,
+        "y": 12.7
+      },
+      "size_mm": {
+        "w": 0.005,
+        "h": 0.005
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 10.16,
+          "y": 0
+        },
+        {
+          "x": 5.08,
+          "y": 7.62
+        }
+      ]
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": 12.6975,
+    "miny": 12.6975,
+    "maxx": 12.702499999999999,
+    "maxy": 12.702499999999999
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": null
+}

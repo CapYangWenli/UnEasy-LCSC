@@ -1,0 +1,21 @@
+{
+  "lcsc": "C124378",
+  "mpn": "B-2100S04P-A110",
+  "package": "HDR-TH_4P-P2.54-V-M",
+  "title": "HDR-TH_4P-P2.54-V-M",
+  "risk": "medium",
+  "tier": "F",
+  "tags": [
+    "header",
+    "THT",
+    "oval"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:11.883Z",
+  "padCommandCount": 4,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 5
+  },
+  "solidRegionCopperAtFreeze": 0
+}

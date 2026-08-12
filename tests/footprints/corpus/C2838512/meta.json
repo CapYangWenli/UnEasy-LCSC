@@ -1,0 +1,20 @@
+{
+  "lcsc": "C2838512",
+  "mpn": "SI7164DP-T1-GE3",
+  "package": "POWERPAK-SO-8_L6.2-W5.2-P1.27-BL-EP",
+  "title": "POWERPAK-SO-8_L6.2-W5.2-P1.27-BL-EP",
+  "risk": "high",
+  "tier": "C",
+  "tags": [
+    "EP",
+    "power"
+  ],
+  "hasEp": true,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:05.092Z",
+  "padCommandCount": 9,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 15
+  },
+  "solidRegionCopperAtFreeze": 5
+}

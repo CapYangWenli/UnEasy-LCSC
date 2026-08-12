@@ -1,0 +1,21 @@
+{
+  "lcsc": "C98715",
+  "mpn": "UC3845BD1R2G",
+  "package": "SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL",
+  "title": "SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL",
+  "risk": "medium",
+  "tier": "B",
+  "tags": [
+    "SOIC-8",
+    "IC"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:01.441Z",
+  "padCommandCount": 8,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 17,
+    "ARC": 1
+  },
+  "solidRegionCopperAtFreeze": 0
+}

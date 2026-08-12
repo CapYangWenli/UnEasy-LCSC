@@ -1,0 +1,13 @@
+{
+  "head": {
+    "x": 0,
+    "y": 0,
+    "c_para": {
+      "package": "SYNTH_MALFORMED"
+    }
+  },
+  "shape": [
+    "PAD~RECT~~~~~~~~~~~~",
+    "PAD~NOTASHAPE~abc~def~x~y~1~~Z~bad~~~~"
+  ]
+}

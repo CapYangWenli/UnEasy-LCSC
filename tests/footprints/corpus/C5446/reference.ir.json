@@ -1,0 +1,77 @@
+{
+  "name": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+  "pads": [
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.235075,
+        "y": 0.94996
+      },
+      "size_mm": {
+        "w": 1.07,
+        "h": 0.599999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.235075,
+        "y": -0.94996
+      },
+      "size_mm": {
+        "w": 1.07,
+        "h": 0.599999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "3",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.235075,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.07,
+        "h": 0.599999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -1.7700749999999998,
+    "miny": -1.2499595000000001,
+    "maxx": 1.7700749999999998,
+    "maxy": 1.2499595000000001
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95"
+}

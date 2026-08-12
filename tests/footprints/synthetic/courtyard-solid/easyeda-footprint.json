@@ -1,0 +1,13 @@
+{
+  "head": {
+    "x": 0,
+    "y": 0,
+    "c_para": {
+      "package": "SYNTH_CRTYD"
+    }
+  },
+  "shape": [
+    "PAD~RECT~0~0~40~20~1~~1~0~~~~",
+    "SOLIDREGION~99~~M -30 -20 L -30 20 L 30 20 L 30 -20 Z ~solid~gge1~~~~0"
+  ]
+}

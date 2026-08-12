@@ -1,0 +1,20 @@
+{
+  "lcsc": "C167308",
+  "mpn": "CEP125NP-0R8NC-UD",
+  "package": "IND-SMD_L12.5-W12.5_CEP125NP",
+  "title": "IND-SMD_L12.5-W12.5_CEP125NP",
+  "risk": "medium",
+  "tier": "E",
+  "tags": [
+    "Micro-USB",
+    "connector"
+  ],
+  "hasEp": false,
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-12T12:19:10.201Z",
+  "padCommandCount": 3,
+  "unhandledAtFreeze": {
+    "SOLIDREGION": 4
+  },
+  "solidRegionCopperAtFreeze": 0
+}

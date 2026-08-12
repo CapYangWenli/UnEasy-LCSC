@@ -1,0 +1,281 @@
+{
+  "name": "HDR-TH_12P-P1.27-V-F",
+  "pads": [
+    {
+      "number": "12",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 6.985,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "11",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 5.715,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "7",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 0.635,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "6",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -0.635,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "5",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -1.905,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "3",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -4.445,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "2",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -5.715,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "1",
+      "type": "thru_hole",
+      "shape": "rect",
+      "center_mm": {
+        "x": -6.985,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "4",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -3.175,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "8",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 1.905,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "9",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 3.175,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    },
+    {
+      "number": "10",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 4.445,
+        "y": 0.000102
+      },
+      "size_mm": {
+        "w": 0.999998,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 0.700024
+      }
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -7.484999,
+    "miny": -0.49989700000000004,
+    "maxx": 7.484999,
+    "maxy": 0.500101
+  },
+  "attributes": {
+    "smd": false,
+    "through_hole": true
+  },
+  "model3d_path": "HDR-TH_12P-P1.27-V-F"
+}

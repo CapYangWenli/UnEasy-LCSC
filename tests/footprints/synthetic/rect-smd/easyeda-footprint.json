@@ -1,0 +1,12 @@
+{
+  "head": {
+    "x": 0,
+    "y": 0,
+    "c_para": {
+      "package": "SYNTH_RECT_SMD"
+    }
+  },
+  "shape": [
+    "PAD~RECT~0~0~40~20~1~~1~0~~~~"
+  ]
+}

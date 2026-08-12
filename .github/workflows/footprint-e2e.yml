@@ -1,0 +1,40 @@
+name: Footprint E2E
+
+on:
+  push:
+    paths:
+      - "src/kicad/convert.js"
+      - "tests/footprints/**"
+      - "scripts/test-footprint-e2e.js"
+      - "scripts/freeze-footprint-fixture.js"
+      - ".github/workflows/footprint-e2e.yml"
+  pull_request:
+    paths:
+      - "src/kicad/convert.js"
+      - "tests/footprints/**"
+      - "scripts/test-footprint-e2e.js"
+      - "scripts/freeze-footprint-fixture.js"
+      - ".github/workflows/footprint-e2e.yml"
+
+jobs:
+  footprint-e2e:
+    name: Footprint conversion e2e
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run footprint e2e suite
+        run: node scripts/test-footprint-e2e.js
+
+      - name: Upload footprint report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: footprint-e2e-report
+          path: artifacts/
+          if-no-files-found: warn

@@ -1,0 +1,57 @@
+{
+  "name": "SYNTH_MALFORMED",
+  "pads": [
+    {
+      "number": "",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 0.01,
+        "h": 0.01
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "Z",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 0.01,
+        "h": 0.01
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -0.005,
+    "miny": -0.005,
+    "maxx": 0.005,
+    "maxy": 0.005
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": null
+}

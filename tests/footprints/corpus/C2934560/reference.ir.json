@@ -1,0 +1,557 @@
+{
+  "name": "BULETM-SMD_ESPRESSIF_ESP32-C3-WROOM-02-N4-4MB",
+  "pads": [
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": -5.999988
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": -4.500118
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "3",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": -2.999994
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "4",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": -1.500124
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "5",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "6",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": 1.49987
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "7",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": 2.999994
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "8",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": 4.499864
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "9",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -8.750046,
+        "y": 5.999988
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "10",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": 5.999988
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "11",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": 4.499864
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "12",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": 2.999994
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "13",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": 1.49987
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "14",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "15",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": -1.500124
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "16",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": -2.999994
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "17",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": -4.500118
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "18",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 8.750046,
+        "y": -5.999988
+      },
+      "size_mm": {
+        "w": 1.999996,
+        "h": 0.999998
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.139954,
+        "y": -0.900176
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.139954,
+        "y": 0.199898
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.139954,
+        "y": 1.299972
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.959866,
+        "y": -0.900176
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.959866,
+        "y": 0.199898
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.959866,
+        "y": 1.299972
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.05994,
+        "y": 1.299972
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.05994,
+        "y": 0.199898
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "19",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.05994,
+        "y": -0.900176
+      },
+      "size_mm": {
+        "w": 0.699999,
+        "h": 0.699999
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -9.750043999999999,
+    "miny": -6.499987,
+    "maxx": 9.750043999999999,
+    "maxy": 6.499987
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "BULETM-SMD_ESPRESSIF_ESP32-C3-WROOM-02-N4-4MB"
+}

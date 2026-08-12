@@ -1,0 +1,41 @@
+{
+  "name": "SYNTH_OVAL_THT_V",
+  "pads": [
+    {
+      "number": "1",
+      "type": "thru_hole",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 10.16,
+        "h": 15.24
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "oval_w": 7.62,
+        "oval_h": 10.16,
+        "orientation": 0
+      }
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -5.08,
+    "miny": -7.62,
+    "maxx": 5.08,
+    "maxy": 7.62
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": null
+}

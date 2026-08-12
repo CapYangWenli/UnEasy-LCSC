@@ -1,0 +1,12 @@
+{
+  "head": {
+    "x": 0,
+    "y": 0,
+    "c_para": {
+      "package": "SYNTH_OVAL_THT_V"
+    }
+  },
+  "shape": [
+    "PAD~OVAL~0~0~40~60~11~~1~15~~~~40"
+  ]
+}

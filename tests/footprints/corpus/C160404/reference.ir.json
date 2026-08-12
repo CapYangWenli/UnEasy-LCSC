@@ -1,0 +1,137 @@
+{
+  "name": "CONN-SMD_4P-P1.00_SM04B-SRSS-TB-LF-SN",
+  "pads": [
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.499872,
+        "y": -1.93802
+      },
+      "size_mm": {
+        "w": 0.599999,
+        "h": 1.55001
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -1.49987,
+        "y": -1.93802
+      },
+      "size_mm": {
+        "w": 0.599999,
+        "h": 1.55001
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "4",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 1.500378,
+        "y": -1.937512
+      },
+      "size_mm": {
+        "w": 0.599999,
+        "h": 1.55001
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "3",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.50038,
+        "y": -1.937512
+      },
+      "size_mm": {
+        "w": 0.599999,
+        "h": 1.55001
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "6",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -2.800096,
+        "y": 1.937512
+      },
+      "size_mm": {
+        "w": 1.199998,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "5",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 2.800096,
+        "y": 1.93802
+      },
+      "size_mm": {
+        "w": 1.199998,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -3.400095,
+    "miny": -2.713025,
+    "maxx": 3.400095,
+    "maxy": 2.838018
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "CONN-SMD_SR1.00-WS-4P"
+}

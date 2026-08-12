@@ -1,0 +1,57 @@
+{
+  "name": "R0603",
+  "pads": [
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0.753364,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 0.806475,
+        "h": 0.864006
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": -0.753364,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 0.806475,
+        "h": 0.864006
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -1.1566015,
+    "miny": -0.432003,
+    "maxx": 1.1566015,
+    "maxy": 0.432003
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "R0603"
+}

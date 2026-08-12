@@ -5,3 +5,4 @@ web-ext-artifacts/
 .env
 .env.local
 .amo-upload-uuid
+artifacts/

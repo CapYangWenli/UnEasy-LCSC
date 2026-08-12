@@ -1,0 +1,105 @@
+{
+  "name": "HDR-TH_4P-P2.54-V-M",
+  "pads": [
+    {
+      "number": "1",
+      "type": "thru_hole",
+      "shape": "rect",
+      "center_mm": {
+        "x": -3.81,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.699997,
+        "h": 1.699997
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 1.100024
+      }
+    },
+    {
+      "number": "2",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": -1.27,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.699997,
+        "h": 1.699997
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 1.100024
+      }
+    },
+    {
+      "number": "3",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 1.27,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.699997,
+        "h": 1.699997
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 1.100024
+      }
+    },
+    {
+      "number": "4",
+      "type": "thru_hole",
+      "shape": "circle",
+      "center_mm": {
+        "x": 3.81,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 1.699997,
+        "h": 1.699997
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "polygon_mm": null,
+      "drill_mm": {
+        "dia": 1.100024
+      }
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -4.6599985,
+    "miny": -0.8499985,
+    "maxx": 4.6599985,
+    "maxy": 0.8499985
+  },
+  "attributes": {
+    "smd": false,
+    "through_hole": true
+  },
+  "model3d_path": "HDR-TH_4P-P2.54-M-LI-1X4P"
+}

@@ -1,0 +1,197 @@
+{
+  "name": "POWERPAK-SO-8_L6.2-W5.2-P1.27-BL-EP",
+  "pads": [
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -1.905,
+        "y": 3.081782
+      },
+      "size_mm": {
+        "w": 0.567004,
+        "h": 1.27
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -0.635,
+        "y": 3.081782
+      },
+      "size_mm": {
+        "w": 0.567004,
+        "h": 1.27
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "3",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0.635,
+        "y": 3.081782
+      },
+      "size_mm": {
+        "w": 0.567004,
+        "h": 1.27
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "4",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 1.905,
+        "y": 3.081782
+      },
+      "size_mm": {
+        "w": 0.567004,
+        "h": 1.27
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "5",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 1.905,
+        "y": -3.081782
+      },
+      "size_mm": {
+        "w": 0.567004,
+        "h": 1.27
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "6",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0.635,
+        "y": -3.081782
+      },
+      "size_mm": {
+        "w": 0.567004,
+        "h": 1.27
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "7",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -0.635,
+        "y": -3.081782
+      },
+      "size_mm": {
+        "w": 0.567004,
+        "h": 1.27
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "8",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -1.905,
+        "y": -3.081782
+      },
+      "size_mm": {
+        "w": 0.567004,
+        "h": 1.27
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "9",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0,
+        "y": -0.605028
+      },
+      "size_mm": {
+        "w": 4.360012,
+        "h": 3.799992
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -2.188502,
+    "miny": -3.7167820000000003,
+    "maxx": 2.188502,
+    "maxy": 3.7167820000000003
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "PG-TDSON-8_L5.2-W6.2-H1.0-P1.27"
+}

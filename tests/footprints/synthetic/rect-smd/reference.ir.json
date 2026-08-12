@@ -1,0 +1,37 @@
+{
+  "name": "SYNTH_RECT_SMD",
+  "pads": [
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "rect",
+      "center_mm": {
+        "x": 0,
+        "y": 0
+      },
+      "size_mm": {
+        "w": 10.16,
+        "h": 5.08
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -5.08,
+    "miny": -2.54,
+    "maxx": 5.08,
+    "maxy": 2.54
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": null
+}

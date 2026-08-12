@@ -1,0 +1,6 @@
+{
+  "name": "synth-circle-tht",
+  "expect": "pass",
+  "risk": "low",
+  "tags": ["synthetic", "circle", "tht"]
+}

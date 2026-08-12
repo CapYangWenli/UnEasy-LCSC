@@ -1,0 +1,177 @@
+{
+  "name": "SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL",
+  "pads": [
+    {
+      "number": "5",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 1.905,
+        "y": -2.599944
+      },
+      "size_mm": {
+        "w": 0.58801,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "6",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0.635,
+        "y": -2.599944
+      },
+      "size_mm": {
+        "w": 0.58801,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "7",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -0.635,
+        "y": -2.599944
+      },
+      "size_mm": {
+        "w": 0.58801,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "8",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -1.905,
+        "y": -2.599944
+      },
+      "size_mm": {
+        "w": 0.58801,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "4",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 1.905,
+        "y": 2.599944
+      },
+      "size_mm": {
+        "w": 0.58801,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "3",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": 0.635,
+        "y": 2.599944
+      },
+      "size_mm": {
+        "w": 0.58801,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "2",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -0.635,
+        "y": 2.599944
+      },
+      "size_mm": {
+        "w": 0.58801,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    },
+    {
+      "number": "1",
+      "type": "smd",
+      "shape": "oval",
+      "center_mm": {
+        "x": -1.905,
+        "y": 2.599944
+      },
+      "size_mm": {
+        "w": 0.58801,
+        "h": 1.799996
+      },
+      "rotation_deg": 0,
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "polygon_mm": null
+    }
+  ],
+  "holes": [],
+  "bbox_mm": {
+    "minx": -2.199005,
+    "miny": -3.499942,
+    "maxx": 2.199005,
+    "maxy": 3.499942
+  },
+  "attributes": {
+    "smd": true,
+    "through_hole": false
+  },
+  "model3d_path": "SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27"
+}

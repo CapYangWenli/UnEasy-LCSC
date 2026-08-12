@@ -1,0 +1,12 @@
+{
+  "head": {
+    "x": 0,
+    "y": 0,
+    "c_para": {
+      "package": "SYNTH_POLYGON"
+    }
+  },
+  "shape": [
+    "PAD~POLYGON~50~50~10~10~1~~1~0~0 0 40 0 20 30~~0~"
+  ]
+}
