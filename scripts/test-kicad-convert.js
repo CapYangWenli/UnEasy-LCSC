@@ -76,6 +76,21 @@ async function testPart(codeId, expectPinsMin) {
   if (!/\(property "MPN" "UC3845BD1R2G"\)/.test(c98715.out.footprint.content)) {
     throw new Error("C98715 footprint missing MPN property");
   }
+
+  // LED body uses EasyEDA PT~ SVG paths (triangle) — must appear as polylines.
+  const led = await testPart("C51933324", 2);
+  const polys = led.out.symbol.content.match(/\(polyline/g) || [];
+  if (polys.length < 6) {
+    throw new Error(
+      `C51933324 expected PT triangles as polylines, got ${polys.length} polylines`
+    );
+  }
+  // Main diode triangle vertices should form a closed shape (first == last after Z).
+  if (!/\(xy [-\d.]+ [-\d.]+\) \(xy [-\d.]+ [-\d.]+\) \(xy [-\d.]+ [-\d.]+\) \(xy [-\d.]+ [-\d.]+\)/.test(
+    led.out.symbol.content
+  )) {
+    throw new Error("C51933324 missing closed triangle polyline from PT~");
+  }
   console.log("OK");
 })().catch((e) => {
   console.error(e);

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "UnEasy-LCSC",
   "description": "Download EasyEDA/LCSC/JLCPCB parts as KiCad symbols, footprints, and STEP models.",
-  "version": "0.6.17",
+  "version": "0.6.18",
 
   "browser_specific_settings": {
     "gecko": {

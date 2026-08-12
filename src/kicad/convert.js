@@ -174,6 +174,44 @@
     return pts;
   }
 
+  // EasyEDA PT~ uses SVG-like path data, e.g. "M 405 283 L 395 290 L 405 297 Z"
+  // (diode/LED triangles, arrow heads). M/L/Z cover the common schematic cases.
+  function parsePathPoints(pathStr, ox, oy, flipY) {
+    const tokens = String(pathStr || "")
+      .trim()
+      .split(/[\s,]+/)
+      .filter(Boolean);
+    const pts = [];
+    let i = 0;
+    let cmd = null;
+    const pushPt = (xPx, yPx) => {
+      const x = pxToMm(xPx - ox);
+      const y = flipY ? -pxToMm(yPx - oy) : pxToMm(yPx - oy);
+      pts.push([x, y]);
+    };
+    while (i < tokens.length) {
+      const t = tokens[i];
+      if (/^[A-Za-z]$/.test(t)) {
+        cmd = t.toUpperCase();
+        i++;
+        if (cmd === "Z") {
+          if (pts.length) pts.push(pts[0]);
+        }
+        continue;
+      }
+      if ((cmd === "M" || cmd === "L") && i + 1 < tokens.length) {
+        pushPt(num(tokens[i]), num(tokens[i + 1]));
+        i += 2;
+        // SVG: extra coordinate pairs after M are implicit LineTos.
+        if (cmd === "M") cmd = "L";
+        continue;
+      }
+      // Skip unsupported absolute commands' leftovers conservatively.
+      i++;
+    }
+    return pts;
+  }
+
   function normalizeDataStr(dataStr) {
     if (!dataStr) return null;
     if (typeof dataStr === "string") {
@@ -262,22 +300,34 @@
               (stroke (width 0.254) (type default))
               (fill (type ${fill}))
             )`);
-      } else if (cmd === "PL" || cmd === "PG") {
+      } else if (cmd === "PL" || cmd === "PG" || cmd === "PT") {
         const p = line.split("~");
-        const pts = parsePolylinePoints(p[1], originX, originY, true);
+        // PL/PG: space-separated points. PT: SVG path in field 1 (LED/diode bodies).
+        const pts =
+          cmd === "PT"
+            ? parsePathPoints(p[1], originX, originY, true)
+            : parsePolylinePoints(p[1], originX, originY, true);
         if (pts.length < 2) continue;
-        const closed = cmd === "PG";
+        const closed = cmd === "PG" || cmd === "PT";
         if (closed && pts.length) {
           const a = pts[0];
           const b = pts[pts.length - 1];
           if (a[0] !== b[0] || a[1] !== b[1]) pts.push(a);
+        }
+        let fill = "none";
+        if (cmd === "PG") {
+          fill = "background";
+        } else if (cmd === "PT") {
+          // PT~path~stroke~width~?~fill~id~
+          const fillRaw = String(p[5] || "none").trim().toLowerCase();
+          fill = fillRaw && fillRaw !== "none" ? "outline" : "none";
         }
         graphics.push(`            (polyline
               (pts
                 ${pts.map(([x, y]) => `(xy ${x.toFixed(2)} ${y.toFixed(2)})`).join(" ")}
               )
               (stroke (width 0.254) (type default))
-              (fill (type ${closed ? "background" : "none"}))
+              (fill (type ${fill}))
             )`);
       }
     }
