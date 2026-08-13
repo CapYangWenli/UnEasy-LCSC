@@ -1,0 +1,7 @@
+{
+  "name": "synth-multi-unit",
+  "expect": "pass",
+  "risk": "medium",
+  "tags": ["synthetic", "multi-unit", "empty-parent-shape"],
+  "notes": "Parent shape=[]; two subparts with pins — H4"
+}

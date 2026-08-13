@@ -1,0 +1,19 @@
+{
+  "lcsc": "C2286",
+  "mpn": "KT-0603R",
+  "package": "LED-SMD_L1.6-W0.8-R-RD",
+  "title": "LED-SMD_L1.6-W0.8-R-RD",
+  "risk": "medium",
+  "tier": "C",
+  "tags": [
+    "pt-path",
+    "diode"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:17.836Z",
+  "visiblePinCount": 2,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

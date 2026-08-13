@@ -1,0 +1,19 @@
+{
+  "lcsc": "C14284",
+  "mpn": "RLSD52A051C",
+  "package": "SOD-523_L1.2-W0.8-LS1.6-BI",
+  "title": "SOD-523_L1.2-W0.8-LS1.6-BI",
+  "risk": "low",
+  "tier": "A",
+  "tags": [
+    "resistor",
+    "2-pin"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:13.238Z",
+  "visiblePinCount": 2,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

@@ -1,0 +1,57 @@
+{
+  "name": "synth-circle",
+  "prefix": "U",
+  "packageName": "SYNTH_CIRCLE",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "",
+    "manufacturer": "",
+    "mpn": "",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SYNTH_CIRCLE"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -7.62,
+          "y_mm": 0,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "2",
+          "name": "B",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 7.62,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "circle",
+          "center": {
+            "x": 0,
+            "y": 0
+          },
+          "radius": 3.81,
+          "fill": "background"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

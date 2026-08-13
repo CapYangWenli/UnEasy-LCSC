@@ -1,0 +1,18 @@
+{
+  "lcsc": "C5446",
+  "mpn": "XC6206P332MR-G",
+  "package": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+  "title": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+  "risk": "medium",
+  "tier": "B",
+  "tags": [
+    "SOT-23"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:16.498Z",
+  "visiblePinCount": 3,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

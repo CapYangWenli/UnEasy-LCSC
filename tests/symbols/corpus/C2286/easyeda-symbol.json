@@ -1,0 +1,45 @@
+{
+  "dataStr": {
+    "head": {
+      "docType": "2",
+      "editorVersion": "6.5.51",
+      "c_para": {
+        "pre": "LED?",
+        "name": "KT-0603R",
+        "package": "LED-SMD_L1.6-W0.8-R-RD",
+        "Supplier": "LCSC",
+        "Manufacturer": "KENTO",
+        "Manufacturer Part": "KT-0603R",
+        "Supplier Part": "C2286",
+        "JLCPCB Part Class": "Basic Part"
+      },
+      "x": 0,
+      "y": -5,
+      "puuid": "5294e4298d7a4d9d966148b3893abd7c",
+      "uuid": "0806368f73e1232ca543f14a515367b4",
+      "utime": 1778891420,
+      "importFlag": 0,
+      "c_spiceCmd": null,
+      "hasIdFlag": true
+    },
+    "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~5~1000~1000~line~5~pixel~5~0~-5",
+    "shape": [
+      "PT~M -15 -18 L -11 -16 L -13 -14 Z ~#880000~1~0~#880000~gge26~0~",
+      "PT~M -11 -22 L -7 -20 L -9 -18 Z ~#880000~1~0~#880000~gge27~0~",
+      "P~show~0~2~-20~-5~180~gge28~0^^-20~-5^^M -20 -5 h 15~#800^^0~-1~-5~0~K~start~~~#800^^0~-9~-9~0~2~end~~~#800^^0~-8~-5^^0~M -5 -2 L -2 -5 L -5 -8",
+      "PL~-8 -11 -15 -18~#880000~1~0~none~gge35~0",
+      "PL~-4 -15 -11 -22~#880000~1~0~none~gge36~0",
+      "P~show~0~1~20~-5~0~gge37~0^^20~-5^^M 20 -5 h -15~#800^^0~1~-5~0~A~end~~~#800^^0~9~-9~0~1~start~~~#800^^0~8~-5^^0~M 5 -8 L 2 -5 L 5 -2",
+      "PL~-5 -13 -5 3~#880000~1~0~none~gge44~0",
+      "PT~M 5 1 L -5 -5 L 5 -12 Z ~#880000~1~0~#880000~gge45~0~"
+    ],
+    "BBox": {
+      "x": -21,
+      "y": -22,
+      "width": 42,
+      "height": 25
+    },
+    "colors": []
+  },
+  "subparts": []
+}

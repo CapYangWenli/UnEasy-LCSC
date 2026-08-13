@@ -1,0 +1,218 @@
+{
+  "name": "MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL",
+  "prefix": "U",
+  "packageName": "MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL",
+  "unitCount": 2,
+  "properties": {
+    "lcsc": "C17702535",
+    "manufacturer": "COSINE(科山芯创)",
+    "mpn": "COSOPA227UMR",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL"
+  },
+  "units": [
+    {
+      "id": 1,
+      "name": "A",
+      "pins": [
+        {
+          "number": "6",
+          "name": "OUT",
+          "type": "output",
+          "easyedaType": 2,
+          "style": "line",
+          "visible": true,
+          "x_mm": 10.16,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        },
+        {
+          "number": "3",
+          "name": "IN+",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -10.16,
+          "y_mm": -2.54,
+          "rotation_deg": 0,
+          "length_mm": 5.08
+        },
+        {
+          "number": "2",
+          "name": "IN-",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -10.16,
+          "y_mm": 2.54,
+          "rotation_deg": 0,
+          "length_mm": 5.08
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -5.08,
+              "y": -5.08
+            },
+            {
+              "x": 5.08,
+              "y": 0
+            },
+            {
+              "x": -5.08,
+              "y": 5.08
+            },
+            {
+              "x": -5.08,
+              "y": -5.08
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -4.06,
+              "y": 2.54
+            },
+            {
+              "x": -2.54,
+              "y": 2.54
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -4.06,
+              "y": -2.54
+            },
+            {
+              "x": -2.54,
+              "y": -2.54
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -3.3,
+              "y": -1.78
+            },
+            {
+              "x": -3.3,
+              "y": -3.3
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "B",
+      "pins": [
+        {
+          "number": "7",
+          "name": "+VS",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -8.89,
+          "y_mm": 1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "4",
+          "name": "-VS",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -8.89,
+          "y_mm": -1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "8",
+          "name": "NC",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 8.89,
+          "y_mm": -2.54,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "5",
+          "name": "NC",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 8.89,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "1",
+          "name": "NC",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 8.89,
+          "y_mm": 2.54,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -6.35,
+            "y": 5.08
+          },
+          "end": {
+            "x": 6.35,
+            "y": -5.08
+          },
+          "easyedaW": 50,
+          "easyedaH": 40
+        },
+        {
+          "kind": "circle",
+          "center": {
+            "x": -5.08,
+            "y": 3.81
+          },
+          "radius": 0.38,
+          "fill": "background"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

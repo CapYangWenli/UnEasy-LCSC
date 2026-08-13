@@ -1,0 +1,205 @@
+{
+  "name": "USB-C-SMD_TYPE-C-16PIN-2MD-073",
+  "prefix": "USB",
+  "packageName": "USB-C-SMD_TYPE-C-16PIN-2MD-073",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C2765186",
+    "manufacturer": "SHOU HAN(首韩)",
+    "mpn": "TYPE-C 16PIN 2MD(073)",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:USB-C-SMD_TYPE-C-16PIN-2MD-073"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "A1B12",
+          "name": "GND",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": 13.97,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "A4B9",
+          "name": "VBUS",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": 11.43,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "B8",
+          "name": "SBU2",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": 8.89,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "A5",
+          "name": "CC1",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": 6.35,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "B7",
+          "name": "Dn2",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": 3.81,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "A6",
+          "name": "Dp1",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": 1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "A7",
+          "name": "Dn1",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": -1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "B6",
+          "name": "Dp2",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": -3.81,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "A8",
+          "name": "SBU1",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": -6.35,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "B5",
+          "name": "CC2",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": -8.89,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "B4A9",
+          "name": "VBUS",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": -11.43,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "B1A12",
+          "name": "GND",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -6.35,
+          "y_mm": -13.97,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "14",
+          "name": "EH",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 11.43,
+          "y_mm": -13.97,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "13",
+          "name": "EH",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 11.43,
+          "y_mm": 13.97,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -3.81,
+            "y": 16.51
+          },
+          "end": {
+            "x": 8.89,
+            "y": -16.51
+          },
+          "easyedaW": 50,
+          "easyedaH": 130
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

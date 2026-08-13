@@ -1,0 +1,7 @@
+{
+  "name": "synth-ellipse-noncircular",
+  "expect": "warn",
+  "risk": "low",
+  "tags": ["synthetic", "ellipse-noncircular"],
+  "notes": "E~ rx≠ry — S2 + UNHANDLED, not BLOCKED"
+}

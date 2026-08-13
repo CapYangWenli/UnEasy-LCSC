@@ -188,6 +188,31 @@ npm run freeze:footprint -- --manifest tests/footprints/corpus-manifest.json
 
 ---
 
+## Symbol testing
+
+Symbols from **Download KiCad** are **assisted conversions** — verify pinout and body graphics (especially LEDs and analog parts) in the schematic editor.
+
+Automated geometry/electrical checks (SymbolIR compares on a frozen LCSC corpus) live under `tests/symbols/` and are documented in:
+
+- [docs/symbol-e2e-trd.md](docs/symbol-e2e-trd.md) — requirements and assertion IDs
+- [docs/symbol-known-gaps.md](docs/symbol-known-gaps.md) — intentional skips (`T~`, curved `PT~`, non-circular `E~`, etc.)
+
+```bash
+npm run test:symbol-e2e
+```
+
+CI runs this suite when `src/kicad/convert.js` or symbol fixtures change. Reports are written to `artifacts/symbol-report.json` (gitignored).
+
+To refresh a frozen corpus part (dev only, not used in CI):
+
+```bash
+npm run freeze:symbol -- C51933324 --tier C --risk high --tags pt-path,LED
+# or batch:
+npm run freeze:symbol -- --manifest tests/symbols/corpus-manifest.json
+```
+
+---
+
 ## Notes
 
 - KiCad conversion covers the common EasyEDA primitives (pins, pads, tracks, silk, holes, etc.) and multi-unit symbols (e.g. Compute Module). Complex arcs/paths may be simplified vs `easyeda2kicad.py`.

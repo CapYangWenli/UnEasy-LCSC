@@ -1,0 +1,42 @@
+{
+  "dataStr": {
+    "head": {
+      "docType": "2",
+      "editorVersion": "6.2.43",
+      "x": 400,
+      "y": 300,
+      "c_para": {
+        "pre": "D?",
+        "name": "RLSD52A051C_C14284",
+        "package": "SOD-523_L1.2-W0.8-LS1.6-BI",
+        "Contributor": "LCSC",
+        "Supplier": "LCSC",
+        "Supplier Part": "C14284",
+        "Manufacturer": "LCSC",
+        "Manufacturer Part": "RLSD52A051C"
+      },
+      "puuid": "83d2c26c897548478611a7b637e39735",
+      "utime": 1568767880,
+      "uuid": "7d1afd74805f4cb38d53576136db3f1e",
+      "importFlag": 0,
+      "c_spiceCmd": null,
+      "hasIdFlag": true
+    },
+    "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~10~1000~1000~line~10~pixel~5~400~300",
+    "shape": [
+      "P~show~0~2~420~300~0~gge3~0^^420~300^^M 420 300 h -10~#8D2323^^0~407~303~0~2~end~~~#8D2323^^0~411~299~0~2~start~~~#8D2323^^0~413~300^^0~M 410 297 L 407 300 L 410 303",
+      "P~show~0~1~380~300~180~gge10~0^^380~300^^M 380 300 h 10~#8D2323^^0~393~303~0~1~start~~~#8D2323^^0~389~299~0~1~end~~~#8D2323^^0~387~300^^0~M 390 303 L 393 300 L 390 297",
+      "PG~390 295 400 300 390 305~#880000~1~0~none~gge17~0",
+      "PG~410 295 400 300 410 305~#880000~1~0~none~gge18~0",
+      "PL~398 294 398 294 400 294 400 306 402 306 402 306~#880000~1~0~none~gge19~0"
+    ],
+    "BBox": {
+      "x": 378.5,
+      "y": 294,
+      "width": 43,
+      "height": 12
+    },
+    "colors": []
+  },
+  "subparts": []
+}

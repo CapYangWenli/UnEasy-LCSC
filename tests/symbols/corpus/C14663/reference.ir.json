@@ -1,0 +1,108 @@
+{
+  "name": "C0603",
+  "prefix": "C",
+  "packageName": "C0603",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C14663",
+    "manufacturer": "YAGEO(国巨)",
+    "mpn": "CC0603KRX7R9BB104",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:C0603"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 0,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 5.08,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -0.51,
+              "y": -2.03
+            },
+            {
+              "x": -0.51,
+              "y": 2.03
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": 2.54,
+              "y": 0
+            },
+            {
+              "x": 0.51,
+              "y": 0
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": 0.51,
+              "y": 2.03
+            },
+            {
+              "x": 0.51,
+              "y": -2.03
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -0.51,
+              "y": 0
+            },
+            {
+              "x": -2.54,
+              "y": 0
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

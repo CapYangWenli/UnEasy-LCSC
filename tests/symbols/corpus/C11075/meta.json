@@ -1,0 +1,18 @@
+{
+  "lcsc": "C11075",
+  "mpn": "AFC11-S24ICC-00",
+  "package": "FPC-SMD_AFC11-S24ICC-00",
+  "title": "FPC-SMD_AFC11-S24ICC-00",
+  "risk": "medium",
+  "tier": "G",
+  "tags": [
+    "parser-trap"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:23.468Z",
+  "visiblePinCount": 26,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

@@ -1,0 +1,7 @@
+{
+  "name": "synth-pt-triangle",
+  "expect": "pass",
+  "risk": "low",
+  "tags": ["synthetic", "pt-path", "pt-triangle"],
+  "notes": "PT~ M/L/Z closed triangle — H9/H11"
+}

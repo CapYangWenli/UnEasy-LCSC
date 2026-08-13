@@ -1,0 +1,117 @@
+{
+  "name": "SOD-523_L1.2-W0.8-LS1.6-BI",
+  "prefix": "D",
+  "packageName": "SOD-523_L1.2-W0.8-LS1.6-BI",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C14284",
+    "manufacturer": "LCSC",
+    "mpn": "RLSD52A051C",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SOD-523_L1.2-W0.8-LS1.6-BI"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "2",
+          "name": "2",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 5.08,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "1",
+          "name": "1",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 0,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -2.54,
+              "y": 1.27
+            },
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": -2.54,
+              "y": -1.27
+            }
+          ],
+          "closed": true,
+          "fill": "background"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": 2.54,
+              "y": 1.27
+            },
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 2.54,
+              "y": -1.27
+            }
+          ],
+          "closed": true,
+          "fill": "background"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -0.51,
+              "y": 1.52
+            },
+            {
+              "x": -0.51,
+              "y": 1.52
+            },
+            {
+              "x": 0,
+              "y": 1.52
+            },
+            {
+              "x": 0,
+              "y": -1.52
+            },
+            {
+              "x": 0.51,
+              "y": -1.52
+            },
+            {
+              "x": 0.51,
+              "y": -1.52
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

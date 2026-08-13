@@ -1,0 +1,142 @@
+{
+  "name": "SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL",
+  "prefix": "U",
+  "packageName": "SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C98715",
+    "manufacturer": "onsemi(安森美)",
+    "mpn": "UC3845BD1R2G",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "Compensation",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -20.32,
+          "y_mm": 3.81,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "2",
+          "name": "VoltageFeedback",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -20.32,
+          "y_mm": 1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "3",
+          "name": "CurrentSense",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -20.32,
+          "y_mm": -1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "4",
+          "name": "RT/CT",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -20.32,
+          "y_mm": -3.81,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "5",
+          "name": "GND",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 20.32,
+          "y_mm": -3.81,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "6",
+          "name": "Output",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 20.32,
+          "y_mm": -1.27,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "7",
+          "name": "VCC",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 20.32,
+          "y_mm": 1.27,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "8",
+          "name": "Vref",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 20.32,
+          "y_mm": 3.81,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -17.78,
+            "y": 6.35
+          },
+          "end": {
+            "x": 17.78,
+            "y": -6.35
+          },
+          "easyedaW": 140,
+          "easyedaH": 50
+        },
+        {
+          "kind": "circle",
+          "center": {
+            "x": -16.51,
+            "y": 5.08
+          },
+          "radius": 0.38,
+          "fill": "background"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

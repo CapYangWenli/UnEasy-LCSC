@@ -1,0 +1,18 @@
+{
+  "lcsc": "C72038",
+  "mpn": "19-213/Y2C-CQ2R2L/3T(CY)",
+  "package": "LED0603-RD-YELLOW",
+  "title": "LED0603-RD-YELLOW",
+  "risk": "medium",
+  "tier": "C",
+  "tags": [
+    "pg-polygon"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:18.506Z",
+  "visiblePinCount": 2,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

@@ -1,0 +1,145 @@
+{
+  "name": "ESOP-8_L4.9-W3.9-P1.27-LS6.0-TL-EP",
+  "prefix": "U",
+  "packageName": "ESOP-8_L4.9-W3.9-P1.27-LS6.0-TL-EP",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C9864",
+    "manufacturer": "TI(德州仪器)",
+    "mpn": "TPS5430DDAR",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:ESOP-8_L4.9-W3.9-P1.27-LS6.0-TL-EP"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "BOOT",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -15.24,
+          "y_mm": 3.81,
+          "rotation_deg": 0,
+          "length_mm": 5.08
+        },
+        {
+          "number": "2",
+          "name": "NC",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -15.24,
+          "y_mm": 1.27,
+          "rotation_deg": 0,
+          "length_mm": 5.08
+        },
+        {
+          "number": "3",
+          "name": "NC",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -15.24,
+          "y_mm": -1.27,
+          "rotation_deg": 0,
+          "length_mm": 5.08
+        },
+        {
+          "number": "4",
+          "name": "VSENSE",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -15.24,
+          "y_mm": -3.81,
+          "rotation_deg": 0,
+          "length_mm": 5.08
+        },
+        {
+          "number": "5",
+          "name": "ENA",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 15.24,
+          "y_mm": -6.35,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        },
+        {
+          "number": "6",
+          "name": "GND",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 15.24,
+          "y_mm": -3.81,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        },
+        {
+          "number": "7",
+          "name": "VIN",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 15.24,
+          "y_mm": -1.27,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        },
+        {
+          "number": "8",
+          "name": "PH",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 15.24,
+          "y_mm": 1.27,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        },
+        {
+          "number": "9",
+          "name": "PowerPAD",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 15.24,
+          "y_mm": 6.35,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -10.16,
+            "y": 8.89
+          },
+          "end": {
+            "x": 10.16,
+            "y": -8.89
+          },
+          "easyedaW": 80,
+          "easyedaH": 70
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

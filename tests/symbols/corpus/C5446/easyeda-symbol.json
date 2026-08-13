@@ -1,0 +1,41 @@
+{
+  "dataStr": {
+    "head": {
+      "docType": "2",
+      "editorVersion": "6.3.22",
+      "c_para": {
+        "pre": "U?",
+        "name": "XC6206P332MR",
+        "package": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+        "Supplier": "LCSC",
+        "Manufacturer": "TOREX(特瑞仕)",
+        "Manufacturer Part": "XC6206P332MR-G",
+        "Supplier Part": "C5446",
+        "JLCPCB Part Class": "Basic Part"
+      },
+      "x": 70,
+      "y": 35,
+      "importFlag": 0,
+      "c_spiceCmd": null,
+      "puuid": "b3b82869fa924bae820e3a6cfb44d689",
+      "uuid": "9a6753e3870e4f5ca7d2458b4aaa2de4",
+      "utime": 1577930580,
+      "hasIdFlag": true
+    },
+    "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~5~1000~1000~line~5~pixel~5~70~35",
+    "shape": [
+      "R~50~5~2~2~40~60~#000000~1~0~none~gge2~0~",
+      "P~show~0~1~110~55~0~gge3~0^^110~55^^M 110 55 h -20~#880000^^1~88~58~0~GND~end~~~#0000FF^^1~95~54~0~1~start~~~#0000FF^^0~93~55^^0~M 90 52 L 87 55 L 90 58",
+      "P~show~0~2~30~35~180~gge10~0^^30~35^^M 30 35 h 20~#880000^^1~52~38~0~Vin~start~~~#0000FF^^1~45~34~0~3~end~~~#0000FF^^0~47~35^^0~M 50 38 L 53 35 L 50 32",
+      "P~show~0~3~110~15~0~gge17~0^^110~15^^M 110 15 h -20~#880000^^1~88~18~0~Vout~end~~~#0000FF^^1~95~14~0~2~start~~~#0000FF^^0~93~15^^0~M 90 12 L 87 15 L 90 18"
+    ],
+    "BBox": {
+      "x": 28,
+      "y": 5,
+      "width": 84,
+      "height": 60
+    },
+    "colors": []
+  },
+  "subparts": []
+}

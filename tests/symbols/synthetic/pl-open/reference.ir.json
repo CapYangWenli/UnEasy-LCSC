@@ -1,0 +1,63 @@
+{
+  "name": "synth-pl-open",
+  "prefix": "U",
+  "packageName": "SYNTH_PL",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "",
+    "manufacturer": "",
+    "mpn": "",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SYNTH_PL"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -12.7,
+          "y_mm": 2.54,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "2",
+          "name": "B",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 12.7,
+          "y_mm": 2.54,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -7.62,
+              "y": 2.54
+            },
+            {
+              "x": 7.62,
+              "y": 2.54
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

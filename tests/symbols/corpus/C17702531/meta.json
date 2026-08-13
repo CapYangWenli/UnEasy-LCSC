@@ -1,0 +1,20 @@
+{
+  "lcsc": "C17702531",
+  "mpn": "CM4102008 - Compute Module 4 Rev5",
+  "package": "COMM-SMD_L55.0-W40.0_CM4101000",
+  "title": "COMM-SMD_L55.0-W40.0_CM4101000",
+  "risk": "high",
+  "tier": "D",
+  "tags": [
+    "multi-unit",
+    "CM4",
+    "empty-parent-shape"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:19.288Z",
+  "visiblePinCount": 200,
+  "hiddenPinCount": 0,
+  "unitCount": 2,
+  "subpartCount": 2,
+  "unhandledAtFreeze": {}
+}

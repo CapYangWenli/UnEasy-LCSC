@@ -1,0 +1,162 @@
+{
+  "name": "LED-SMD_L1.6-W0.8-R-RD",
+  "prefix": "LED",
+  "packageName": "LED-SMD_L1.6-W0.8-R-RD",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C2286",
+    "manufacturer": "KENTO",
+    "mpn": "KT-0603R",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:LED-SMD_L1.6-W0.8-R-RD"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "2",
+          "name": "K",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -1.27,
+          "rotation_deg": 0,
+          "length_mm": 3.81
+        },
+        {
+          "number": "1",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 5.08,
+          "y_mm": -1.27,
+          "rotation_deg": 180,
+          "length_mm": 3.81
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -3.81,
+              "y": 2.03
+            },
+            {
+              "x": -2.79,
+              "y": 1.52
+            },
+            {
+              "x": -3.3,
+              "y": 1.02
+            },
+            {
+              "x": -3.81,
+              "y": 2.03
+            }
+          ],
+          "closed": true,
+          "fill": "outline"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -2.79,
+              "y": 3.05
+            },
+            {
+              "x": -1.78,
+              "y": 2.54
+            },
+            {
+              "x": -2.29,
+              "y": 2.03
+            },
+            {
+              "x": -2.79,
+              "y": 3.05
+            }
+          ],
+          "closed": true,
+          "fill": "outline"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -2.03,
+              "y": 0.25
+            },
+            {
+              "x": -3.81,
+              "y": 2.03
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -1.02,
+              "y": 1.27
+            },
+            {
+              "x": -2.79,
+              "y": 3.05
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -1.27,
+              "y": 0.76
+            },
+            {
+              "x": -1.27,
+              "y": -3.3
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": 1.27,
+              "y": -2.79
+            },
+            {
+              "x": -1.27,
+              "y": -1.27
+            },
+            {
+              "x": 1.27,
+              "y": 0.51
+            },
+            {
+              "x": 1.27,
+              "y": -2.79
+            }
+          ],
+          "closed": true,
+          "fill": "outline"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

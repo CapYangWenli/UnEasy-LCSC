@@ -1,0 +1,52 @@
+{
+  "name": "synth-pt-curves",
+  "prefix": "U",
+  "packageName": "SYNTH_PT_CURVE",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "",
+    "manufacturer": "",
+    "mpn": "",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SYNTH_PT_CURVE"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -10.16,
+          "y_mm": 2.54,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "2",
+          "name": "B",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 15.24,
+          "y_mm": 2.54,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": []
+    }
+  ],
+  "unhandled": [
+    {
+      "cmd": "PT",
+      "count": 1
+    }
+  ]
+}

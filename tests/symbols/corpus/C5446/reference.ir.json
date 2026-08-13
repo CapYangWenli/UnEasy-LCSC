@@ -1,0 +1,73 @@
+{
+  "name": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+  "prefix": "U",
+  "packageName": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C5446",
+    "manufacturer": "TOREX(特瑞仕)",
+    "mpn": "XC6206P332MR-G",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "GND",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 10.16,
+          "y_mm": -5.08,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        },
+        {
+          "number": "3",
+          "name": "Vin",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -10.16,
+          "y_mm": 0,
+          "rotation_deg": 0,
+          "length_mm": 5.08
+        },
+        {
+          "number": "2",
+          "name": "Vout",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 10.16,
+          "y_mm": 5.08,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -5.08,
+            "y": 7.62
+          },
+          "end": {
+            "x": 5.08,
+            "y": -7.62
+          },
+          "easyedaW": 40,
+          "easyedaH": 60
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

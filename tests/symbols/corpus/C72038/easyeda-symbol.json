@@ -1,0 +1,45 @@
+{
+  "dataStr": {
+    "head": {
+      "docType": "2",
+      "editorVersion": "6.5.27",
+      "c_para": {
+        "pre": "LED?",
+        "name": "19-213/Y2C-CQ2R2L/3T(CY)",
+        "package": "LED0603-RD-YELLOW",
+        "Supplier": "LCSC",
+        "Manufacturer": "EVERLIGHT(亿光)",
+        "Manufacturer Part": "19-213/Y2C-CQ2R2L/3T(CY)",
+        "Supplier Part": "C72038",
+        "JLCPCB Part Class": "Extended Part"
+      },
+      "x": 5,
+      "y": -5,
+      "puuid": "915ed4d9d6f54d4c9533225998da3260",
+      "uuid": "0e7de0705db79c49f7005d174cdac6cc",
+      "utime": 1681093751,
+      "importFlag": 0,
+      "c_spiceCmd": null,
+      "hasIdFlag": true
+    },
+    "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~5~1000~1000~line~5~pixel~5~5~-5",
+    "shape": [
+      "P~show~1~2~25~-5~0~gge11~0^^25~-5^^M 25 -5 h -15~#000000^^0~5~-2~0~A~end~~~#000000^^0~12~-6~0~2~start~~~#000000^^0~13~-5^^0~M 10 -8 L 7 -5 L 10 -2",
+      "P~show~1~1~-15~-5~180~gge20~0^^-15~-5^^M -15 -5 h 15~#000000^^0~5~-2~0~C~start~~~#000000^^0~-2~-6~0~1~end~~~#000000^^0~-3~-5^^0~M 0 -2 L 3 -5 L 0 -8",
+      "PG~10 1 0 -5 10 -11~#880000~1~0~#880000~gge27~0",
+      "PL~3 -13 -4 -20~#880000~1~0~none~gge28~0",
+      "PL~7 -17 0 -24~#880000~1~0~none~gge29~0",
+      "PG~-4 -20 0 -18 -2 -16~#880000~1~0~#880000~gge30~0",
+      "PG~0 -24 4 -22 2 -20~#880000~1~0~#880000~gge31~0",
+      "PL~0 -11 0 1~#880000~1~0~none~gge32~0"
+    ],
+    "BBox": {
+      "x": -16,
+      "y": -24,
+      "width": 42,
+      "height": 25
+    },
+    "colors": []
+  },
+  "subparts": []
+}

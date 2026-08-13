@@ -4,6 +4,9 @@ node_modules/**
 web-ext-artifacts/**
 releases/**
 scripts/**
+tests/**
+docs/**
+artifacts/**
 *.md
 package.json
 package-lock.json

@@ -1,0 +1,7 @@
+{
+  "name": "synth-pt-curves",
+  "expect": "warn",
+  "risk": "low",
+  "tags": ["synthetic", "pt-curves"],
+  "notes": "PT~ with cubic curve — S3 WARN, not BLOCKED unless risk=high"
+}

@@ -1,0 +1,45 @@
+{
+  "dataStr": {
+    "head": {
+      "docType": "2",
+      "editorVersion": "5.8.20",
+      "c_para": {
+        "pre": "C?",
+        "name": "CC0603KRX7R9BB104",
+        "package": "C0603",
+        "nameAlias": "Value",
+        "Supplier": "LCSC",
+        "Manufacturer": "YAGEO(国巨)",
+        "Manufacturer Part": "CC0603KRX7R9BB104",
+        "Value": "100nF",
+        "Supplier Part": "C14663",
+        "JLCPCB Part Class": "Basic Part"
+      },
+      "x": 0,
+      "y": 0,
+      "puuid": "f8151fdc728a41ebbc304e11d39e5437",
+      "uuid": "154b66255b01a09bf1c88bb1ea89be78",
+      "utime": 1542796025,
+      "importFlag": 0,
+      "c_spiceCmd": null,
+      "hasIdFlag": true
+    },
+    "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~5~1000~1000~line~5~pixel~5~0~0",
+    "shape": [
+      "PL~-2 8 -2 -8~#A00000~1~0~none~gge9~0",
+      "P~show~0~1~-20~0~180~gge10~0^^-20~0^^M -10 0 h -10~#800^^0~-6~0~0~1~start~~~#800^^0~-14~-4~0~1~end~~~#800^^0~-33~0^^0~M -30 3 L -27 0 L -30 -3",
+      "PL~10 0 2 0~#A00000~1~0~none~gge19~0",
+      "PL~2 -8 2 8~#A00000~1~0~none~gge20~0",
+      "P~show~0~2~20~0~0~gge21~0^^20~0^^M 10 0 h 10~#800^^0~6~0~0~2~end~~~#800^^0~14~-4~0~2~start~~~#800^^0~33~0^^0~M 30 -3 L 27 0 L 30 3",
+      "PL~-2 0 -10 0~#A00000~1~0~none~gge28~0"
+    ],
+    "BBox": {
+      "x": -24,
+      "y": -8,
+      "width": 48,
+      "height": 16
+    },
+    "colors": []
+  },
+  "subparts": []
+}

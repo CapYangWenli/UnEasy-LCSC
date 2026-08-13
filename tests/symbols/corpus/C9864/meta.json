@@ -1,0 +1,20 @@
+{
+  "lcsc": "C9864",
+  "mpn": "TPS5430DDAR",
+  "package": "ESOP-8_L4.9-W3.9-P1.27-LS6.0-TL-EP",
+  "title": "ESOP-8_L4.9-W3.9-P1.27-LS6.0-TL-EP",
+  "risk": "medium",
+  "tier": "B",
+  "tags": [
+    "SOP",
+    "IC",
+    "empty-radius"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:15.871Z",
+  "visiblePinCount": 9,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

@@ -1,0 +1,19 @@
+{
+  "lcsc": "C17702535",
+  "mpn": "COSOPA227UMR",
+  "package": "MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL",
+  "title": "MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL",
+  "risk": "high",
+  "tier": "D",
+  "tags": [
+    "multi-unit",
+    "empty-parent-shape"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:43:28.902Z",
+  "visiblePinCount": 8,
+  "hiddenPinCount": 0,
+  "unitCount": 2,
+  "subpartCount": 2,
+  "unhandledAtFreeze": {}
+}

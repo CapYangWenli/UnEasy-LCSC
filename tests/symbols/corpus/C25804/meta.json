@@ -1,0 +1,19 @@
+{
+  "lcsc": "C25804",
+  "mpn": "0603WAF1002T5E",
+  "package": "R0603",
+  "title": "R0603",
+  "risk": "low",
+  "tier": "A",
+  "tags": [
+    "0603",
+    "resistor"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:13.932Z",
+  "visiblePinCount": 2,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

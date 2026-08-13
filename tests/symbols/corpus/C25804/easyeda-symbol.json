@@ -1,0 +1,42 @@
+{
+  "dataStr": {
+    "head": {
+      "docType": "2",
+      "editorVersion": "5.8.20",
+      "c_para": {
+        "pre": "R?",
+        "name": "0603WAF1002T5E",
+        "package": "R0603",
+        "nameAlias": "Value",
+        "Supplier": "LCSC",
+        "Manufacturer": "UNI-ROYAL(厚声)",
+        "Manufacturer Part": "0603WAF1002T5E",
+        "Supplier Part": "C25804",
+        "Value": "10kΩ",
+        "JLCPCB Part Class": "Basic Part"
+      },
+      "x": 20,
+      "y": 0,
+      "puuid": "398691f1f785460098bbe5ee6590333c",
+      "uuid": "b210af5a1436310a86e8b108e2e5a90b",
+      "utime": 1542392660,
+      "importFlag": 0,
+      "c_spiceCmd": null,
+      "hasIdFlag": true
+    },
+    "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~5~1000~1000~line~5~pixel~5~20~0",
+    "shape": [
+      "P~show~1~2~40~0~0~rep2~0^^40~0^^M 40 -0 h-10~#000000^^0~25~3~0~2~end~~~#000000^^0~35~-1~0~2~start~~~#000000^^0~33~0^^0~M 30 -3 L 27 0 L 30 3",
+      "P~show~1~1~0~0~180~rep3~0^^0~0^^M 0 -0 h10~#000000^^0~15~3~0~1~start~~~#000000^^0~5~-1~0~1~end~~~#000000^^0~7~0^^0~M 10 3 L 13 0 L 10 -3",
+      "R~10~-4~~~20~8~#880000~1~0~none~rep4~0"
+    ],
+    "BBox": {
+      "x": -4,
+      "y": -4,
+      "width": 48,
+      "height": 8
+    },
+    "colors": []
+  },
+  "subparts": []
+}

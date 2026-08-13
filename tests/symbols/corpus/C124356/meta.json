@@ -1,0 +1,19 @@
+{
+  "lcsc": "C124356",
+  "mpn": "B-2101S80P-B110",
+  "package": "HDR-TH_80P-P1.27-V-M-R2-C40-S1.27",
+  "title": "HDR-TH_80P-P1.27-V-M-R2-C40-S1.27",
+  "risk": "medium",
+  "tier": "F",
+  "tags": [
+    "connector",
+    "header"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:22.146Z",
+  "visiblePinCount": 80,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

@@ -1,0 +1,19 @@
+{
+  "lcsc": "C51933324",
+  "mpn": "GL0602UG01",
+  "package": "LED-SMD_L1.6-W1.1-RD",
+  "title": "LED-SMD_L1.6-W1.1-RD",
+  "risk": "high",
+  "tier": "C",
+  "tags": [
+    "pt-path",
+    "LED"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:17.128Z",
+  "visiblePinCount": 2,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

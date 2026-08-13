@@ -1,0 +1,150 @@
+{
+  "name": "LED0603-RD-YELLOW",
+  "prefix": "LED",
+  "packageName": "LED0603-RD-YELLOW",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C72038",
+    "manufacturer": "EVERLIGHT(亿光)",
+    "mpn": "19-213/Y2C-CQ2R2L/3T(CY)",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:LED0603-RD-YELLOW"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "2",
+          "name": "A",
+          "type": "input",
+          "easyedaType": 1,
+          "style": "line",
+          "visible": true,
+          "x_mm": 5.08,
+          "y_mm": -1.27,
+          "rotation_deg": 180,
+          "length_mm": 3.81
+        },
+        {
+          "number": "1",
+          "name": "C",
+          "type": "input",
+          "easyedaType": 1,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -1.27,
+          "rotation_deg": 0,
+          "length_mm": 3.81
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": 1.27,
+              "y": -2.79
+            },
+            {
+              "x": -1.27,
+              "y": -1.27
+            },
+            {
+              "x": 1.27,
+              "y": 0.25
+            }
+          ],
+          "closed": true,
+          "fill": "background"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -0.51,
+              "y": 0.76
+            },
+            {
+              "x": -2.29,
+              "y": 2.54
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": 0.51,
+              "y": 1.78
+            },
+            {
+              "x": -1.27,
+              "y": 3.56
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -2.29,
+              "y": 2.54
+            },
+            {
+              "x": -1.27,
+              "y": 2.03
+            },
+            {
+              "x": -1.78,
+              "y": 1.52
+            }
+          ],
+          "closed": true,
+          "fill": "background"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -1.27,
+              "y": 3.56
+            },
+            {
+              "x": -0.25,
+              "y": 3.05
+            },
+            {
+              "x": -0.76,
+              "y": 2.54
+            }
+          ],
+          "closed": true,
+          "fill": "background"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -1.27,
+              "y": 0.25
+            },
+            {
+              "x": -1.27,
+              "y": -2.79
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

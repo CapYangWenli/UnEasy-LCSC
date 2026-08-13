@@ -1,0 +1,19 @@
+{
+  "lcsc": "C14663",
+  "mpn": "CC0603KRX7R9BB104",
+  "package": "C0603",
+  "title": "C0603",
+  "risk": "low",
+  "tier": "A",
+  "tags": [
+    "0603",
+    "capacitor"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:14.576Z",
+  "visiblePinCount": 2,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

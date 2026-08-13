@@ -1,0 +1,7 @@
+{
+  "name": "synth-rect-body",
+  "expect": "pass",
+  "risk": "low",
+  "tags": ["synthetic", "rect-body", "c9864-class"],
+  "notes": "R~ with empty rx/ry slots (C9864 class) — H10 must pass"
+}

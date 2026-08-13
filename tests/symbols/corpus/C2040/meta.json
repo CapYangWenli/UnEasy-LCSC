@@ -1,0 +1,21 @@
+{
+  "lcsc": "C2040",
+  "mpn": "RP2040",
+  "package": "LQFN-56_L7.0-W7.0-P0.4-EP",
+  "title": "LQFN-56_L7.0-W7.0-P0.4-EP",
+  "risk": "high",
+  "tier": "E",
+  "tags": [
+    "dense-pins",
+    "QFN"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:20.662Z",
+  "visiblePinCount": 57,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {
+    "T": 2
+  }
+}

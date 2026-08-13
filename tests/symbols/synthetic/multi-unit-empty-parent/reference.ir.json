@@ -1,0 +1,82 @@
+{
+  "name": "synth-multi-unit",
+  "prefix": "U",
+  "packageName": "SYNTH_MULTI",
+  "unitCount": 2,
+  "properties": {
+    "lcsc": "",
+    "manufacturer": "",
+    "mpn": "",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SYNTH_MULTI"
+  },
+  "units": [
+    {
+      "id": 1,
+      "name": "A",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -12.7,
+          "y_mm": 1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -5.08,
+            "y": 5.08
+          },
+          "end": {
+            "x": 5.08,
+            "y": -2.54
+          },
+          "easyedaW": 40,
+          "easyedaH": 30
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "B",
+      "pins": [
+        {
+          "number": "2",
+          "name": "B",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 12.7,
+          "y_mm": 1.27,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -5.08,
+            "y": 5.08
+          },
+          "end": {
+            "x": 5.08,
+            "y": -2.54
+          },
+          "easyedaW": 40,
+          "easyedaH": 30
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

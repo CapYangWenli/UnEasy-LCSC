@@ -1,0 +1,192 @@
+{
+  "name": "LED-SMD_L1.6-W1.1-RD",
+  "prefix": "LED",
+  "packageName": "LED-SMD_L1.6-W1.1-RD",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C51933324",
+    "manufacturer": "Guiguang light(桂光光电)",
+    "mpn": "GL0602UG01",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:LED-SMD_L1.6-W1.1-RD"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "K",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "2",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 5.08,
+          "y_mm": -1.27,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -4.06,
+              "y": 2.03
+            },
+            {
+              "x": -3.05,
+              "y": 1.52
+            },
+            {
+              "x": -3.56,
+              "y": 1.02
+            },
+            {
+              "x": -4.06,
+              "y": 2.03
+            }
+          ],
+          "closed": true,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -3.05,
+              "y": 3.05
+            },
+            {
+              "x": -2.03,
+              "y": 2.54
+            },
+            {
+              "x": -2.54,
+              "y": 2.03
+            },
+            {
+              "x": -3.05,
+              "y": 3.05
+            }
+          ],
+          "closed": true,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -2.29,
+              "y": 0.25
+            },
+            {
+              "x": -3.3,
+              "y": 1.27
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -1.27,
+              "y": 1.27
+            },
+            {
+              "x": -2.29,
+              "y": 2.29
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -1.27,
+              "y": -1.27
+            },
+            {
+              "x": -2.54,
+              "y": -1.27
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": 2.54,
+              "y": -1.27
+            },
+            {
+              "x": 1.27,
+              "y": -1.27
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -1.27,
+              "y": 0.51
+            },
+            {
+              "x": -1.27,
+              "y": -3.05
+            }
+          ],
+          "closed": false,
+          "fill": "none"
+        },
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": 1.27,
+              "y": 0.51
+            },
+            {
+              "x": -1.27,
+              "y": -1.27
+            },
+            {
+              "x": 1.27,
+              "y": -3.05
+            },
+            {
+              "x": 1.27,
+              "y": 0.51
+            }
+          ],
+          "closed": true,
+          "fill": "none"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

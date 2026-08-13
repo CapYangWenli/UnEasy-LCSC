@@ -1,0 +1,358 @@
+{
+  "name": "FPC-SMD_AFC11-S24ICC-00",
+  "prefix": "P",
+  "packageName": "FPC-SMD_AFC11-S24ICC-00",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C11075",
+    "manufacturer": "JS(钜硕电子)",
+    "mpn": "AFC11-S24ICC-00",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:FPC-SMD_AFC11-S24ICC-00"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 29.21,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 26.67,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "3",
+          "name": "3",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 24.13,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "4",
+          "name": "4",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 21.59,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "5",
+          "name": "5",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 19.05,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "6",
+          "name": "6",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 16.51,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "7",
+          "name": "7",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 13.97,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "8",
+          "name": "8",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 11.43,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "9",
+          "name": "9",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 8.89,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "10",
+          "name": "10",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 6.35,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "11",
+          "name": "11",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 3.81,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "12",
+          "name": "12",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "13",
+          "name": "13",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -1.27,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "14",
+          "name": "14",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -3.81,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "15",
+          "name": "15",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -6.35,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "16",
+          "name": "16",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -8.89,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "17",
+          "name": "17",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -11.43,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "18",
+          "name": "18",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -13.97,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "19",
+          "name": "19",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -16.51,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "20",
+          "name": "20",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -19.05,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "21",
+          "name": "21",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -21.59,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "22",
+          "name": "22",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -24.13,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "23",
+          "name": "23",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -26.67,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "24",
+          "name": "24",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": -29.21,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "25",
+          "name": "25",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 6.35,
+          "y_mm": -29.21,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "26",
+          "name": "26",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 6.35,
+          "y_mm": -26.67,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -2.54,
+            "y": 31.75
+          },
+          "end": {
+            "x": 3.81,
+            "y": -31.75
+          },
+          "easyedaW": 25,
+          "easyedaH": 250
+        },
+        {
+          "kind": "circle",
+          "center": {
+            "x": -1.78,
+            "y": 30.99
+          },
+          "radius": 0.38,
+          "fill": "background"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

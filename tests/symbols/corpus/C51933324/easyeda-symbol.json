@@ -1,0 +1,48 @@
+{
+  "dataStr": {
+    "head": {
+      "docType": "2",
+      "editorVersion": "6.5.51",
+      "x": 400,
+      "y": 290,
+      "c_para": {
+        "pre": "LED?",
+        "name": "GL0602UG01",
+        "package": "LED-SMD_L1.6-W1.1-RD",
+        "Supplier": "LCSC",
+        "Supplier Part": "C51933324",
+        "Manufacturer": "Guiguang light(桂光光电)",
+        "Manufacturer Part": "GL0602UG01",
+        "JLCPCB Part Class": "Extended Part",
+        "Contributor": "lcsc"
+      },
+      "uuid": "c64511175f4e46789ed99db3a046f0f9",
+      "puuid": "c7618cf5c2354ae5b68956683d28d334",
+      "importFlag": 0,
+      "c_spiceCmd": null,
+      "hasIdFlag": true,
+      "utime": 1772257837
+    },
+    "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~10~1000~1000~line~10~pixel~5~400~290",
+    "shape": [
+      "PT~M 384 277 L 388 279 L 386 281 Z ~#880000~1~0~none~gge38~0~",
+      "PT~M 388 273 L 392 275 L 390 277 Z ~#880000~1~0~none~gge39~0~",
+      "PL~391 284 387 280~#880000~1~0~#880000~gge40~0",
+      "PL~395 280 391 276~#880000~1~0~#880000~gge41~0",
+      "PL~395 290 390 290~#880000~1~0~none~gge46~0",
+      "PL~410 290 405 290~#880000~1~0~none~gge47~0",
+      "PL~395 283 395 297~#880000~1~0~none~gge48~0",
+      "PT~M 405 283 L 395 290 L 405 297 Z ~#880000~1~0~none~gge49~0~",
+      "P~show~0~1~380~290~180~gge50~0^^380~290^^M 380 290 h 10~#880000^^0~393~293~0~K~start~~~#0000FF^^0~387~289~0~1~end~~~#0000FF^^0~387~290^^0~M 390 293 L 393 290 L 390 287",
+      "P~show~0~2~420~290~0~gge57~0^^420~290^^M 420 290 h -10~#880000^^0~407~293~0~A~end~~~#0000FF^^0~413~289~0~2~start~~~#0000FF^^0~413~290^^0~M 410 287 L 407 290 L 410 293"
+    ],
+    "BBox": {
+      "x": 379,
+      "y": 273,
+      "width": 42,
+      "height": 24
+    },
+    "colors": []
+  },
+  "subparts": []
+}

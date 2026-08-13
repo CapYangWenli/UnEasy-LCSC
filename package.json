@@ -9,7 +9,9 @@
     "firefox:sign": "node scripts/sign-firefox.js",
     "firefox:sign:win": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/firefox-sign.ps1",
     "test:footprint-e2e": "node scripts/test-footprint-e2e.js",
-    "freeze:footprint": "node scripts/freeze-footprint-fixture.js"
+    "freeze:footprint": "node scripts/freeze-footprint-fixture.js",
+    "test:symbol-e2e": "node scripts/test-symbol-e2e.js",
+    "freeze:symbol": "node scripts/freeze-symbol-fixture.js"
   },
   "devDependencies": {
     "web-ext": "^8.9.0"

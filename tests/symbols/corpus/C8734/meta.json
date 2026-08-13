@@ -1,0 +1,19 @@
+{
+  "lcsc": "C8734",
+  "mpn": "STM32F103C8T6",
+  "package": "LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL",
+  "title": "LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL",
+  "risk": "high",
+  "tier": "E",
+  "tags": [
+    "dense-pins",
+    "QFN"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-13T13:36:21.412Z",
+  "visiblePinCount": 48,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

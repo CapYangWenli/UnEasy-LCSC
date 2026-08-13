@@ -1,0 +1,129 @@
+{
+  "dataStr": {
+    "head": {
+      "docType": 2,
+      "x": 400,
+      "y": 300,
+      "c_para": {
+        "pre": "U?",
+        "name": "COSOPA227UMR",
+        "package": "MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL",
+        "Supplier": "LCSC",
+        "Supplier Part": "C17702535",
+        "Manufacturer": "COSINE(科山芯创)",
+        "Manufacturer Part": "COSOPA227UMR",
+        "JLCPCB Part Class": "Extended Part",
+        "subpart_no": "1",
+        "Contributor": "lcsc"
+      },
+      "uuid": "a89b97fb1a2948bb8a1d2c79669d103c",
+      "puuid": "d6cc441bbf2a42d39aa7c1c23168ba92"
+    },
+    "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~10~1000~1000~line~10~pixel~5~400~300",
+    "shape": []
+  },
+  "subparts": [
+    {
+      "uuid": "49358f90264840fba20e76ce11c315df",
+      "title": "COSOPA227UMR.1",
+      "dataStr": {
+        "head": {
+          "docType": "6",
+          "editorVersion": "6.5.48",
+          "x": 400,
+          "y": 300,
+          "c_para": {
+            "pre": "U?.1",
+            "name": "COSOPA227UMR",
+            "package": "MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL",
+            "Supplier": "LCSC",
+            "Supplier Part": "C17702535",
+            "Manufacturer": "COSINE(科山芯创)",
+            "Manufacturer Part": "COSOPA227UMR",
+            "JLCPCB Part Class": "Extended Part",
+            "subpart_no": "1"
+          },
+          "uuid": "49358f90264840fba20e76ce11c315df",
+          "utime": 1741594232,
+          "puuid": "d6cc441bbf2a42d39aa7c1c23168ba92",
+          "importFlag": 0,
+          "c_spiceCmd": null,
+          "hasIdFlag": true
+        },
+        "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~10~1000~1000~line~10~pixel~5~400~300",
+        "shape": [
+          "PL~380 320 420 300 380 280 380 320~#880000~1~0~none~gge7~0",
+          "PL~384 290 390 290~#880000~1~0~none~gge10~0",
+          "PL~384 310 390 310~#880000~1~0~none~gge13~0",
+          "PL~387 307 387 313~#880000~1~0~none~gge16~0",
+          "P~show~2~6~440~300~0~gge25~0^^440~300^^M 440 300 h -20~#880000^^0~417~303~0~OUT~end~~~#0000FF^^1~426~299~0~6~start~~~#0000FF^^0~423~300^^0~M 420 297 L 417 300 L 420 303",
+          "P~show~0~3~360~310~180~gge46~0^^360~310^^M 360 310 h 20~#880000^^0~383~313~0~IN +~start~~~#0000FF^^1~374~309~0~3~end~~~#0000FF^^0~377~310^^0~M 380 313 L 383 310 L 380 307",
+          "P~show~0~2~360~290~180~gge67~0^^360~290^^M 360 290 h 20~#880000^^0~383~293~0~IN -~start~~~#0000FF^^1~374~289~0~2~end~~~#0000FF^^0~377~290^^0~M 380 293 L 383 290 L 380 287"
+        ],
+        "BBox": {
+          "x": 358.5,
+          "y": 279.5,
+          "width": 83,
+          "height": 40.5
+        },
+        "colors": []
+      },
+      "updateTime": 1741594581,
+      "description": "",
+      "datastrid": "f2ee82116dd24d0d97262276b84f11a1",
+      "thumb": "//image.lceda.cn/components/49358f90264840fba20e76ce11c315df.png"
+    },
+    {
+      "uuid": "88a31142ffb24454a99e038168fa7418",
+      "title": "COSOPA227UMR.2",
+      "dataStr": {
+        "head": {
+          "docType": "6",
+          "editorVersion": "6.5.48",
+          "x": 400,
+          "y": 300,
+          "c_para": {
+            "pre": "U?.2",
+            "name": "COSOPA227UMR",
+            "package": "MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL",
+            "Supplier": "LCSC",
+            "Supplier Part": "C17702535",
+            "Manufacturer": "COSINE(科山芯创)",
+            "Manufacturer Part": "COSOPA227UMR",
+            "JLCPCB Part Class": "Extended Part",
+            "subpart_no": "2"
+          },
+          "uuid": "88a31142ffb24454a99e038168fa7418",
+          "puuid": "d6cc441bbf2a42d39aa7c1c23168ba92",
+          "utime": 1741594232,
+          "importFlag": 0,
+          "c_spiceCmd": null,
+          "pre": "U?.2",
+          "name": "COSOPA227UMR",
+          "hasIdFlag": true
+        },
+        "canvas": "CA~1000~1000~#FFFFFF~yes~#CCCCCC~5~1000~1000~line~5~pixel~5~400~300",
+        "shape": [
+          "R~375~280~2~2~50~40~#880000~1~0~none~gge1~0~",
+          "E~380~285~1.5~1.5~#880000~1~0~#880000~gge2~0",
+          "P~show~0~7~365~295~180~gge47~0^^365~295^^M365,295h10~#880000^^1~378.7~299~0~+VS~start~~~#0000FF^^1~374.5~294~0~7~end~~~#0000FF^^0~372~295^^0~M 375 298 L 378 295 L 375 292",
+          "P~show~0~4~365~305~180~gge44~0^^365~305^^M365,305h10~#880000^^1~378.7~309~0~-VS~start~~~#0000FF^^1~374.5~304~0~4~end~~~#0000FF^^0~372~305^^0~M 375 308 L 378 305 L 375 302",
+          "P~show~0~8~435~310~0~gge48~0^^435~310^^M435,310h-10~#880000^^1~421.3~314~0~NC~end~~~#0000FF^^1~425.5~309~0~8~start~~~#0000FF^^0~428~310^^0~M 425 307 L 422 310 L 425 313",
+          "P~show~0~5~435~300~0~gge45~0^^435~300^^M435,300h-10~#880000^^1~421.3~304~0~NC~end~~~#0000FF^^1~425.5~299~0~5~start~~~#0000FF^^0~428~300^^0~M 425 297 L 422 300 L 425 303",
+          "P~show~0~1~435~290~0~gge41~0^^435~290^^M435,290h-10~#880000^^1~421.3~294~0~NC~end~~~#0000FF^^1~425.5~289~0~1~start~~~#0000FF^^0~428~290^^0~M 425 287 L 422 290 L 425 293"
+        ],
+        "BBox": {
+          "x": 364,
+          "y": 279.6,
+          "width": 72,
+          "height": 40.4
+        },
+        "colors": []
+      },
+      "updateTime": 1741594617,
+      "description": "",
+      "datastrid": "b852e88c0e62424ab05eb9adbb370832",
+      "thumb": "//image.lceda.cn/components/88a31142ffb24454a99e038168fa7418.png"
+    }
+  ]
+}

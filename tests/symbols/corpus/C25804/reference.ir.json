@@ -1,0 +1,61 @@
+{
+  "name": "R0603",
+  "prefix": "R",
+  "packageName": "R0603",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C25804",
+    "manufacturer": "UNI-ROYAL(厚声)",
+    "mpn": "0603WAF1002T5E",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:R0603"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "2",
+          "name": "2",
+          "type": "input",
+          "easyedaType": 1,
+          "style": "line",
+          "visible": true,
+          "x_mm": 5.08,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        },
+        {
+          "number": "1",
+          "name": "1",
+          "type": "input",
+          "easyedaType": 1,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 0,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -2.54,
+            "y": 1.02
+          },
+          "end": {
+            "x": 2.54,
+            "y": -1.01
+          },
+          "easyedaW": 20,
+          "easyedaH": 8
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

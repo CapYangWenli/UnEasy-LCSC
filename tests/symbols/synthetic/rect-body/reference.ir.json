@@ -1,0 +1,61 @@
+{
+  "name": "synth-rect-body",
+  "prefix": "U",
+  "packageName": "SYNTH_RECT",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "",
+    "manufacturer": "",
+    "mpn": "RECT-BODY",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SYNTH_RECT"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -15.24,
+          "y_mm": 5.08,
+          "rotation_deg": 0,
+          "length_mm": 5.08
+        },
+        {
+          "number": "2",
+          "name": "B",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 15.24,
+          "y_mm": 5.08,
+          "rotation_deg": 180,
+          "length_mm": 5.08
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "rectangle",
+          "start": {
+            "x": -5.08,
+            "y": 5.08
+          },
+          "end": {
+            "x": 5.08,
+            "y": -2.54
+          },
+          "easyedaW": 40,
+          "easyedaH": 30
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

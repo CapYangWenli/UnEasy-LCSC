@@ -1,0 +1,71 @@
+{
+  "name": "synth-pt-triangle",
+  "prefix": "D",
+  "packageName": "SYNTH_PT_TRI",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "",
+    "manufacturer": "",
+    "mpn": "",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SYNTH_PT_TRI"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -7.62,
+          "y_mm": 0,
+          "rotation_deg": 0,
+          "length_mm": 3.81
+        },
+        {
+          "number": "2",
+          "name": "K",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 7.62,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 3.81
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "polyline",
+          "pts": [
+            {
+              "x": -2.54,
+              "y": 2.54
+            },
+            {
+              "x": 2.54,
+              "y": 0
+            },
+            {
+              "x": -2.54,
+              "y": -2.54
+            },
+            {
+              "x": -2.54,
+              "y": 2.54
+            }
+          ],
+          "closed": true,
+          "fill": "none"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}
