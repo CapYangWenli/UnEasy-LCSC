@@ -244,18 +244,6 @@ npm install
 npm run firefox:sign
 ```
 
-If `npm install` fails with `'node' is not recognized` (common with nvm-windows inside Cursor), either fully restart Cursor, or in that terminal run:
-
-```powershell
-$env:NVM_HOME = "$env:LOCALAPPDATA\nvm"
-$env:NVM_SYMLINK = "C:\nvm4w\nodejs"
-$env:Path = "$env:NVM_SYMLINK;$env:NVM_HOME;$env:Path"
-npm install
-```
-
-Or use the wrapper: `npm run firefox:sign:win`
-
-`.env` is gitignored — do not commit your keys.
 
 ---
 
