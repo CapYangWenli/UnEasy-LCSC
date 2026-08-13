@@ -2,6 +2,7 @@
 "use strict";
 
 const fs = require("fs");
+const os = require("os");
 const path = require("path");
 const { spawnSync } = require("child_process");
 
@@ -35,6 +36,17 @@ function loadEnvFile(filePath) {
   return true;
 }
 
+function stageExtensionSource() {
+  const stage = fs.mkdtempSync(path.join(os.tmpdir(), "uneasy-lcsc-sign-"));
+  fs.copyFileSync(path.join(root, "manifest.json"), path.join(stage, "manifest.json"));
+  const licence = path.join(root, "LICENCE");
+  if (fs.existsSync(licence)) {
+    fs.copyFileSync(licence, path.join(stage, "LICENCE"));
+  }
+  fs.cpSync(path.join(root, "src"), path.join(stage, "src"), { recursive: true });
+  return stage;
+}
+
 const loaded = loadEnvFile(envPath);
 const apiKey = (process.env.WEB_EXT_API_KEY || "").trim();
 const apiSecret = (process.env.WEB_EXT_API_SECRET || "").trim();
@@ -60,15 +72,18 @@ if (!webExtBin) {
   process.exit(1);
 }
 
+const stageDir = stageExtensionSource();
+console.log(`Signing from staged source: ${stageDir}`);
+
 const args = [
   webExtBin,
   "sign",
   "--source-dir",
-  ".",
+  stageDir,
   "--channel",
   "unlisted",
   "--artifacts-dir",
-  "web-ext-artifacts",
+  path.join(root, "web-ext-artifacts"),
   "--api-key",
   apiKey,
   "--api-secret",
@@ -82,4 +97,5 @@ const result = spawnSync(process.execPath, args, {
   shell: false,
 });
 
+fs.rmSync(stageDir, { recursive: true, force: true });
 process.exit(result.status == null ? 1 : result.status);

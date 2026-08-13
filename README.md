@@ -16,7 +16,7 @@ Everything runs **locally in your browser** — no EasyEDA account necessary.
 
 Use the signed add-on in [`releases/`](releases/) — this is the recommended install path.
 
-1. Download [`releases/uneasy-lcsc-0.6.17.xpi`](releases/uneasy-lcsc-0.6.17.xpi) (or the latest `.xpi` in that folder).
+1. Download [`releases/uneasy-lcsc-0.6.20.xpi`](releases/uneasy-lcsc-0.6.20.xpi) (or the latest `.xpi` in that folder).
 2. Open Firefox → `about:addons`.
 3. Click the gear icon → **Install Add-on From File…**
 4. Select the downloaded `.xpi`.

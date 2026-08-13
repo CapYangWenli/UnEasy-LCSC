@@ -1,6 +1,6 @@
 {
   "name": "uneasy-lcsc",
-  "version": "0.6.18",
+  "version": "0.6.20",
   "private": true,
   "description": "Browser extension: LCSC/JLCPCB parts to KiCad symbols, footprints, and STEP models",
   "scripts": {
@@ -15,5 +15,18 @@
   },
   "devDependencies": {
     "web-ext": "^8.9.0"
+  },
+  "webExt": {
+    "ignoreFiles": [
+      "artifacts",
+      "docs",
+      "releases",
+      "scripts",
+      "tests",
+      "web-ext-artifacts",
+      "*.md",
+      "package.json",
+      "package-lock.json"
+    ]
   }
 }
