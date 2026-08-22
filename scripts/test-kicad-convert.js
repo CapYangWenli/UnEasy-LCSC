@@ -91,6 +91,22 @@ async function testPart(codeId, expectPinsMin) {
   )) {
     throw new Error("C51933324 missing closed triangle polyline from PT~");
   }
+
+  // Inductor body uses EasyEDA A~ SVG arcs — must appear as KiCad (arc start/mid/end).
+  const inductor = await testPart("C55315393", 2);
+  const arcs = inductor.out.symbol.content.match(/\(arc\b/g) || [];
+  if (arcs.length < 4) {
+    throw new Error(
+      `C55315393 expected 4 inductor A~ loops as arcs, got ${arcs.length}`
+    );
+  }
+  if (
+    !/\(arc[\s\S]*?\(start [-\d.]+ [-\d.]+\)[\s\S]*?\(mid [-\d.]+ [-\d.]+\)[\s\S]*?\(end [-\d.]+ [-\d.]+\)/.test(
+      inductor.out.symbol.content
+    )
+  ) {
+    throw new Error("C55315393 missing (arc (start) (mid) (end)) from A~");
+  }
   console.log("OK");
 })().catch((e) => {
   console.error(e);

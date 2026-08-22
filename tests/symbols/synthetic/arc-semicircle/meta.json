@@ -1,0 +1,7 @@
+{
+  "name": "synth-arc-semicircle",
+  "expect": "pass",
+  "risk": "low",
+  "tags": ["synthetic", "symbol-arc"],
+  "notes": "EasyEDA A~ semicircle — H9 must emit a KiCad (arc)"
+}

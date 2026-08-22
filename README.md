@@ -16,7 +16,7 @@ Everything runs **locally in your browser** — no EasyEDA account necessary.
 
 Use the signed add-on in [`releases/`](releases/) — this is the recommended install path.
 
-1. Download [`releases/uneasy-lcsc-0.6.20.xpi`](releases/uneasy-lcsc-0.6.20.xpi) (or the latest `.xpi` in that folder).
+1. Download [`releases/uneasy-lcsc-0.6.21.xpi`](releases/uneasy-lcsc-0.6.21.xpi) (or the latest `.xpi` in that folder).
 2. Open Firefox → `about:addons`.
 3. Click the gear icon → **Install Add-on From File…**
 4. Select the downloaded `.xpi`.
@@ -215,7 +215,7 @@ npm run freeze:symbol -- --manifest tests/symbols/corpus-manifest.json
 
 ## Notes
 
-- KiCad conversion covers the common EasyEDA primitives (pins, pads, tracks, silk, holes, etc.) and multi-unit symbols (e.g. Compute Module). Complex arcs/paths may be simplified vs `easyeda2kicad.py`.
+- KiCad conversion covers the common EasyEDA primitives (pins, pads, tracks, silk, holes, schematic `A~` arcs, etc.) and multi-unit symbols (e.g. Compute Module). Complex `PT~` path curves may be simplified vs `easyeda2kicad.py`.
 - Extracted `.json` files match EasyEDA’s internal symbol/footprint schema.
 - `.obj` export is geometry-only (no texture/material metadata).
 - Not affiliated with LCSC, EasyEDA, or JLCPCB.

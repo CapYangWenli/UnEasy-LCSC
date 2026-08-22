@@ -22,7 +22,7 @@ function pinsByUnit(ir) {
 }
 
 function graphicsByKind(ir) {
-  const counts = { rectangle: 0, circle: 0, polyline: 0 };
+  const counts = { rectangle: 0, circle: 0, polyline: 0, arc: 0 };
   for (const u of ir.units || []) {
     for (const g of u.graphics || []) {
       if (counts[g.kind] != null) counts[g.kind]++;
@@ -36,6 +36,7 @@ function countEasyedaHandledBodies(eeParsed) {
   return {
     R: hc.R || 0,
     C: (hc.C || 0) + (hc.E || 0),
+    A: hc.A || 0,
     PL: hc.PL || 0,
     PG: hc.PG || 0,
     PT: hc.PT || 0
@@ -184,8 +185,11 @@ function compareSymbols(dut, ref, opts = {}) {
       `polylines dropped: expected=${expectedPolys} (PL=${expected.PL} PG=${expected.PG} PT=${expected.PT}) dut=${dutBodies.polyline}`
     );
   }
+  if (dutBodies.arc < expected.A) {
+    fail("H9", `arcs dropped: expected=${expected.A} dut=${dutBodies.arc}`);
+  }
 
-  const totalExpected = expected.R + expected.C + expectedPolys;
+  const totalExpected = expected.R + expected.C + expectedPolys + expected.A;
 
   // Accounting bug: UNHANDLED lists a type H9 claims to handle
   const unhandled = opts.unhandled || {};
@@ -196,6 +200,9 @@ function compareSymbols(dut, ref, opts = {}) {
   }
   if (unhandled.PT && (eeParsed.handledCounts?.PT || 0) > 0) {
     fail("H9", "accounting bug: PT in UNHANDLED while M/L/Z path was also counted handled");
+  }
+  if (unhandled.A && (eeParsed.handledCounts?.A || 0) > 0) {
+    fail("H9", "accounting bug: A in UNHANDLED while an A~ arc was also counted handled");
   }
 
   // H10 degenerate rectangles
@@ -295,14 +302,14 @@ function compareSymbols(dut, ref, opts = {}) {
   if (meta.risk === "high") {
     const onlyUnconvertedBody =
       totalExpected === 0 &&
-      (unhandled.PT || unhandled.E) &&
+      (unhandled.PT || unhandled.E || unhandled.A) &&
       refVisible.length > 0;
     if (onlyUnconvertedBody) {
       labels.push("UNCONVERTED_FEATURES");
       labels.push("QUARANTINE");
       fail(
         "Q1",
-        `high-risk: only symbol body was unhandled PT/E curves (PT=${unhandled.PT || 0} E=${unhandled.E || 0})`
+        `high-risk: only symbol body was unhandled PT/E/A (PT=${unhandled.PT || 0} E=${unhandled.E || 0} A=${unhandled.A || 0})`
       );
     }
   }
@@ -350,6 +357,14 @@ function roundIr(ir, eps) {
           return {
             ...g,
             pts: (g.pts || []).map((p) => ({ x: r(p.x), y: r(p.y) }))
+          };
+        }
+        if (g.kind === "arc") {
+          return {
+            ...g,
+            start: { x: r(g.start.x), y: r(g.start.y) },
+            mid: { x: r(g.mid.x), y: r(g.mid.y) },
+            end: { x: r(g.end.x), y: r(g.end.y) }
           };
         }
         return g;

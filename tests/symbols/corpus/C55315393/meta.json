@@ -1,0 +1,19 @@
+{
+  "lcsc": "C55315393",
+  "mpn": "PCT303020-2R2-M",
+  "package": "IND-SMD_L3.0-W3.0_FTC303020D",
+  "title": "IND-SMD_L3.0-W3.0_FTC303020D",
+  "risk": "high",
+  "tier": "C",
+  "tags": [
+    "symbol-arc",
+    "inductor"
+  ],
+  "reference": "tertiary-easyeda-ir",
+  "frozenAt": "2026-08-22T19:23:26.853Z",
+  "visiblePinCount": 2,
+  "hiddenPinCount": 0,
+  "unitCount": 1,
+  "subpartCount": 1,
+  "unhandledAtFreeze": {}
+}

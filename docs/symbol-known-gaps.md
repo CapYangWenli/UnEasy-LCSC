@@ -15,12 +15,14 @@ This document tracks EasyEDA commands the converter does **not** fully handle to
 
 ## Handled electrical / graphic primitives
 
-`P~` (visible pins), `R~`, `C~`, circular `E~`, `PL~`, `PG~`, `PT~` (`M`/`L`/`Z` with ≥2 points), multi-unit `subparts`, properties (`LCSC Part`, `MPN`, `Footprint`).
+`P~` (visible pins), `R~`, `C~`, circular `E~`, `A~` (SVG arc → KiCad `(arc start/mid/end)`), `PL~`, `PG~`, `PT~` (`M`/`L`/`Z` with ≥2 points), multi-unit `subparts`, properties (`LCSC Part`, `MPN`, `Footprint`).
+
+Schematic `A~` is distinct from `PT~` path curve tokens: inductor coils are top-level `A~` commands (C55315393). SVG `A` *inside* a `PT~` path is still S3.
 
 ## How the suite reports gaps
 
 - Every fixture prints `UNHANDLED: …` when unknown commands remain.
 - Soft-only gaps → status `WARN` (CI still green).
-- High-risk fixtures where the **only** body was unhandled `PT~` curves or non-circular `E~` → `BLOCKED` / `QUARANTINE`.
+- High-risk fixtures where the **only** body was unhandled `PT~` curves, non-circular `E~`, or unconverted `A~` → `BLOCKED` / `QUARANTINE`.
 
 See [symbol-e2e-trd.md](./symbol-e2e-trd.md) for assertion IDs and corpus policy.

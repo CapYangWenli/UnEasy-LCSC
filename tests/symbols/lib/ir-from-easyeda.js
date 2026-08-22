@@ -9,12 +9,13 @@ const {
   parsePolylinePoints,
   parsePathPoints,
   pathHasUnsupportedTokens,
+  symbolArcToKiCad,
   pxToMm,
   round2,
   sanitizeName
 } = require("./units");
 
-const HANDLED = new Set(["P", "R", "C", "E", "PL", "PG", "PT"]);
+const HANDLED = new Set(["P", "R", "C", "E", "A", "PL", "PG", "PT"]);
 
 function normalizeComponent(component) {
   if (!component) return { dataStr: null, subparts: [] };
@@ -48,7 +49,7 @@ function buildUnitIr(dataStr, unitId, unitName) {
   const pins = [];
   const graphics = [];
   const unhandled = {};
-  const handledCounts = { R: 0, C: 0, E: 0, PL: 0, PG: 0, PT: 0, P: 0 };
+  const handledCounts = { R: 0, C: 0, E: 0, A: 0, PL: 0, PG: 0, PT: 0, P: 0 };
   let visiblePinCount = 0;
   let hiddenPinCount = 0;
   let ptCurveCount = 0;
@@ -147,6 +148,26 @@ function buildUnitIr(dataStr, unitId, unitName) {
       continue;
     }
 
+    if (cmd === "A") {
+      const p = line.split("~");
+      const ki = symbolArcToKiCad(p[1], origin.x, origin.y);
+      if (!ki) {
+        bumpUnhandled("A");
+        continue;
+      }
+      handledCounts.A++;
+      const fillRaw = String(p[6] || "none").trim().toLowerCase();
+      const fill = fillRaw && fillRaw !== "none" ? "outline" : "none";
+      graphics.push({
+        kind: "arc",
+        start: ki.start,
+        mid: ki.mid,
+        end: ki.end,
+        fill
+      });
+      continue;
+    }
+
     if (cmd === "PL" || cmd === "PG" || cmd === "PT") {
       const p = line.split("~");
       const hasCurves = cmd === "PT" && pathHasUnsupportedTokens(p[1]);
@@ -221,7 +242,7 @@ function irFromEasyeda(component, meta = {}) {
   });
 
   const unhandled = {};
-  const handledCounts = { R: 0, C: 0, E: 0, PL: 0, PG: 0, PT: 0, P: 0 };
+  const handledCounts = { R: 0, C: 0, E: 0, A: 0, PL: 0, PG: 0, PT: 0, P: 0 };
   let visiblePinCount = 0;
   let hiddenPinCount = 0;
   let ptCurveCount = 0;

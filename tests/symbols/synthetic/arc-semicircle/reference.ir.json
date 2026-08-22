@@ -1,0 +1,64 @@
+{
+  "name": "synth-arc-semicircle",
+  "prefix": "L",
+  "packageName": "SYNTH_ARC",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "",
+    "manufacturer": "",
+    "mpn": "",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:SYNTH_ARC"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "A",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -7.62,
+          "y_mm": 0,
+          "rotation_deg": 0,
+          "length_mm": 2.54
+        },
+        {
+          "number": "2",
+          "name": "B",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 7.62,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 2.54
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "arc",
+          "start": {
+            "x": 2.03,
+            "y": 0
+          },
+          "mid": {
+            "x": 0,
+            "y": 2.03
+          },
+          "end": {
+            "x": -2.03,
+            "y": 0
+          },
+          "fill": "none"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

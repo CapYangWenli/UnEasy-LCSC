@@ -212,6 +212,141 @@
     return pts;
   }
 
+  function flag01(v) {
+    return v === true || v === 1 || v === "1";
+  }
+
+  // EasyEDA A~ path: "M sx sy A rx ry rot large sweep ex ey"
+  function parseSymbolArcPath(pathStr) {
+    const tokens = String(pathStr || "")
+      .trim()
+      .split(/[\s,]+/)
+      .filter(Boolean);
+    let i = 0;
+    let sx;
+    let sy;
+    while (i < tokens.length) {
+      const t = tokens[i];
+      if (/^[A-Za-z]$/.test(t)) {
+        const cmdA = t.toUpperCase();
+        i++;
+        if (cmdA === "M" && i + 1 < tokens.length) {
+          sx = num(tokens[i]);
+          sy = num(tokens[i + 1]);
+          i += 2;
+          continue;
+        }
+        if (cmdA === "A" && sx != null && i + 6 < tokens.length) {
+          return {
+            sx,
+            sy,
+            rx: num(tokens[i]),
+            ry: num(tokens[i + 1]),
+            rot: num(tokens[i + 2]),
+            large: tokens[i + 3],
+            sweep: tokens[i + 4],
+            ex: num(tokens[i + 5]),
+            ey: num(tokens[i + 6])
+          };
+        }
+        continue;
+      }
+      i++;
+    }
+    return null;
+  }
+
+  // SVG elliptical-arc midpoint in EasyEDA pixel space (W3C SVG 1.1 §F.6).
+  function svgArcMidPoint(sx, sy, ex, ey, rx, ry, xRotationDeg, largeArcFlag, sweepFlag) {
+    const large = flag01(largeArcFlag);
+    const sweep = flag01(sweepFlag);
+    let rxAbs = Math.abs(rx);
+    let ryAbs = Math.abs(ry);
+    if (!rxAbs || !ryAbs) return null;
+    if (sx === ex && sy === ey) return null;
+
+    const phi = ((xRotationDeg % 360) * Math.PI) / 180;
+    const cosPhi = Math.cos(phi);
+    const sinPhi = Math.sin(phi);
+    const dx2 = (sx - ex) / 2;
+    const dy2 = (sy - ey) / 2;
+    const x1 = cosPhi * dx2 + sinPhi * dy2;
+    const y1 = -sinPhi * dx2 + cosPhi * dy2;
+
+    let rxSq = rxAbs * rxAbs;
+    let rySq = ryAbs * ryAbs;
+    const x1Sq = x1 * x1;
+    const y1Sq = y1 * y1;
+    const radiiScale = rxSq && rySq ? x1Sq / rxSq + y1Sq / rySq : 0;
+    if (radiiScale > 1) {
+      const scale = Math.sqrt(radiiScale);
+      rxAbs *= scale;
+      ryAbs *= scale;
+      rxSq = rxAbs * rxAbs;
+      rySq = ryAbs * ryAbs;
+    }
+
+    const sign = large === sweep ? -1 : 1;
+    const numer = Math.max(0, rxSq * rySq - rxSq * y1Sq - rySq * x1Sq);
+    const den = rxSq * y1Sq + rySq * x1Sq;
+    const coef = den > 0 ? sign * Math.sqrt(numer / den) : 0;
+    const cx1 = coef * ((rxAbs * y1) / ryAbs);
+    const cy1 = rxAbs !== 0 ? coef * -((ryAbs * x1) / rxAbs) : 0;
+    const cx = cosPhi * cx1 - sinPhi * cy1 + (sx + ex) / 2;
+    const cy = sinPhi * cx1 + cosPhi * cy1 + (sy + ey) / 2;
+
+    const angleBetween = (ux, uy, vx, vy) => {
+      const n = Math.hypot(ux, uy) * Math.hypot(vx, vy);
+      if (n === 0) return 0;
+      const cosVal = Math.max(-1, Math.min(1, (ux * vx + uy * vy) / n));
+      let a = Math.acos(cosVal);
+      if (ux * vy - uy * vx < 0) a = -a;
+      return a;
+    };
+
+    const ux = rxAbs ? (x1 - cx1) / rxAbs : 0;
+    const uy = ryAbs ? (y1 - cy1) / ryAbs : 0;
+    const vx = rxAbs ? (-x1 - cx1) / rxAbs : 0;
+    const vy = ryAbs ? (-y1 - cy1) / ryAbs : 0;
+    const theta1 = angleBetween(1, 0, ux, uy);
+    let dTheta = angleBetween(ux, uy, vx, vy);
+    if (!sweep && dTheta > 0) dTheta -= 2 * Math.PI;
+    else if (sweep && dTheta < 0) dTheta += 2 * Math.PI;
+
+    const thetaMid = theta1 + dTheta / 2;
+    const lx = rxAbs * Math.cos(thetaMid);
+    const ly = ryAbs * Math.sin(thetaMid);
+    return {
+      x: cosPhi * lx - sinPhi * ly + cx,
+      y: sinPhi * lx + cosPhi * ly + cy
+    };
+  }
+
+  // KiCad (arc start/mid/end) in mm, Y-flipped. Start/end swapped so the mid
+  // stays on the correct side of the chord after the Y-flip.
+  function symbolArcToKiCad(pathStr, ox, oy) {
+    const parsed = parseSymbolArcPath(pathStr);
+    if (!parsed) return null;
+    if (Math.abs(parsed.rx) < 1e-9 || Math.abs(parsed.ry) < 1e-9) return null;
+    const mid = svgArcMidPoint(
+      parsed.sx,
+      parsed.sy,
+      parsed.ex,
+      parsed.ey,
+      parsed.rx,
+      parsed.ry,
+      parsed.rot,
+      parsed.large,
+      parsed.sweep
+    );
+    if (!mid) return null;
+    const toKi = (xPx, yPx) => [pxToMm(xPx - ox), -pxToMm(yPx - oy)];
+    const [endX, endY] = toKi(parsed.sx, parsed.sy);
+    const [startX, startY] = toKi(parsed.ex, parsed.ey);
+    const [midX, midY] = toKi(mid.x, mid.y);
+    return { start: [startX, startY], mid: [midX, midY], end: [endX, endY] };
+  }
+
   function normalizeDataStr(dataStr) {
     if (!dataStr) return null;
     if (typeof dataStr === "string") {
@@ -297,6 +432,19 @@
         graphics.push(`            (circle
               (center ${cx.toFixed(2)} ${cy.toFixed(2)})
               (radius ${rad.toFixed(2)})
+              (stroke (width 0.254) (type default))
+              (fill (type ${fill}))
+            )`);
+      } else if (cmd === "A") {
+        const p = line.split("~");
+        const ki = symbolArcToKiCad(p[1], originX, originY);
+        if (!ki) continue;
+        const fillRaw = String(p[6] || "none").trim().toLowerCase();
+        const fill = fillRaw && fillRaw !== "none" ? "outline" : "none";
+        graphics.push(`            (arc
+              (start ${ki.start[0].toFixed(2)} ${ki.start[1].toFixed(2)})
+              (mid ${ki.mid[0].toFixed(2)} ${ki.mid[1].toFixed(2)})
+              (end ${ki.end[0].toFixed(2)} ${ki.end[1].toFixed(2)})
               (stroke (width 0.254) (type default))
               (fill (type ${fill}))
             )`);

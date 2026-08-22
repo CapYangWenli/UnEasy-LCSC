@@ -61,6 +61,25 @@ function parseCircle(circleList) {
   };
 }
 
+function parseArc(arcList) {
+  const start = child(arcList, "start") || [];
+  const mid = child(arcList, "mid") || child(arcList, "middle") || [];
+  const end = child(arcList, "end") || [];
+  const fillNode = child(arcList, "fill");
+  let fill = "none";
+  if (fillNode) {
+    const typeNode = child(fillNode, "type");
+    fill = typeNode ? String(typeNode[1] || "none") : "none";
+  }
+  return {
+    kind: "arc",
+    start: { x: round2(atomNum(start[1])), y: round2(atomNum(start[2])) },
+    mid: { x: round2(atomNum(mid[1])), y: round2(atomNum(mid[2])) },
+    end: { x: round2(atomNum(end[1])), y: round2(atomNum(end[2])) },
+    fill
+  };
+}
+
 function parsePolyline(polyList) {
   const ptsNode = child(polyList, "pts") || [];
   const pts = [];
@@ -97,6 +116,7 @@ function parseUnitSymbol(symList) {
   for (const r of findAll([symList], "rectangle")) graphics.push(parseRectangle(r));
   for (const c of findAll([symList], "circle")) graphics.push(parseCircle(c));
   for (const pl of findAll([symList], "polyline")) graphics.push(parsePolyline(pl));
+  for (const a of findAll([symList], "arc")) graphics.push(parseArc(a));
 
   return { id, name: unitName, pins, graphics };
 }

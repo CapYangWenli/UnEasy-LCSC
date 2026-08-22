@@ -11,6 +11,7 @@
     { "lcsc": "C51933324", "tier": "C", "risk": "high", "tags": ["pt-path", "LED"], "notes": "LED with PT~ triangle body — TRD anchor." },
     { "lcsc": "C2286", "tier": "C", "risk": "medium", "tags": ["pt-path", "diode"], "notes": "Diode with path-drawn body." },
     { "lcsc": "C72038", "tier": "C", "risk": "medium", "tags": ["pg-polygon"], "notes": "PG~ polygon body symbol." },
+    { "lcsc": "C55315393", "tier": "C", "risk": "high", "tags": ["symbol-arc", "inductor"], "notes": "Inductor coil is 4× A~ arcs — silent-drop class (empty KiCad body)." },
 
     { "lcsc": "C17702531", "tier": "D", "risk": "high", "tags": ["multi-unit", "CM4", "empty-parent-shape"], "notes": "CM4 multi-unit — TRD anchor." },
     { "lcsc": "C17702535", "tier": "D", "risk": "high", "tags": ["multi-unit", "empty-parent-shape"], "notes": "Second multi-unit (C965851 LED had no subparts)." },

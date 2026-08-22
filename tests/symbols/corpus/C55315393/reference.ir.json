@@ -1,0 +1,112 @@
+{
+  "name": "IND-SMD_L3.0-W3.0_FTC303020D",
+  "prefix": "U",
+  "packageName": "IND-SMD_L3.0-W3.0_FTC303020D",
+  "unitCount": 1,
+  "properties": {
+    "lcsc": "C55315393",
+    "manufacturer": "JIERR(捷而瑞)",
+    "mpn": "PCT303020-2R2-M",
+    "datasheet": "",
+    "footprint": "UnEasy-LCSC:IND-SMD_L3.0-W3.0_FTC303020D"
+  },
+  "units": [
+    {
+      "id": 0,
+      "name": "",
+      "pins": [
+        {
+          "number": "1",
+          "name": "1",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": -5.08,
+          "y_mm": 0,
+          "rotation_deg": 0,
+          "length_mm": 1.27
+        },
+        {
+          "number": "2",
+          "name": "2",
+          "type": "unspecified",
+          "easyedaType": 0,
+          "style": "line",
+          "visible": true,
+          "x_mm": 5.08,
+          "y_mm": 0,
+          "rotation_deg": 180,
+          "length_mm": 1.27
+        }
+      ],
+      "graphics": [
+        {
+          "kind": "arc",
+          "start": {
+            "x": 2.03,
+            "y": -0.01
+          },
+          "mid": {
+            "x": 1.02,
+            "y": 1.02
+          },
+          "end": {
+            "x": 0,
+            "y": 0.01
+          },
+          "fill": "none"
+        },
+        {
+          "kind": "arc",
+          "start": {
+            "x": 4.06,
+            "y": -0.01
+          },
+          "mid": {
+            "x": 3.05,
+            "y": 1.02
+          },
+          "end": {
+            "x": 2.03,
+            "y": 0.01
+          },
+          "fill": "none"
+        },
+        {
+          "kind": "arc",
+          "start": {
+            "x": 0,
+            "y": -0.01
+          },
+          "mid": {
+            "x": -1.01,
+            "y": 1.02
+          },
+          "end": {
+            "x": -2.03,
+            "y": 0.01
+          },
+          "fill": "none"
+        },
+        {
+          "kind": "arc",
+          "start": {
+            "x": -2.03,
+            "y": -0.01
+          },
+          "mid": {
+            "x": -3.04,
+            "y": 1.02
+          },
+          "end": {
+            "x": -4.06,
+            "y": 0.01
+          },
+          "fill": "none"
+        }
+      ]
+    }
+  ],
+  "unhandled": []
+}

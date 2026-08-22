@@ -129,6 +129,7 @@ Handcraft tiny `easyeda-symbol.json` objects (valid `head` + `shape` / `subparts
 - `hidden-pin` — one hidden `P~` → H8
 - `multi-unit-empty-parent` — parent `shape=[]`, two subparts with pins → H4
 - `pt-curves` — `PT~` with `C` or `A` → S3 WARN (not BLOCKED unless risk=high)
+- `arc-semicircle` — `A~` SVG semicircle; H9 must emit a KiCad `(arc)`
 
 Include `P~` pins on synthetics that need pin hard-checks.
 

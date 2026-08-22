@@ -20,7 +20,7 @@ Success is not “`.kicad_sym` parses.” Success is:
 - Symbol export path: EasyEDA component (`dataStr` + `subparts`) → `.kicad_sym`
 - Pins: number, name, electrical type, style (line / inverted / clock), position, length, rotation, visibility
 - Units / subparts (e.g. Compute Module)
-- Body graphics: `R~`, `C~`, `E~` (circular), `PL~`, `PG~`, `PT~` (M/L/Z)
+- Body graphics: `R~`, `C~`, `E~` (circular), `A~` (SVG arc → KiCad `(arc)`), `PL~`, `PG~`, `PT~` (M/L/Z)
 - Properties: Reference prefix, Value/MPN, Footprint nickname, `LCSC Part`, Manufacturer
 - Frozen LCSC corpus + synthetic fixtures
 - Unhandled-command accounting (the C51933324 failure mode)
@@ -42,7 +42,7 @@ Success is not “`.kicad_sym` parses.” Success is:
 | Reference | Trusted geometry/electrical source (see §5) |
 | Unit | One KiCad `(symbol NAME_N_1 …)` corresponding to one EasyEDA subpart (or the parent if no subparts) |
 | Critical pin | Any pin with `visible ≠ hide` in EasyEDA |
-| Body graphic | Non-pin drawing primitive (`R`, `C`, `E`, `PL`, `PG`, `PT`) |
+| Body graphic | Non-pin drawing primitive (`R`, `C`, `E`, `A`, `PL`, `PG`, `PT`) |
 | Hard fail | Missing/extra pin, wrong number, wrong unit, degenerate/missing **required** body, crash |
 | Soft fail | Missing `T~` text, non-circular ellipse skipped, curved `PT~` simplified, pin type `unspecified` vs datasheet |
 
@@ -52,7 +52,7 @@ Success is not “`.kicad_sym` parses.” Success is:
 
 1. **Zero silent hard fails** on the golden corpus.
 2. Detect dropped pins or unit splits (CM4-class) on every convert.js change.
-3. Detect dropped body primitives of handled types (`R`/`PL`/`PG`/`PT` M/L/Z/`C`/`E` circle) — the LED-triangle class.
+3. Detect dropped body primitives of handled types (`R`/`PL`/`PG`/`PT` M/L/Z/`C`/`E` circle/`A` arc) — the LED-triangle / inductor-coil class.
 4. Detect degenerate rectangles (zero width/height) from misparsed `R~` (C9864 class).
 5. Run headlessly in CI; JSON + markdown report.
 6. Print `UNHANDLED: …` for every EasyEDA symbol command the converter does not emit.
@@ -100,10 +100,11 @@ SymbolIR {
       visible
     }
     graphics[] {
-      kind                // rectangle | circle | polyline
+      kind                // rectangle | circle | polyline | arc
       // rectangle: start{x,y} end{x,y}  (reject if |w|<ε or |h|<ε)
       // circle: center{x,y} radius
       // polyline: pts[{x,y}…] closed? fill  // none | background | outline
+      // arc: start{x,y} mid{x,y} end{x,y} fill
     }
   }
   unhandled[] { cmd, count }
@@ -128,7 +129,7 @@ Recommended matcher: convert EasyEDA pin (x,y,rot,len) with the **same functions
 | H6 | Each pin rotation ∈ {0,90,180,270} and matches reference | exact |
 | H7 | Each pin length matches reference | ≤ 0.05 mm |
 | H8 | Hidden EasyEDA pins (`hide`) are **not** emitted | exact |
-| H9 | Converter does not drop handled body commands: every `R~`, `PL~`, `PG~`, `PT~` (M/L/Z with ≥2 pts), `C~`, circular `E~` produces a graphic | exact counts (±0 for those types) |
+| H9 | Converter does not drop handled body commands: every `R~`, `PL~`, `PG~`, `PT~` (M/L/Z with ≥2 pts), `C~`, circular `E~`, `A~` (valid SVG arc) produces a graphic | exact counts (±0 for those types) |
 | H10 | No degenerate rectangle: `|end.x-start.x| ≥ 0.2 mm` **and** `|end.y-start.y| ≥ 0.2 mm` when EasyEDA `R~` w,h are both ≥ 2 px | |
 | H11 | Closed `PT~`/`PG~` with ≥3 unique vertices emit a polyline with ≥3 points and first≈last if closed | |
 | H12 | Properties `LCSC Part` and `MPN` present when EasyEDA `c_para` has them | exact strings (escaped) |
@@ -155,7 +156,7 @@ Pin **electrical type** is **not** H-hard when EasyEDA type is `0` (unspecified)
 ### 7.3 Severity policy
 
 - Any **H\*** fail → CI **red**, part `BLOCKED`
-- Only **S\*** → `WARN` (CI green) unless `risk=high` **and** S2/S3 indicate the **only** body of the symbol was dropped → `BLOCKED` / `QUARANTINE`
+- Only **S\*** → `WARN` (CI green) unless `risk=high` **and** S2/S3 / unconverted `A~` indicate the **only** body of the symbol was dropped → `BLOCKED` / `QUARANTINE`
 - Parse/crash → CI **red**
 - `UNHANDLED` of types that H9 claims to handle → **H fail** (accounting bug)
 
@@ -169,13 +170,13 @@ Minimum permanent corpus (≥ 16 parts), stratified:
 | --- | --- | --- | --- |
 | A – 2-pin passives | R/C, simple `R~` body | 3 | C14284 |
 | B – standard ICs | SOIC/SOT, rect body | 3 | C98715 |
-| C – path-drawn bodies | LED/diode `PT~` / `PG~` triangles | 3 | **C51933324**, C2286, C72038 |
+| C – path-drawn bodies | LED/diode `PT~` / `PG~` triangles; inductor `A~` coils | 3 | **C51933324**, C2286, C72038, **C55315393** |
 | D – multi-unit | EasyEDA `subparts`, graphics not on parent | 2 | **C17702531** (CM4) |
 | E – dense pins | ≥ 40 pins, QFP/QFN-style symbols | 2 | C2040, C8734 |
 | F – connectors / headers | many pins, mixed names | 2 | C124356, C2765186 |
 | G – degenerate / parser traps | empty `R~` radius slots, hidden pins | 1 | **C9864** (body rect) |
 
-Tags in `meta.json`: `pt-path`, `pg-polygon`, `multi-unit`, `hidden-pins`, `empty-parent-shape`.
+Tags in `meta.json`: `pt-path`, `pg-polygon`, `symbol-arc`, `multi-unit`, `hidden-pins`, `empty-parent-shape`.
 
 ### 8.2 Fixture packaging
 
@@ -200,6 +201,7 @@ Synthetic fixtures under `tests/symbols/synthetic/`:
 | `hidden-pin` | one `P~hide~` must not appear |
 | `multi-unit-empty-parent` | parent `shape=[]`, two subparts with pins |
 | `pt-curves` | `PT~` with `C`/`A` — v1 soft unless tagged required |
+| `arc-semicircle` | `A~` SVG semicircle → KiCad `(arc start/mid/end)` |
 
 ## 9. End-to-end pipeline requirements
 
@@ -230,7 +232,7 @@ Also required:
 | --- | --- |
 | Runner | `node scripts/test-symbol-e2e.js` and `npm run test:symbol-e2e` |
 | EasyEDA IR | `tests/symbols/lib/ir-from-easyeda.js` |
-| KiCad IR | `tests/symbols/lib/ir-from-kicad.js` (sexpr for `pin` / `rectangle` / `circle` / `polyline` / `property`) |
+| KiCad IR | `tests/symbols/lib/ir-from-kicad.js` (sexpr for `pin` / `rectangle` / `circle` / `polyline` / `arc` / `property`) |
 | Compare | `tests/symbols/lib/compare.js` |
 | Reports | `artifacts/symbol-report.json` (gitignored) |
 | Exit codes | 0 pass (WARN allowed), 1 hard fail, 2 infra/fixture error |
@@ -255,6 +257,7 @@ May share a workflow with footprint e2e or a sibling `symbol-e2e.yml`.
 - [ ] C51933324 (or frozen equivalent) **H9/H11** green — `PT~` triangle present
 - [ ] C17702531 (or frozen equivalent) **H4** green — two units, pins not all on unit 0
 - [ ] C9864 **H10** green — non-degenerate body rectangle
+- [ ] C55315393 (or frozen equivalent) **H9** green — four `A~` inductor loops present as `(arc)`
 - [ ] `docs/symbol-known-gaps.md` lists `T~`, non-circular `E~`, curved `PT~`
 - [ ] README links this TRD + `npm run test:symbol-e2e`
 
@@ -273,7 +276,7 @@ Commands currently expected as unhandled in v1 (soft unless they are the only bo
 - `T~` text
 - non-circular `E~`
 - `PT~` curve ops beyond M/L/Z
-- any future codes (`A~`, `BEZIER`, …) until implemented
+- any future codes (`BEZIER`, …) until implemented
 
 ## 14. Phased delivery
 
@@ -290,7 +293,7 @@ Commands currently expected as unhandled in v1 (soft unless they are the only bo
 | --- | --- | --- |
 | Failure cost | Wrong net / unreadable schematic | Unmanufacturable PCB |
 | IR focus | Pins + units + body graphics | Pads + drills + layers |
-| Silent-drop example | `PT~` LED triangle | `SOLIDREGION` / `ARC` |
+| Silent-drop example | `PT~` LED triangle / `A~` inductor coil | `SOLIDREGION` / `ARC` |
 | Shared | Frozen fixtures, unhandled-command logs, convert.js CI trigger | |
 
 Do **not** merge the two IRs. A part may PASS footprint e2e and BLOCK symbol e2e (or the reverse).
@@ -305,5 +308,5 @@ Do **not** merge the two IRs. A part may PASS footprint e2e and BLOCK symbol e2e
 
 - Test **SymbolIR**, not “file exists.”
 - Freeze fixtures; live LCSC is for freeze scripts only.
-- **Pins and units are hard; cosmetics are soft** — except when the “cosmetic” *is* the symbol body (`PT~` / `R~`).
-- Make unknown EasyEDA commands **visible**. C51933324 was a silent `PT~` drop: pins exported, triangle did not.
+- **Pins and units are hard; cosmetics are soft** — except when the “cosmetic” *is* the symbol body (`PT~` / `R~` / `A~`).
+- Make unknown EasyEDA commands **visible**. C51933324 was a silent `PT~` drop; C55315393 was a silent `A~` drop: pins exported, coil did not.
